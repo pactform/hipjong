@@ -44,6 +44,8 @@
     --cream-deep: #E6E1D8;
     --white: #FFFFFF;
     --terracotta: #AC3A29;
+    --tile-blue: #3B728F;
+    --tile-gold: #D6973F;
 
     /* Font */
     --font-body: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -803,8 +805,7 @@ body.nav-open {
 .card-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+    object-fit: cover; 
 }
 
 .collection-card:hover .card-image-wrapper img { transform: scale(1.05); }
@@ -1539,6 +1540,155 @@ body.nav-open {
     max-width: 62ch;
 }
 
+/* ============ 11B. HALAMAN INTERNAL — ELEMEN VISUAL ============
+   Tanda tile 2x2 (gema dari logo), band pernyataan full-bleed,
+   timeline langkah berwarna, dan chip prinsip — dipakai di
+   About / How It Works / FAQ supaya halaman teks tidak terasa datar. */
+
+/* --- Band pernyataan full-bleed (statement) --- */
+.statement-band {
+    width: 100%;
+    padding: clamp(3rem, 7vw, 5.5rem) var(--pad-x);
+    position: relative;
+    overflow: hidden;
+}
+
+.statement-band.on-green { background-color: var(--brand-green); }
+.statement-band.on-terracotta { background-color: var(--terracotta); }
+
+.statement-inner { max-width: 900px; position: relative; z-index: 1; }
+
+.statement-band .statement-script {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    color: rgba(248, 246, 240, 0.85);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.statement-band .statement-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4.4vw, 2.75rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.28;
+    color: var(--cream);
+    max-width: 34ch;
+}
+
+.statement-band .statement-text strong { font-weight: 600; color: #FF9A7A; }
+
+.statement-band .btn { margin-top: clamp(1.75rem, 4vw, 2.5rem); }
+
+/* --- Prinsip: chip ikon berwarna (bukan angka — bukan urutan) --- */
+.principle-item { border-top: none; padding-top: 0; }
+
+.principle-chip {
+    width: clamp(46px, 6vw, 54px);
+    height: clamp(46px, 6vw, 54px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.principle-chip svg { width: 22px; height: 22px; }
+.principle-chip { color: var(--white); }
+
+.principle-chip.chip-red { background-color: var(--brand-red); }
+.principle-chip.chip-green { background-color: var(--brand-green); }
+.principle-chip.chip-blue { background-color: var(--tile-blue); }
+.principle-chip.chip-gold {
+    background-color: transparent;
+    border: 2px solid var(--tile-gold);
+    color: var(--tile-gold);
+}
+
+/* --- How It Works: timeline langkah berwarna --- */
+.timeline { max-width: 760px; position: relative; }
+
+.timeline .step-item {
+    display: flex;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    align-items: flex-start;
+    padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.timeline .step-item:last-child { padding-bottom: 0; }
+
+.step-marker {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-dot {
+    width: clamp(46px, 8vw, 60px);
+    height: clamp(46px, 8vw, 60px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.step-dot.dot-red { background-color: var(--brand-red); }
+.step-dot.dot-green { background-color: var(--brand-green); }
+.step-dot.dot-blue { background-color: var(--tile-blue); }
+.step-dot.dot-gold { background-color: var(--tile-gold); }
+
+.step-connector {
+    width: 2px;
+    flex: 1;
+    min-height: clamp(1.25rem, 4vw, 2rem);
+    background-color: var(--border-color);
+    margin-top: 0.5rem;
+}
+
+.timeline .step-text { min-width: 0; padding-top: clamp(0.4rem, 1vw, 0.65rem); }
+
+.timeline .step-text h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.timeline .step-text p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 52ch;
+}
+
+/* --- FAQ: kartu sisi berwarna --- */
+.faq-side-card {
+    background-color: var(--brand-green);
+    color: var(--cream);
+    border-radius: 16px;
+    padding: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.faq-side-card h2 { color: var(--cream); }
+.faq-side-card p { color: rgba(248, 246, 240, 0.82); }
+
+.faq-item {
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+}
+
+.faq-item:hover { background-color: var(--cream-deep); }
+.faq-item summary { padding-inline: 0.75rem; margin-inline: -0.75rem; }
+.faq-item p { padding-inline: 0.75rem; margin-inline: -0.75rem; }
+
 /* ============ 12. ANIMASI ============ */
 .reveal,
 .reveal-left,
@@ -1839,6 +1989,12 @@ body.nav-open {
         max-width: 1720px;
         margin-inline: auto;
     }
+
+    .statement-band .statement-inner {
+        max-width: 900px;
+        margin-inline: auto;
+        margin-inline-start: calc((100vw - 1720px) / 2 + var(--pad-x));
+    }
 }
 
 /* ---- Print ---- */
@@ -1864,3 +2020,4 @@ body.nav-open {
     white-space: nowrap;
     border: 0;
 }
+
