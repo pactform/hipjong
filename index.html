@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport-fit=cover: aman untuk iPhone dengan notch -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="HIPJONG makes modern, smart mahjong tables for contemporary homes. Game nights, elevated.">
+    <meta name="theme-color" content="#F8F6F0">
+    <title>HIPJONG - Modern Mahjong Tables</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Caveat ikut dimuat: dipakai .decorative-script & .cta-decorative-center -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Ditandai lebih awal supaya tidak ada kedipan konten -->
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="navbar">
+            <a href="index.html" class="logo" aria-label="HIPJONG - beranda">
+                <div class="logo-icon" aria-hidden="true">
+                    <span class="box red"></span>
+                    <span class="box green"></span>
+                    <span class="box blue"></span>
+                    <span class="box empty"></span>
+                </div>
+                <span class="logo-text">HIPJONG</span>
+            </a>
+
+            <nav class="nav-links" id="primary-nav" aria-label="Menu utama">
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="faq.html">FAQ</a>
+
+                <!-- Hanya tampil di dalam drawer (mobile/tablet).
+                     Dulu Cart & Search hilang total di layar kecil. -->
+                <div class="nav-drawer-extra">
+                    <a href="#" class="drawer-cart">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        Cart (0)
+                    </a>
+                    <button type="button" class="drawer-search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Search
+                    </button>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <a href="#" class="cart-link">Cart (0)</a>
+                <!-- Label memendek di HP supaya tombol tidak pecah
+                     jadi dua baris, tapi CTA tidak hilang. -->
+                <a href="shop.html" class="btn btn-primary nav-cta">
+                    <span class="cta-label-full">Shop Our Tables &rarr;</span>
+                    <span class="cta-label-short">Shop &rarr;</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+    <main id="main">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text-wrapper reveal-group">
+                <span class="eyebrow reveal">MODERN TABLES<br>FOR MODERN GATHERINGS</span>
+                <h1 class="headline reveal">Game nights,<br><span class="highlight">elevated.</span></h1>
+                <h2 class="sub-headline reveal">Mahjong just got hipper.</h2>
+                <p class="description reveal">Smart, multi-functional tables designed to fit dinner nights, game nights, and everything in between.</p>
+
+                <div class="cta-group reveal reveal-group">
+                    <a href="shop.html" class="btn btn-primary reveal">Shop Our Tables &rarr;</a>
+                    <a href="#our-story" class="btn btn-outline reveal">Explore The Vibe</a>
+                </div>
+
+                <div class="social-proof reveal">
+                    <div class="avatars">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="" width="32" height="32">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="" width="32" height="32">
+                        <img src="https://i.pravatar.cc/100?img=9" alt="" width="32" height="32">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="" width="32" height="32">
+                    </div>
+                    <div class="rating-text">
+                        <span>Loved by <strong>modern homes</strong></span>
+                        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="vibe-shift">
+        <!-- Kolom Kiri: Visual/Gambar -->
+        <div class="vibe-visual">
+            <!-- Day/Night image stack: 2 foto ditumpuk untuk efek morph/crossfade -->
+            <div class="vibe-image-stack">
+                <img src="meja biru.png" alt="Blue Mahjong Table - Day Mode" class="vibe-image vibe-image-day" loading="lazy" decoding="async">
+                <img src="meja biru night.png" alt="Blue Mahjong Table - Night Mode" class="vibe-image vibe-image-night" loading="lazy" decoding="async">
+            </div>
+            <div class="floating-text reveal-left">
+                DETAILS<br>
+                MAKE<br>
+                BETTER<br>
+                GATHERINGS
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Konten Teks -->
+        <div class="vibe-content reveal-group">
+            <span class="eyebrow reveal">THE VIBE SHIFT</span>
+            <h2 class="vibe-headline reveal">Why settle for <br><span class="highlight-green">boring game furniture?</span></h2>
+            
+            <p class="description reveal">Most mahjong tables are clunky, noisy, outdated, and totally clash with your modern home vibe. Why should your favorite social hobby come with ugly, bulky gear?</p>
+            
+            <p class="description reveal">Hipjong reimagined mahjong furniture from the ground up — modern design + smart functionality + ultra-quiet tech engineering.</p>
+            
+            <div class="modes-wrapper reveal reveal-group">
+                <!-- Day Mode -->
+                <div class="mode-item active-mode" data-mode="day">
+                    <div class="mode-icon tile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#AF3E2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </div>
+                    <div class="mode-text">
+                        <h4>Day Mode</h4>
+                        <p>Sleek, minimalist<br>dining table.</p>
+                    </div>
+                </div>
+                
+                <!-- Garis Pemisah -->
+                <div class="mode-divider"></div>
+                
+                <!-- Night Mode -->
+                <div class="mode-item" data-mode="night">
+                    <div class="mode-icon tile">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C3854" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                    <div class="mode-text">
+                        <h4>Night Mode</h4>
+                        <p>Premium automatic<br>mahjong setup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="collections">
+        <div class="collections-header reveal-group">
+            <div class="header-left">
+                <span class="eyebrow reveal">OUR COLLECTIONS</span>
+                <h2 class="collections-title reveal">
+                    Built for <span class="highlight-green">every vibe,</span><br>
+                    <span class="highlight-red">every crew,</span> <span class="highlight-blue">every home.</span>
+                </h2>
+            </div>
+            <a href="shop.html" class="view-all-link reveal">View All Collections &rarr;</a>
+        </div>
+
+        <div class="collections-grid reveal-group">
+            <div class="collection-card reveal-scale">
+                <div class="card-image-wrapper">
+                    <!-- Ganti dengan nama file foto meja kayu kamu -->
+                    <img src="majong table new.png" alt="Social Night Series" loading="lazy" decoding="async">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <h3>MAHJONG TABLE</h3>
+                        <p>Everyday Smart Mahjong Tables</p>
+                    </div>
+                    <a href="#" class="card-arrow-btn beige" aria-label="View Social Night Series">&rarr;</a>
+                </div>
+            </div>
+            <div class="collection-card reveal-scale">
+                <div class="card-image-wrapper">
+                    <!-- Ganti dengan nama file foto meja pink kamu -->
+                    <img src="billiard table.png" alt="Elevated Home Series" loading="lazy" decoding="async">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <h3>POOL TABLE</h3>
+                        <p>Signature Smart Furniture</p>
+                    </div>
+                    <a href="#" class="card-arrow-btn pink" aria-label="View Elevated Home Series">&rarr;</a>
+                </div>
+            </div>
+            <div class="collection-card reveal-scale">
+                <div class="card-image-wrapper">
+                    <!-- Ganti dengan nama file foto meja biru kamu -->
+                    <img src="poker table.png" alt="Atelier Custom Series" loading="lazy" decoding="async">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <h3>POKER TABLE</h3>
+                        <p>Bespoke Tech Design</p>
+                    </div>
+                    <a href="#" class="card-arrow-btn blue" aria-label="View Atelier Custom Series">&rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-story" id="our-story">
+        <div class="story-visual">
+            <!-- Ganti 'mahjong-tiles.jpg' dengan nama file fotomu yang sebenarnya -->
+            <img src="mahjong close up.png" alt="Mahjong Tiles Layout" class="story-image reveal-scale" loading="lazy" decoding="async">
+            
+            <div class="story-floating-text reveal-left">
+                <span class="large-text">More<br>Than<br>a Game</span>
+                <div class="line"></div>
+                <span class="small-text">A BETTER WAY<br>TO GATHER</span>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Konten Teks -->
+        <div class="story-content reveal-group">
+            <span class="eyebrow red-text reveal">OUR STORY</span>
+            <h2 class="story-headline reveal">We asked: Why can't<br>mahjong feel <span class="highlight-red">modern?</span></h2>
+            
+            <p class="reveal">Mahjong is no longer an old-school pastime. It's the go-to chill social night, crew hangout, weekend ritual for millions of modern people. But the furniture? It never updated.</p>
+            
+            <p class="reveal">We started Hipjong because we were tired of the trade-off:<br>Style vs. Function. Pretty vs. Playable. Home vibe vs. Game night setup.</p>
+            
+            <p class="reveal">We believe modern gatherings deserve modern furniture.<br>Sleek design. Smart hidden tech. Zero compromise.</p>
+            
+            <p class="reveal">Mahjong isn't just a game anymore.<br>It's a lifestyle — and your table should match that energy.</p>
+        </div>
+    </section>
+<!-- CTA Banner Section -->
+    <section class="cta-banner">
+        <!-- Konten Kiri (Teks & Tombol) -->
+        <div class="cta-content reveal-group">
+            <span class="eyebrow white-text reveal">READY TO UPGRADE YOUR GAME NIGHT VIBE?</span>
+            <h2 class="cta-headline reveal">Ditch the messy mats,<br>noisy tables, and outdated setups.</h2>
+            <p class="cta-subtext reveal">Your new favorite gathering centerpiece is just a click away.</p>
+            
+            <a href="shop.html" class="btn-white reveal">Browse Full Collection &rarr;</a>
+        </div>
+        <div class="cta-visual">
+            <!-- Ganti dengan nama file foto meja & batu mahjong dari dekat -->
+            <img src="close up.png" alt="Mahjong Table Close Up" class="cta-image reveal-scale" loading="lazy" decoding="async">
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-decoration left-deco" aria-hidden="true">
+            <img src="batu-mahjong-kiri.png" alt="" loading="lazy">
+        </div>
+        <div class="footer-decoration right-deco" aria-hidden="true">
+            <img src="batu-mahjong-kanan.png" alt="" loading="lazy">
+        </div>
+
+        <div class="footer-top reveal-group">
+            <div class="footer-column brand-col reveal">
+                <h3 class="footer-logo">HIPJONG</h3>
+                <p>Game nights, elevated.<br>Mahjong just got hipper.</p>
+                <p>Modern design + smart tech furniture<br>for contemporary gatherings.<br>Style. Play. Gather. Effortlessly.</p>
+            </div>
+
+            <div class="footer-column links-col reveal">
+                <h4 class="footer-heading">Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Tables</a></li>
+                    <li><a href="#">Social Night Series</a></li>
+                    <li><a href="#">Elevated Home Series</a></li>
+                    <li><a href="#">Atelier Custom Series</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column links-col reveal">
+                <h4 class="footer-heading">About</h4>
+                <ul>
+                    <li><a href="index.html#our-story">Our Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column newsletter-col reveal">
+                <h4 class="footer-heading">Join the vibe</h4>
+                <p>Get the latest drops, stories, and exclusive offers.</p>
+
+                <form class="newsletter-form">
+                    <label class="visually-hidden" for="newsletter-email">Email address</label>
+                    <input id="newsletter-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path><path d="M15 4v12a5 5 0 0 1-5 5"></path><path d="M15 8a4 4 0 0 0 4 4"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.3 2.7 8.1 6.6 9.5-.1-.8-.2-2.1.04-3l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2 1 .5 1.7 1.4 1.7 1.7 0 3-1.8 3-4.4 0-2.3-1.7-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.1.1.1.1.2.1.3-.1.4-.3 1.1-.3 1.2-.1.1-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6.1 0 3.6-2.3 6.5-5.4 6.5-1 0-2-.5-2.4-1.2l-.7 2.5c-.2.9-.9 2-1.3 2.7A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hipjong. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <span class="legal-tagline">Game nights, elevated. Mahjong just got hipper.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
