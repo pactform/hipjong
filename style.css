@@ -1,29 +1,3 @@
-/* =========================================================
-   HIPJONG — style.css
-   Struktur:
-   01. Reset & tokens
-   02. Elemen dasar
-   03. Navbar + mobile drawer
-   04. Tombol
-   05. Hero
-   06. Vibe Shift
-   07. Collections
-   08. Our Story
-   09. CTA Banner
-   10. Footer
-   11. Halaman internal (Shop/About/How It Works/FAQ)
-   12. Animasi & micro-interaction
-   13. Media queries (satu blok terpusat)
-
-   Prinsip responsif:
-   - Tidak ada 100vw (penyebab scroll horizontal saat ada scrollbar).
-   - Ukuran font & padding pakai clamp() → mulus di semua lebar,
-     termasuk jendela setengah layar (half view).
-   - Grid pakai auto-fit/minmax → kolom menyesuaikan sendiri.
-   - Breakpoint hanya untuk perubahan layout, bukan ukuran font.
-   ========================================================= */
-
-/* ============ 01. RESET & TOKENS ============ */
 *,
 *::before,
 *::after {
@@ -48,9 +22,9 @@
     --tile-gold: #D6973F;
 
     /* Font */
-    --font-body: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --font-script: 'Caveat', 'Segoe Script', cursive;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-script: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
     /* Ruang horizontal global — satu sumber kebenaran.
        Dipakai navbar, hero, semua section, dan footer supaya
@@ -519,7 +493,7 @@ body.nav-open {
 .avatars img {
     width: clamp(28px, 6vw, 32px);
     height: clamp(28px, 6vw, 32px);
-    border-radius: 50%;
+    border-radius: 0;
     border: 2px solid var(--white);
     margin-left: -10px;
     object-fit: cover;
@@ -796,7 +770,7 @@ body.nav-open {
 .card-image-wrapper {
     width: 100%;
     aspect-ratio: 4 / 3;
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
     margin-bottom: 1.25rem;
     background-color: var(--cream-deep);
@@ -1556,7 +1530,12 @@ body.nav-open {
 .statement-band.on-green { background-color: var(--brand-green); }
 .statement-band.on-terracotta { background-color: var(--terracotta); }
 
-.statement-inner { max-width: 900px; position: relative; z-index: 1; }
+.statement-inner { 
+    max-width: 1200px; 
+    margin-inline: var(--pad-x); 
+    position: relative; 
+    z-index: 1; 
+}
 
 .statement-band .statement-script {
     font-family: var(--font-display);
@@ -1991,10 +1970,10 @@ body.nav-open {
     }
 
     .statement-band .statement-inner {
-        max-width: 900px;
-        margin-inline: auto;
-        margin-inline-start: calc((100vw - 1720px) / 2 + var(--pad-x));
-    }
+            max-width: 1720px;
+            margin-inline: auto;
+            padding-inline: var(--pad-x);
+        }
 }
 
 /* ---- Print ---- */
@@ -2021,3 +2000,1160 @@ body.nav-open {
     border: 0;
 }
 
+
+/* ============ 20. PICTURE-DOMINANT / BENTO LAYOUT ENHANCEMENTS ============
+   No copy changes here — only layout, sizing and grid rules so the
+   homepage reads as an image-led bento grid (Umimo-style) instead of
+   equal-weight text/image splits. All original rules above are left
+   untouched; these overrides win by appearing later in the cascade. */
+
+/* ---- Hero: slightly shorter so the very first scroll reveals more
+   of the bento grid below, image still fills the section ---- */
+@media (min-width: 901px) {
+    .hero { min-height: 92vh; }
+}
+
+/* ---- Vibe Shift: let the photo take noticeably more width than
+   the text column ---- */
+@media (min-width: 901px) {
+    .vibe-shift { align-items: stretch; }
+    .vibe-visual { flex: 1.5 1 0%; }
+    .vibe-content { flex: 1 1 0%; }
+}
+
+/* ---- Our Story: same idea — the tile photo leads, text trails ---- */
+@media (min-width: 901px) {
+    .story-visual { flex: 1.4 1 0%; }
+    .story-content { flex: 1 1 0%; }
+}
+
+/* ---- CTA Banner: image becomes the dominant half ---- */
+@media (min-width: 901px) {
+    .cta-content { flex: 1 1 0%; }
+    .cta-visual { flex: 1.35 1 0%; }
+}
+
+/* ---- Collections: turn the equal-weight card grid into an
+   asymmetric bento grid — one large picture tile plus four smaller
+   ones, mirroring the reference layout. Copy inside each card is
+   unchanged, only its container's size/shape changes. ---- */
+@media (min-width: 901px) {
+    .collections-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(170px, auto);
+        gap: clamp(1.25rem, 2vw, 1.75rem);
+    }
+
+    .collection-card {
+        height: 100%;
+    }
+
+    .collection-card:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .collection-card:nth-child(1) .card-image-wrapper {
+        aspect-ratio: auto;
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    .collections-grid { grid-auto-rows: minmax(200px, auto); }
+}
+
+/* Bigger tile's image should still crop nicely at any of the taller
+   heights produced by the grid-row span above */
+.collection-card:nth-child(1) .card-image-wrapper img {
+    height: 100%;
+}
+
+/* ---- Photo strip: a row of small square picture tiles, no copy,
+   purely visual — sits right before the newsletter/footer the way
+   the reference theme's image strip does ---- */
+.photo-strip {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: clamp(0.6rem, 1.5vw, 1rem);
+    padding: 0 var(--pad-x) clamp(2.5rem, 6vw, 4rem);
+    background-color: var(--cream);
+}
+
+.photo-strip a {
+    display: block;
+    aspect-ratio: 1 / 1;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+.photo-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.photo-strip a:hover img { transform: scale(1.08); }
+
+@media (max-width: 900px) {
+    .photo-strip { grid-template-columns: repeat(3, 1fr); }
+    .photo-strip a:nth-child(n+7) { display: none; }
+}
+
+@media (max-width: 480px) {
+    .photo-strip { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============ 21. PICTURE-DOMINANT: CONTENT / TEXT PAGES ============
+   Applies to About, FAQ, How It Works, Shop intro. No copy changes —
+   only tighter typography (smaller size, narrower measure) plus new
+   photo-band / photo-duo / photo-trio components so these pages read
+   as image-led rather than paragraph-led, matching the homepage. */
+
+.page-hero-inner p {
+    font-size: var(--fs-small);
+    max-width: 46ch;
+}
+
+@media (min-width: 901px) {
+    .content-block { max-width: 52ch; }
+}
+
+.content-block h2 {
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+}
+
+.content-block p {
+    font-size: var(--fs-small);
+    line-height: 1.7;
+}
+
+.principle-item p,
+.faq-item p,
+.timeline .step-text p,
+.step-text p {
+    font-size: var(--fs-small);
+}
+
+.principle-item h3,
+.step-text h3 {
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+}
+
+/* Full-width single photo band */
+.photo-band {
+    width: 100%;
+    aspect-ratio: 21 / 8;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+.photo-band img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .photo-band { aspect-ratio: 4 / 3; }
+}
+
+/* Two photos side by side */
+.photo-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    margin: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.photo-duo .photo-tile {
+    aspect-ratio: 4 / 3;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+.photo-duo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .photo-duo { grid-template-columns: 1fr; }
+}
+
+/* Three small photos in a row */
+.photo-trio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    margin: clamp(2rem, 5vw, 3.5rem) 0;
+}
+
+.photo-trio .photo-tile {
+    aspect-ratio: 1 / 1;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+.photo-trio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .photo-trio { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+}
+
+/* ============ 22. CHECKERBOARD HOME REDESIGN ============
+   New homepage structure: split dark hero, centered statement,
+   then alternating full-bleed rows (image / mini-products,
+   text / image) — no copy removed, only re-laid-out + restyled. */
+
+/* ---- Split hero ---- */
+.split-hero {
+    display: flex;
+    width: 100%;
+    min-height: 88vh;
+    min-height: 88dvh;
+    background-color: var(--brand-green);
+    overflow: hidden;
+}
+
+.split-hero-text {
+    flex: 1 1 46%;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--nav-h) + 2rem) var(--pad-x) 3rem;
+    min-width: 0;
+}
+
+.split-hero-text .hero-text-wrapper { max-width: 480px; }
+
+.split-hero .eyebrow { color: rgba(248, 246, 240, 0.75); }
+
+.split-hero .headline {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--cream);
+}
+
+.split-hero .headline .highlight { color: #FF9A7A; font-style: italic; }
+
+.split-hero .description { color: rgba(248, 246, 240, 0.8); font-weight: 500; }
+
+.split-hero-visual {
+    flex: 1 1 54%;
+    position: relative;
+    min-width: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Keeps the light navbar text readable where it overlaps the photo */
+.split-hero-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(15, 10, 8, 0.4) 0%, rgba(15, 10, 8, 0) 28%);
+    pointer-events: none;
+}
+
+.split-hero-shape {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+    width: clamp(160px, 22vw, 320px);
+    height: clamp(160px, 22vw, 320px);
+    border-radius: 50%;
+    background-color: rgba(248, 246, 240, 0.08);
+    z-index: 1;
+}
+
+.split-hero-visual img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 92%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+@media (max-width: 900px) {
+    .split-hero { flex-direction: column; min-height: 0; }
+    .split-hero-text { padding-top: calc(var(--nav-h) + 2rem); flex: none; }
+    .split-hero-visual { flex: none; height: 46vh; }
+}
+
+/* ---- Centered featured statement (was Collections header) ---- */
+.featured-statement {
+    background-color: var(--white);
+    text-align: center;
+    padding: clamp(3rem, 8vw, 6rem) var(--pad-x);
+}
+
+.featured-statement .eyebrow { display: block; }
+
+.featured-statement .collections-title {
+    max-width: 760px;
+    margin: 0.75rem auto 2rem;
+}
+
+.featured-statement .view-all-link {
+    display: inline-block;
+    border: 1px solid var(--text-dark);
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+}
+
+/* ---- Checkerboard image + mini-product rows ---- */
+.checker-row {
+    display: flex;
+    width: 100%;
+    min-height: 70vh;
+}
+
+.checker-image {
+    flex: 1 1 50%;
+    min-width: 0;
+    background-color: var(--cream-deep);
+}
+
+.checker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.checker-products {
+    flex: 1 1 50%;
+    min-width: 0;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mini-product {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.mini-product:hover { opacity: 0.85; }
+
+.mini-product:first-child { border-left: none; }
+
+.checker-products .mini-product:nth-child(-n+2) { border-top: none; }
+
+.mini-product-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+    margin-bottom: 1.1rem;
+}
+
+.mini-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mini-product-name {
+    font-family: var(--font-display);
+    font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.35rem;
+}
+
+.mini-product-desc {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.mini-product-price {
+    font-size: var(--fs-small);
+    color: var(--brand-red);
+    margin-top: auto;
+}
+
+/* Three-tile variant (row 3) wraps to 2 columns, third spans full width */
+.checker-products.has-three { grid-template-columns: repeat(2, 1fr); }
+.checker-products.has-three .mini-product:nth-child(3) {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border-color);
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+.checker-products.has-three .mini-product:nth-child(3) .mini-product-img {
+    width: 140px;
+    aspect-ratio: 1/1;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .checker-row { flex-direction: column; min-height: 0; }
+    .checker-image { height: 52vh; }
+    .checker-products { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+    .checker-products { grid-template-columns: 1fr; }
+    .mini-product { border-left: none !important; }
+    .checker-products.has-three .mini-product:nth-child(3) {
+        flex-direction: column;
+    }
+    .checker-products.has-three .mini-product:nth-child(3) .mini-product-img {
+        width: 100%;
+    }
+}
+
+/* ---- Reverse row order: turns the existing image-left/text-right
+   sections (vibe-shift, our-story) into text-left/image-right rows
+   to keep the checkerboard alternating, without touching any of
+   their inner content or JS-driven behaviour. ---- */
+@media (min-width: 901px) {
+    .reverse-row.vibe-shift .vibe-visual,
+    .reverse-row.our-story .story-visual {
+        order: 2;
+    }
+    .reverse-row.vibe-shift .vibe-content,
+    .reverse-row.our-story .story-content {
+        order: 1;
+    }
+}
+
+
+/* =========================================================
+   23. HOMEPAGE — PIXEL MATCH PASS
+   Menyelaraskan index.html persis dengan mockup terbaru:
+   navbar hijau solid, hero foto full-bleed + teks kiri,
+   statement putih di tengah, lalu deretan baris foto-kiri /
+   konten-kanan, banner merah, dan footer krem.
+   Ditaruh paling akhir supaya menimpa aturan sebelumnya.
+   ========================================================= */
+
+/* ---------- 23.1 NAVBAR: bar hijau solid, bukan transparan ---------- */
+.navbar:not(.navbar-static) {
+    position: sticky;
+    top: 0;
+    background-color: var(--brand-green);
+    padding-top: clamp(0.85rem, 1.6vw, 1.15rem);
+    padding-bottom: clamp(0.85rem, 1.6vw, 1.15rem);
+    gap: 1rem;
+}
+
+.navbar:not(.navbar-static) .logo-text {
+    font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+    letter-spacing: 1.5px;
+}
+
+.navbar:not(.navbar-static) .logo-icon {
+    width: 20px;
+    height: 20px;
+    gap: 2px;
+}
+
+.navbar:not(.navbar-static) .nav-links a,
+.navbar:not(.navbar-static) .cart-link {
+    font-size: clamp(0.78rem, 0.95vw, 0.85rem);
+    font-weight: 500;
+}
+
+.navbar:not(.navbar-static) .nav-links a:hover {
+    color: #FF9A7A;
+}
+
+.navbar:not(.navbar-static) .search-btn {
+    min-width: 32px;
+    min-height: 32px;
+}
+
+/* CTA di navbar: hijau sedikit lebih terang di atas bar hijau */
+.navbar:not(.navbar-static) .nav-cta {
+    background-color: rgba(248, 246, 240, 0.14);
+    border: 1px solid rgba(248, 246, 240, 0.28);
+    color: var(--cream);
+    font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+    font-weight: 500;
+    padding: 0.55rem 1.05rem;
+    min-height: 36px;
+    border-radius: 50px;
+}
+
+.navbar:not(.navbar-static) .nav-cta:hover {
+    background-color: rgba(248, 246, 240, 0.24);
+    border-color: rgba(248, 246, 240, 0.5);
+}
+
+/* ---------- 23.2 HERO: foto full-bleed, teks di kolom kiri ---------- */
+.split-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: clamp(30rem, 48vw, 47rem);
+    background-color: var(--cream);
+    overflow: hidden;
+}
+
+/* Foto jadi lapisan latar yang menutupi seluruh hero */
+.split-hero-visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    flex: none;
+    display: block;
+}
+
+.split-hero-visual::before { display: none; }
+
+.split-hero-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Gradasi krem tipis supaya kolom teks tetap terbaca
+   tanpa memotong foto jadi dua panel. */
+.split-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(248, 246, 240, 0.97) 0%,
+        rgba(248, 246, 240, 0.94) 26%,
+        rgba(248, 246, 240, 0.62) 42%,
+        rgba(248, 246, 240, 0.12) 55%,
+        rgba(248, 246, 240, 0) 64%
+    );
+}
+
+.split-hero-text {
+    position: relative;
+    z-index: 2;
+    flex: 0 1 auto;
+    align-items: center;
+    padding: clamp(3rem, 6vw, 5rem) var(--pad-x);
+    max-width: min(100%, 38rem);
+}
+
+.split-hero-text .hero-text-wrapper { max-width: 29rem; }
+
+.split-hero .eyebrow {
+    color: var(--brand-green);
+    font-size: clamp(0.64rem, 0.85vw, 0.72rem);
+    letter-spacing: 2px;
+    line-height: 1.7;
+    margin-bottom: clamp(1rem, 2vw, 1.4rem);
+}
+
+.split-hero .headline {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--brand-green);
+    font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    margin-bottom: clamp(1rem, 2vw, 1.35rem);
+}
+
+.split-hero .headline .highlight {
+    color: var(--brand-red);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.split-hero .description {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: clamp(0.82rem, 1vw, 0.92rem);
+    line-height: 1.6;
+    max-width: 24rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.split-hero .cta-group { gap: 0.6rem; }
+
+/* Dua tombol pil terang di atas latar krem */
+.split-hero .btn {
+    padding: 0.65rem 1.15rem;
+    min-height: 38px;
+    font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+    font-weight: 500;
+}
+
+.split-hero .btn-primary {
+    background-color: var(--white);
+    color: var(--text-dark);
+    border: 1px solid rgba(34, 26, 21, 0.9);
+}
+
+.split-hero .btn-primary:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+.split-hero .btn-outline {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1px solid rgba(34, 26, 21, 0.55);
+}
+
+.split-hero .btn-outline:hover {
+    background-color: rgba(34, 26, 21, 0.06);
+    border-color: var(--text-dark);
+}
+
+/* ---------- 23.3 STATEMENT PUTIH DI TENGAH ---------- */
+.featured-statement {
+    padding: clamp(2.75rem, 5.5vw, 4.75rem) var(--pad-x);
+}
+
+.featured-statement .eyebrow {
+    color: var(--text-muted);
+    font-size: clamp(0.62rem, 0.8vw, 0.7rem);
+    letter-spacing: 2.4px;
+    margin-bottom: 0.9rem;
+}
+
+.featured-statement .collections-title {
+    font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    max-width: 40rem;
+    margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.featured-statement .view-all-link {
+    font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    border: 1px solid rgba(34, 26, 21, 0.85);
+    border-radius: 3px;
+    padding: 0.7rem 1.35rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.featured-statement .view-all-link:hover {
+    opacity: 1;
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+/* ---------- 23.4 BARIS FOTO + KARTU PRODUK ---------- */
+.checker-image { background-color: var(--cream-deep); }
+
+.checker-products { background-color: var(--white); }
+
+.mini-product {
+    padding: clamp(1.1rem, 2.1vw, 1.85rem);
+    border-color: #E8E4DC;
+}
+
+.mini-product-img {
+    aspect-ratio: 4 / 3;
+    background-color: var(--white);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-product-img img {
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mini-product:hover { opacity: 1; }
+.mini-product:hover .mini-product-img img { transform: scale(1.05); }
+
+.mini-product-name {
+    font-size: clamp(0.7rem, 0.88vw, 0.78rem);
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 0.45rem;
+}
+
+.mini-product-desc {
+    font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.mini-product-price {
+    font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+    font-weight: 500;
+    color: var(--brand-red);
+    margin-top: auto;
+}
+
+/* Kartu ketiga (baris poker): foto kecil di kiri, teks di kanan */
+.checker-products.has-three .mini-product:nth-child(3) {
+    gap: clamp(1rem, 2vw, 1.75rem);
+    border-color: #E8E4DC;
+}
+
+.checker-products.has-three .mini-product:nth-child(3) .mini-product-img {
+    width: clamp(90px, 9vw, 130px);
+    aspect-ratio: 4 / 3;
+}
+
+.checker-products.has-three .mini-product:nth-child(3) .mini-product-desc {
+    margin-bottom: 0.45rem;
+}
+
+.checker-products.has-three .mini-product:nth-child(3) .mini-product-price {
+    margin-top: 0;
+}
+
+/* ---------- 23.5 THE VIBE SHIFT ---------- */
+.vibe-content {
+    background-color: var(--cream);
+    padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.75rem, 3vw, 3rem);
+}
+
+.vibe-content .eyebrow {
+    color: var(--text-muted);
+    font-size: clamp(0.62rem, 0.8vw, 0.7rem);
+    letter-spacing: 2.4px;
+    margin-bottom: 1rem;
+}
+
+.vibe-headline {
+    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.16;
+    margin-bottom: clamp(0.9rem, 2vw, 1.35rem);
+}
+
+.vibe-content .description {
+    font-size: clamp(0.8rem, 0.95vw, 0.88rem);
+    max-width: 30rem;
+    margin-bottom: 0;
+}
+
+.modes-wrapper {
+    margin-top: clamp(1.4rem, 3vw, 2.25rem);
+    gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.mode-item { gap: 0.75rem; }
+
+.mode-icon.tile {
+    width: clamp(34px, 3vw, 42px);
+    height: clamp(34px, 3vw, 42px);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.mode-icon.tile svg { width: 16px; height: 16px; }
+
+.mode-text h4 {
+    font-size: clamp(0.76rem, 0.92vw, 0.85rem);
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
+
+.mode-text p {
+    font-size: clamp(0.68rem, 0.82vw, 0.76rem);
+    line-height: 1.4;
+}
+
+.mode-divider { height: 36px; }
+
+.floating-text {
+    font-size: clamp(0.58rem, 0.72vw, 0.68rem);
+    letter-spacing: 2.4px;
+    line-height: 1.9;
+}
+
+/* ---------- 23.6 OUR STORY ---------- */
+.story-content {
+    background-color: var(--cream);
+    padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.75rem, 3vw, 3rem);
+}
+
+.story-content .eyebrow.red-text {
+    font-size: clamp(0.62rem, 0.8vw, 0.7rem);
+    letter-spacing: 2.4px;
+    margin-bottom: 1rem;
+}
+
+.story-headline {
+    font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.18;
+    margin-bottom: clamp(1rem, 2.2vw, 1.6rem);
+    max-width: 22ch;
+}
+
+.story-content p {
+    font-size: clamp(0.8rem, 0.95vw, 0.88rem);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 34rem;
+}
+
+.story-floating-text .large-text {
+    font-size: clamp(1.1rem, 2.1vw, 1.6rem);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+}
+
+.story-floating-text .line { margin: clamp(0.75rem, 1.6vw, 1.15rem) 0; }
+
+.story-floating-text .small-text {
+    font-size: clamp(0.58rem, 0.72vw, 0.68rem);
+    letter-spacing: 2.4px;
+    line-height: 1.7;
+}
+
+/* ---------- 23.7 BANNER CTA MERAH ---------- */
+.cta-banner { background-color: var(--terracotta); }
+
+.cta-content {
+    padding: clamp(2.5rem, 5vw, 4rem) clamp(1.75rem, 4vw, 4rem);
+}
+
+.cta-content .eyebrow.white-text {
+    font-size: clamp(0.6rem, 0.78vw, 0.68rem);
+    letter-spacing: 2.4px;
+    margin-bottom: 0.9rem;
+}
+
+.cta-headline {
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 500;
+    line-height: 1.28;
+    margin-bottom: 0.75rem;
+}
+
+.cta-subtext {
+    font-size: clamp(0.78rem, 0.92vw, 0.86rem);
+    margin-bottom: clamp(1.4rem, 3vw, 2rem);
+}
+
+.btn-white {
+    font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    border-radius: 3px;
+    min-height: 38px;
+}
+
+.cta-image { object-position: left bottom; }
+
+/* ---------- 23.8 FOOTER ---------- */
+.site-footer { background-color: var(--cream); }
+
+.footer-logo {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+}
+
+.brand-col p {
+    font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.footer-heading {
+    font-size: clamp(0.8rem, 0.95vw, 0.88rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.links-col ul li { margin-bottom: 0; }
+
+.links-col ul li a {
+    font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+    padding: 0.3rem 0;
+}
+
+.newsletter-col p {
+    font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    padding: 0.28rem 0.28rem 0.28rem 1rem;
+    max-width: 22rem;
+    margin-bottom: 1.25rem;
+}
+
+.newsletter-form button { width: 32px; height: 32px; }
+.newsletter-form button svg { width: 15px; height: 15px; }
+
+.social-icons { gap: 0.35rem; }
+
+.social-icons a { width: 32px; height: 32px; }
+.social-icons a svg { width: 16px; height: 16px; }
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    font-size: clamp(0.66rem, 0.8vw, 0.74rem);
+}
+
+.footer-legal { gap: 1.25rem; }
+
+/* ---------- 23.9 PROPORSI KOLOM (desktop) ---------- */
+@media (min-width: 1025px) {
+    .checker-row { min-height: clamp(24rem, 39vw, 39rem); }
+    .checker-image { flex: 0 0 49.5%; }
+    .checker-products { flex: 1 1 50.5%; }
+
+    .vibe-shift { min-height: clamp(28rem, 52vw, 52rem); }
+    .vibe-visual { flex: 0 0 56.5%; }
+    .vibe-content { flex: 1 1 43.5%; }
+
+    .our-story { min-height: clamp(26rem, 45vw, 45rem); }
+    .story-visual { flex: 0 0 58%; }
+    .story-content { flex: 1 1 42%; }
+
+    .cta-banner { min-height: clamp(20rem, 27vw, 27rem); }
+    .cta-content { flex: 0 0 59%; }
+    .cta-visual { flex: 1 1 41%; }
+}
+
+/* ---------- 23.10 TABLET & HP ---------- */
+@media (max-width: 1024px) {
+    /* Hero jadi satu kolom: foto sebagai latar, scrim dibuat vertikal */
+    .split-hero {
+        flex-direction: row;
+        min-height: clamp(30rem, 82vh, 44rem);
+        align-items: flex-end;
+    }
+
+    /* Foto tetap jadi lapisan latar penuh, bukan blok setinggi 46vh
+       seperti aturan lama di §22. */
+    .split-hero-visual {
+        position: absolute;
+        inset: 0;
+        height: auto;
+        flex: none;
+    }
+
+    .split-hero::after {
+        background: linear-gradient(
+            180deg,
+            rgba(248, 246, 240, 0) 0%,
+            rgba(248, 246, 240, 0.35) 34%,
+            rgba(248, 246, 240, 0.9) 56%,
+            rgba(248, 246, 240, 0.98) 72%
+        );
+    }
+
+    .split-hero-text {
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding-block: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .split-hero-visual img { object-position: center top; }
+
+    .checker-row { min-height: 0; }
+}
+
+@media (max-width: 900px) {
+    .checker-image { height: clamp(16rem, 52vw, 26rem); }
+}
+
+@media (max-width: 600px) {
+    .split-hero .cta-group .btn { width: 100%; }
+    .mini-product { padding: 1.25rem; }
+}
+
+/* Kartu ketiga membungkus teksnya dalam <div>, jadi span-nya tidak
+   otomatis jadi blok seperti di kartu biasa. */
+.mini-product-name,
+.mini-product-price { display: block; }
+
+
+/* =========================================================
+   24. GUTTER TUNGGAL — SEMUA TEKS SEJAJAR DENGAN LOGO
+   Di pass sebelumnya tiap panel punya padding sendiri
+   (1.75rem / 3rem / 4rem), jadi awal teks tiap section
+   tidak pernah jatuh di garis yang sama. Sekarang semuanya
+   memakai --pad-x, yaitu jarak yang dipakai logo di navbar.
+   ========================================================= */
+
+/* Navbar = sumber garis. Logo mulai di var(--pad-x). */
+.navbar,
+.navbar:not(.navbar-static) {
+    padding-inline: var(--pad-x);
+}
+
+/* Hero: teks mulai di garis yang sama dengan logo */
+.split-hero-text { padding-inline: var(--pad-x); }
+
+/* Statement tengah: garis tepi kiri/kanan ikut gutter */
+.featured-statement { padding-inline: var(--pad-x); }
+
+/* Panel teks kanan (vibe shift, our story) */
+.vibe-content,
+.story-content { padding-inline: var(--pad-x); }
+
+/* Banner CTA merah */
+.cta-content { padding-inline: var(--pad-x); }
+
+/* Teks mengambang di atas foto sudah memakai var(--pad-x),
+   dipertegas di sini supaya tidak tergeser aturan lain. */
+.floating-text,
+.story-floating-text { left: var(--pad-x); }
+
+/* Footer */
+.site-footer { padding-inline: var(--pad-x); }
+
+/* Kartu produk: ini inset kartu, bukan gutter halaman, jadi
+   nilainya lebih kecil — tapi tetap SATU nilai untuk semua
+   kartu supaya nama, deskripsi, dan harga selalu rata. */
+.mini-product { padding: clamp(1.25rem, 2.4vw, 2.25rem); }
+
+.checker-products.has-three .mini-product:nth-child(3) {
+    padding: clamp(1.25rem, 2.4vw, 2.25rem);
+}
+
+/* Blok teks tidak boleh ikut melebar sampai ujung kanan —
+   lebar baca dibatasi, tapi TEPI KIRI tetap di garis gutter. */
+.split-hero-text .hero-text-wrapper,
+.vibe-content > *,
+.story-content > *,
+.cta-content > * {
+    margin-inline-start: 0;
+}
+
+@media (max-width: 1024px) {
+    /* Saat section bertumpuk jadi satu kolom, panel teks
+       mewarisi gutter yang sama persis dengan navbar. */
+    .vibe-content,
+    .story-content,
+    .cta-content,
+    .split-hero-text {
+        padding-inline: var(--pad-x);
+    }
+}
+
+
+/* =========================================================
+   25. REVISI LAYOUT HOMEPAGE (mockup 1.png)
+   - Hero: headline & copy baru, satu tombol saja
+   - Urutan: Hero > Collections > Vibe Shift > Row produk
+     (foto kanan) > Row produk (foto kiri) > Our Story > CTA
+   - Proporsi kolom disamakan dengan mockup
+   ========================================================= */
+
+/* ---------- 25.1 HERO ---------- */
+/* Headline sekarang tiga baris dan baris ketiga paling panjang
+   ("The idea was bigger."), jadi kolom teks perlu lebih lebar. */
+.split-hero-text { max-width: min(100%, 42rem); }
+.split-hero-text .hero-text-wrapper { max-width: 34rem; }
+
+.split-hero .headline {
+    font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+    line-height: 1.14;
+}
+
+.split-hero .description {
+    max-width: 30rem;
+    line-height: 1.65;
+}
+
+/* Scrim dipersempit: di mockup jendela dan lampu di sisi kanan
+   tetap bening, yang tertutup hanya bidang dinding di kiri. */
+.split-hero::after {
+    background: linear-gradient(
+        90deg,
+        rgba(248, 246, 240, 0.96) 0%,
+        rgba(248, 246, 240, 0.93) 24%,
+        rgba(248, 246, 240, 0.58) 34%,
+        rgba(248, 246, 240, 0.14) 43%,
+        rgba(248, 246, 240, 0) 50%
+    );
+}
+
+/* Hanya satu tombol — tidak perlu jarak antar tombol */
+.split-hero .cta-group { gap: 0; }
+
+/* ---------- 25.2 PANEL TEKS ---------- */
+/* Di mockup panel Vibe Shift krem, panel Our Story putih bersih. */
+.vibe-content { background-color: var(--cream); }
+.story-content { background-color: var(--white); }
+
+/* ---------- 25.3 BARIS PRODUK DENGAN FOTO DI KANAN ---------- */
+/* Urutan DOM sudah produk-dulu-foto, jadi desktop otomatis benar.
+   Yang perlu diatur hanya versi tumpuk di layar kecil supaya
+   foto tetap muncul lebih dulu seperti baris lainnya. */
+@media (max-width: 1024px) {
+    .checker-row.image-right { flex-direction: column; }
+    .checker-row.image-right .checker-image { order: 1; }
+    .checker-row.image-right .checker-products { order: 2; }
+}
+
+/* ---------- 25.4 PROPORSI KOLOM (desktop) ---------- */
+@media (min-width: 1025px) {
+    .checker-image { flex: 0 0 50%; }
+    .checker-products { flex: 1 1 50%; }
+
+    .checker-row.image-right { flex-direction: row; }
+
+    /* Foto meja pink mengisi ~61% lebar layar di mockup */
+    .vibe-visual { flex: 0 0 61%; }
+    .vibe-content { flex: 1 1 39%; }
+
+    .story-visual { flex: 0 0 58%; }
+    .story-content { flex: 1 1 42%; }
+}
+
+
+/* ---------- 25.5 PERBAIKAN DRAWER DI LAYAR KECIL ----------
+   Aturan ukuran huruf navbar di §23 punya specificity lebih
+   tinggi daripada aturan drawer di §13, jadi link di dalam
+   drawer sempat ikut mengecil. Dikembalikan ke ukuran sentuh
+   yang benar di sini. */
+@media (max-width: 900px) {
+    .navbar .nav-links a,
+    .navbar:not(.navbar-static) .nav-links a {
+        font-size: 1.1rem;
+        color: var(--text-dark);
+    }
+
+    .navbar:not(.navbar-static) .nav-links a:hover { color: var(--brand-green); }
+}

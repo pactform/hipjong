@@ -1,0 +1,1011 @@
+/* =========================================
+   pages-extra.css
+   Gaya tambahan khusus halaman baru:
+   Contact, 404, Privacy Policy, Terms of Service.
+   File terpisah — style.css & shop.css tidak disentuh.
+========================================= */
+
+/* ---- Contact form ---- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 560px;
+}
+
+.contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem; /* 16px: cegah auto-zoom di iOS */
+    color: var(--text-dark);
+    background-color: var(--cream);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--brand-green);
+    background-color: var(--white);
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+.form-note {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+}
+
+/* ---- Contact info panel (reuses .faq-side-card look) ---- */
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.contact-info-item h4 {
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info-item p,
+.contact-info-item a {
+    font-size: var(--fs-body);
+    color: rgba(248, 246, 240, 0.9);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.contact-info-item a:hover { color: var(--white); text-decoration: underline; }
+
+/* ---- 404 page ---- */
+.error-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: clamp(3rem, 8vw, 6rem) var(--pad-x);
+    background-color: var(--white);
+}
+
+.error-page-inner { max-width: 480px; }
+
+.error-code {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 700;
+    color: var(--brand-green);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.error-page-inner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.85rem;
+}
+
+.error-page-inner p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+
+.error-page-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---- Legal pages (Privacy / Terms) ---- */
+.legal-content .last-updated {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.legal-content ul,
+.legal-content ol {
+    color: var(--text-muted);
+    font-size: var(--fs-body);
+    line-height: 1.85;
+    margin: 0 0 1.25rem 1.25rem;
+}
+
+.legal-content li { margin-bottom: 0.5rem; }
+
+@media (max-width: 600px) {
+    .error-page-actions { flex-direction: column; align-items: stretch; }
+}
+
+/* ---- Product detail page ---- */
+.product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+.product-gallery {
+    border-radius: 0;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+    aspect-ratio: 4 / 3;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info { position: sticky; top: calc(var(--nav-h) + 1.5rem); }
+
+.product-info .eyebrow { margin-bottom: 0.75rem; }
+
+.product-info h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.product-tagline {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+    font-weight: 600;
+    color: var(--brand-red);
+    margin-bottom: 1.5rem;
+}
+
+.product-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin: 1.5rem 0;
+}
+
+.product-features li {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    padding-left: 1.4rem;
+    position: relative;
+}
+
+.product-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--brand-green);
+}
+
+.product-desc {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+}
+
+.qty-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.qty-stepper button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--cream);
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.qty-stepper button:hover { background: var(--cream-deep); }
+
+.qty-stepper input {
+    width: 44px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    appearance: textfield; /* Gunakan versi standar ini sebagai pengganti -moz-appearance */
+}
+
+/* Tambahkan baris di bawah ini untuk menyembunyikan panah di Chrome, Safari, dan Edge */
+.qty-stepper input::-webkit-outer-spin-button,
+.qty-stepper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-to-cart-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.add-to-cart-row .btn {
+    border: none;
+    cursor: pointer;
+}
+
+.cart-confirm {
+    margin-top: 1rem;
+    font-size: var(--fs-small);
+    color: var(--brand-green);
+    display: none;
+}
+
+.cart-confirm.visible { display: block; }
+
+.product-not-found {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .product-detail { grid-template-columns: minmax(0, 1fr); }
+    .product-info { position: static; }
+}
+
+/* ---- Cart page ---- */
+.cart-page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+.cart-items { display: flex; flex-direction: column; }
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr) auto auto;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-row img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 0;
+    background-color: var(--cream-deep);
+}
+
+.cart-row-name {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.35rem;
+}
+
+.cart-row-price {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+}
+
+.cart-row-remove {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    text-decoration: underline;
+    font-size: var(--fs-small);
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.cart-row-remove:hover { color: var(--brand-red); }
+
+.cart-summary {
+    background-color: var(--cream);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    position: sticky;
+    top: calc(var(--nav-h) + 1.5rem);
+}
+
+.cart-summary h2 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    color: var(--text-dark);
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.cart-summary-row.total {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0.5rem;
+}
+
+.cart-summary .btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-empty {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    text-align: left;
+    max-width: 480px;
+}
+
+.cart-empty p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+    .cart-page-layout { grid-template-columns: minmax(0, 1fr); }
+    .cart-summary { position: static; }
+}
+
+@media (max-width: 480px) {
+    .cart-row { grid-template-columns: 60px minmax(0, 1fr); }
+    .cart-row img { width: 60px; height: 60px; }
+    .cart-row-remove, .cart-row > div:nth-child(3) { grid-column: 2; }
+}
+
+/* ---- Picture-dominant tweak: product page ----
+   No copy changes — just a slightly larger gallery and a more
+   compact description so the photo leads. */
+@media (min-width: 901px) {
+    .product-detail {
+        grid-template-columns: minmax(0, 1.3fr) minmax(280px, 380px);
+    }
+}
+
+.product-desc {
+    font-size: var(--fs-small);
+    line-height: 1.7;
+}
+
+.product-tagline {
+    font-size: var(--fs-small);
+}
+
+/* =========================================
+   More creative photo layouts (mosaic / overlap)
+   Reuses existing tokens; no new fonts or colors.
+========================================= */
+
+/* Asymmetric mosaic: one tall photo + two stacked smaller ones */
+.photo-mosaic {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    margin: clamp(2.5rem, 6vw, 4rem) 0;
+    height: clamp(320px, 46vw, 460px);
+}
+
+.photo-mosaic .mosaic-tile {
+    border-radius: 0;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+.photo-mosaic .mosaic-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.photo-mosaic .mosaic-tile:hover img { transform: scale(1.06); }
+
+.photo-mosaic .mosaic-main { grid-row: 1 / 3; grid-column: 1; }
+.photo-mosaic .mosaic-top { grid-row: 1; grid-column: 2; }
+.photo-mosaic .mosaic-bottom { grid-row: 2; grid-column: 2; }
+
+@media (max-width: 700px) {
+    .photo-mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+    .photo-mosaic .mosaic-main { grid-row: 1; grid-column: 1 / 3; aspect-ratio: 16/10; }
+    .photo-mosaic .mosaic-top { grid-row: 2; grid-column: 1; aspect-ratio: 1/1; }
+    .photo-mosaic .mosaic-bottom { grid-row: 2; grid-column: 2; aspect-ratio: 1/1; }
+}
+
+/* Overlapping duo: a smaller image offset on top of a larger one,
+   for a scrapbook / editorial feel where a text column sits beside it */
+.photo-overlap {
+    position: relative;
+    margin: clamp(2rem, 5vw, 3rem) auto;
+    max-width: 520px;
+}
+
+.photo-overlap .overlap-back {
+    border-radius: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: var(--cream-deep);
+}
+
+.photo-overlap .overlap-front {
+    position: absolute;
+    width: 52%;
+    aspect-ratio: 1 / 1;
+    right: -6%;
+    bottom: -10%;
+    border-radius: 0;
+    overflow: hidden;
+    border: 6px solid var(--white);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+    background-color: var(--cream-deep);
+}
+
+.photo-overlap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .photo-overlap { max-width: 360px; }
+}
+
+/* Small circular thumbnail accents — used to add a picture next to a
+   short line of copy instead of a wall of text */
+.thumb-inline {
+    display: inline-flex;
+    width: 2.4em;
+    height: 2.4em;
+    border-radius: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    background-color: var(--cream-deep);
+}
+
+.thumb-inline img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Step photo used on How It Works: a small square thumbnail sitting
+   beside each step marker so the timeline reads as picture-led */
+.step-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--cream-deep);
+}
+
+.step-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* =========================================================
+   FULL-BLEED SQUARE MEDIA + RESPONSIVE PASS
+   ---------------------------------------------------------
+   Aturan terakhir yang berlaku di semua halaman (file ini
+   dimuat paling akhir). Tujuan:
+   1. Semua foto = sudut siku, tanpa border-radius sama sekali.
+   2. Semua blok foto = full width (menembus padding section),
+      tanpa jarak antar foto.
+   3. Penyesuaian presisi untuk desktop, tablet, half view,
+      dan HP — tanpa mengubah teks/markup halaman.
+========================================================= */
+
+/* ---------- 1. SUDUT SIKU UNTUK SEMUA FOTO ---------- */
+img,
+picture,
+video,
+.card-image-wrapper,
+.card-image-wrapper img,
+.photo-band,
+.photo-band img,
+.photo-duo .photo-tile,
+.photo-trio .photo-tile,
+.photo-mosaic .mosaic-tile,
+.photo-overlap .overlap-back,
+.photo-overlap .overlap-front,
+.photo-strip a,
+.product-gallery,
+.product-gallery img,
+.cart-row img,
+.step-thumb,
+.thumb-inline,
+.mini-product-img,
+.mini-product-img img,
+.checker-image img,
+.split-hero-visual img,
+.vibe-image,
+.story-image,
+.cta-image,
+.avatars img,
+#product-thumbs button,
+#product-thumbs img,
+.hj-related-card,
+.hj-related-card img,
+.hj-search-item img {
+    border-radius: 0;
+}
+
+/* Foto selalu mengisi kotaknya penuh — tidak ada sisa ruang
+   di tepi yang membuat sudut terlihat "membulat". */
+.card-image-wrapper img,
+.photo-band img,
+.photo-duo img,
+.photo-trio img,
+.photo-mosaic .mosaic-tile img,
+.photo-overlap img,
+.mini-product-img img,
+.checker-image img,
+.product-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- 2. BLOK FOTO JADI FULL WIDTH ----------
+   Blok di bawah ini berada di dalam .page-content yang punya
+   padding horizontal var(--pad-x). Margin negatif sebesar
+   padding itu membuatnya menempel ke tepi layar — persis,
+   tanpa menimbulkan scroll horizontal. */
+.page-content > .photo-mosaic,
+.page-content > .photo-duo,
+.page-content > .photo-trio,
+.page-content > .photo-overlap {
+    margin-inline: calc(var(--pad-x) * -1);
+    width: auto;
+    max-width: none;
+    gap: 0;
+}
+
+/* Jarak antar foto dihilangkan supaya menyatu jadi satu bidang */
+.photo-mosaic,
+.photo-duo,
+.photo-trio,
+.photo-strip {
+    gap: 0;
+}
+
+.photo-strip {
+    padding-inline: 0;
+}
+
+/* Jarak vertikal blok foto dibuat seragam */
+.page-content > .photo-mosaic,
+.page-content > .photo-duo,
+.page-content > .photo-trio,
+.page-content > .photo-overlap {
+    margin-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+/* ---------- 3. PHOTO BAND (pembuka halaman) ---------- */
+.photo-band {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+/* ---------- 4. PHOTO OVERLAP → SPLIT FULL WIDTH ----------
+   Versi lama memakai foto kecil yang menumpuk (punya border
+   putih + bayangan + sudut membulat). Sekarang jadi dua bidang
+   foto sejajar, rapat, siku, dan selebar layar. */
+.photo-overlap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    height: clamp(280px, 42vw, 520px);
+}
+
+.photo-overlap .overlap-back,
+.photo-overlap .overlap-front {
+    position: static;
+    width: 100%;
+    height: 100%;
+    inset: auto;
+    aspect-ratio: auto;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+}
+
+/* ---------- 5. FOTO PENUH DI SECTION HOMEPAGE ---------- */
+.split-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.checker-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- 6. THUMBNAIL KECIL (tetap siku) ---------- */
+.step-thumb,
+.thumb-inline,
+.cart-row img,
+#product-thumbs button,
+.hj-search-item img {
+    overflow: hidden;
+}
+
+/* =========================================================
+   RESPONSIVE — DESKTOP → TABLET → HALF VIEW → HP
+   Urutan menurun supaya aturan yang lebih sempit selalu menang.
+========================================================= */
+
+/* ---- ≥1025px: desktop penuh ---- */
+@media (min-width: 1025px) {
+    .photo-band { aspect-ratio: 21 / 8; }
+    .photo-mosaic { height: clamp(360px, 40vw, 520px); }
+}
+
+/* ---- 901–1024px: tablet lanskap & half view lebar ---- */
+@media (max-width: 1024px) {
+    .photo-band { aspect-ratio: 16 / 7; }
+    .photo-mosaic { height: clamp(320px, 46vw, 460px); }
+    .photo-overlap { height: clamp(260px, 44vw, 420px); }
+    .product-detail { gap: clamp(1.75rem, 4vw, 2.5rem); }
+}
+
+/* ---- ≤900px: tablet portrait ---- */
+@media (max-width: 900px) {
+    .photo-band { aspect-ratio: 16 / 9; }
+
+    /* Foto produk ikut full width di layar sempit */
+    .product-detail .product-gallery {
+        margin-inline: calc(var(--pad-x) * -1);
+        width: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Baris checkerboard: tinggi ikut lebar layar,
+       bukan vh yang meleset saat address bar HP muncul/hilang. */
+    .checker-image { height: clamp(240px, 58vw, 460px); }
+
+    .split-hero-visual { height: clamp(260px, 62vw, 480px); }
+}
+
+/* ---- ≤768px: HP lanskap, tablet sempit, half view ---- */
+@media (max-width: 768px) {
+    .photo-band { aspect-ratio: 3 / 2; }
+    .photo-mosaic { height: auto; }
+    .photo-overlap { height: clamp(240px, 56vw, 380px); }
+
+    /* Timeline How It Works: thumbnail naik ke atas teks
+       supaya tidak menekan lebar paragraf. */
+    .timeline .step-item { gap: 1rem; }
+    .step-thumb { width: 52px; height: 52px; }
+
+    /* Galeri produk & ringkasan keranjang jadi satu kolom penuh */
+    .cart-page-layout { gap: 2rem; }
+}
+
+/* ---- ≤700px: blok foto bertumpuk, tetap rapat & full width ---- */
+@media (max-width: 700px) {
+    .photo-mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        height: auto;
+    }
+    .photo-mosaic .mosaic-main { aspect-ratio: 3 / 2; }
+    .photo-mosaic .mosaic-top,
+    .photo-mosaic .mosaic-bottom { aspect-ratio: 1 / 1; }
+
+    .photo-duo { grid-template-columns: 1fr; gap: 0; }
+    .photo-duo .photo-tile { aspect-ratio: 3 / 2; }
+
+    .photo-overlap {
+        grid-template-columns: 1fr 1fr;
+        height: clamp(200px, 50vw, 300px);
+    }
+}
+
+/* ---- ≤600px: HP portrait ---- */
+@media (max-width: 600px) {
+    .photo-band { aspect-ratio: 4 / 3; }
+
+    .photo-trio { grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .photo-trio .photo-tile { aspect-ratio: 1 / 1; }
+
+    /* Detail produk: tombol & stepper tidak pecah dua baris */
+    .add-to-cart-row { gap: 0.6rem; }
+    .add-to-cart-row .btn { flex: 1 1 100%; }
+
+    .contact-form { max-width: none; }
+    .contact-form .btn { align-self: stretch; width: 100%; }
+}
+
+/* ---- ≤480px: HP kecil ---- */
+@media (max-width: 480px) {
+    .photo-mosaic {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .photo-mosaic .mosaic-main,
+    .photo-mosaic .mosaic-top,
+    .photo-mosaic .mosaic-bottom {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    .photo-overlap { grid-template-columns: 1fr; height: auto; }
+    .photo-overlap .overlap-back,
+    .photo-overlap .overlap-front { aspect-ratio: 3 / 2; height: auto; }
+
+    .photo-trio { grid-template-columns: 1fr 1fr; }
+    .photo-trio .photo-tile:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
+
+    .cart-row { gap: 0.9rem; }
+    .qty-stepper button { width: 36px; height: 36px; }
+    .qty-stepper input { width: 40px; height: 36px; }
+}
+
+/* ---- Layar pendek / HP dimiringkan ---- */
+@media (max-height: 520px) and (orientation: landscape) {
+    .photo-band { aspect-ratio: 21 / 8; }
+    .split-hero-visual { height: clamp(200px, 40vh, 320px); }
+}
+
+.photo-band {
+    margin-inline: var(--pad-x);
+    margin-bottom: 3rem;        
+    width: auto;                 
+    background-color: transparent;
+}
+
+.photo-band img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-color: var(--cream-deep);
+}
+
+/* Blok foto di dalam .page-content kembali sejajar dengan
+   teks di atas & di bawahnya (margin negatif dibatalkan). */
+.page-content > .photo-mosaic,
+.page-content > .photo-duo,
+.page-content > .photo-trio,
+.page-content > .photo-overlap {
+    margin-inline: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Foto full-bleed di homepage (hero split, checkerboard,
+   vibe shift, our story, CTA) sengaja DIBIARKAN menempel ke
+   tepi layar — bentuknya memang bidang penuh, bukan foto
+   yang berdiri di dalam kolom teks. */
+
+/* ---------- 2. NAVBAR IKUT LEBAR KONTEN ----------
+   Di layar sangat lebar, .page-hero & .page-content dibatasi
+   1720px dan ditengahkan, sementara navbar tetap selebar layar
+   — itulah yang membuat logo tidak sebaris dengan judul & foto.
+   Navbar diberi padding yang sama besarnya supaya satu garis. */
+@media (min-width: 1800px) {
+    .navbar {
+        padding-inline: calc((100% - 1720px) / 2 + var(--pad-x));
+    }
+
+    .photo-band {
+        max-width: 1720px;
+        margin-inline: auto;
+    }
+}
+
+/* ---------- 3. TIMELINE HOW IT WORKS: 2 + 2 + 1 ---------- */
+.timeline {
+    --tl-gap: clamp(1.5rem, 3vw, 3rem);
+    max-width: 1040px;
+    margin-inline: auto;
+    margin-bottom: clamp(3rem, 6vw, 5rem); 
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--tl-gap);
+    row-gap: 0;
+}
+
+.timeline .step-item {
+    align-items: center;
+    gap: clamp(0.9rem, 2vw, 1.5rem);
+    padding-block: clamp(1.25rem, 3vw, 1.9rem);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Aturan lama mematikan padding bawah item terakhir — di tata
+   letak baru item itu perlu ruang yang sama seperti lainnya. */
+.timeline .step-item:last-child {
+    padding-bottom: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+/* Baris ketiga: satu item, selebar satu kolom, di tengah */
+.timeline .step-item:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--tl-gap) / 2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Garis penghubung vertikal tidak relevan lagi di tata letak
+   dua kolom — dimatikan supaya tidak menggantung. */
+.timeline .step-connector { display: none; }
+
+.timeline .step-text { padding-top: 0; }
+
+/* Tablet & half view: dua kolom masih muat, jarak dirapatkan */
+@media (max-width: 1024px) {
+    .timeline { max-width: 100%; }
+}
+
+/* HP & half view sempit: satu kolom, semua item selebar penuh */
+@media (max-width: 768px) {
+    .timeline {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .timeline .step-item:nth-child(5) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+}
+/* ---- Memaksa Section Philosophy Benar-benar ke Tengah Layar & Melebar ---- */
+.page-content > .content-block:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    /* INI KUNCINYA: Membuka paksa batas sempit dari style.css bawaan */
+    max-width: 100% !important; 
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(2rem, 6vw, 5rem); /* Jarak jauh antar ikon */
+    width: 100%;
+    max-width: 1200px; /* Batas renggang maksimal antar ke-4 ikon */
+    margin: 3rem auto 0;
+}
+
+.principle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsif untuk Tablet (2 Baris) */
+@media (max-width: 900px) {
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
+/* Responsif untuk HP (1 Baris) */
+@media (max-width: 600px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.timeline {
+    max-width: 1240px !important;
+}
+
+.step-thumb {
+    width: 86px !important; 
+    height: 86px !important; 
+}
+
+.step-dot {
+    width: clamp(60px, 8vw, 76px) !important;
+    height: clamp(60px, 8vw, 76px) !important;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem) !important;
+}
+
+.timeline .step-item {
+    gap: clamp(1.5rem, 3vw, 2.5rem) !important; 
+}
+
+.timeline .step-text h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem) !important;
+}
+
+.timeline .step-text p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem) !important;
+}
+
+@media (max-width: 768px) {
+    .step-thumb { 
+        width: 68px !important; 
+        height: 68px !important; 
+    }
+}
