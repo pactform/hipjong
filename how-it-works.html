@@ -9,7 +9,11 @@
     <title>How It Works - HIPJONG</title>
 
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" href="favicon.ico?v=3" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png?v=3">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 
 
     <meta property="og:type" content="website">
@@ -31,18 +35,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages-extra.css">
     <link rel="stylesheet" href="pages-redesign.css">
+    <link rel="stylesheet" href="logo-loader.css">
+    <script src="loader.js"></script>
     <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+<!-- Page loader -->
+<div class="page-loader" role="status" aria-live="polite">
+    <span class="visually-hidden">Loading&hellip;</span>
+    <div class="page-loader-inner">
+        <svg class="pl-mark" viewBox="0 0 630 632" aria-hidden="true" focusable="false">
+            <g transform="translate(315 316) rotate(45)">
+                <rect class="pl-ring" x="-194" y="-194" width="388" height="388" rx="60" pathLength="1" fill="none" stroke="#3FE0D0" stroke-width="52"/>
+                <rect class="pl-core" x="-55" y="-55" width="110" height="110" rx="20" fill="#FF4FA3"/>
+            </g>
+            <circle class="pl-dot pl-dot-1" cx="74" cy="75" r="74" fill="#4A2E2A"/>
+            <circle class="pl-dot pl-dot-2" cx="556" cy="75" r="74" fill="#FF4FA3"/>
+            <circle class="pl-dot pl-dot-3" cx="556" cy="557" r="74" fill="#3FE0D0"/>
+            <circle class="pl-dot pl-dot-4" cx="74" cy="557" r="74" fill="#FFD84D"/>
+        </svg>
+        <p class="pl-tagline">Game nights, elevated.</p>
+    </div>
+</div>
 <header class="navbar">
             <a href="index.html" class="logo" aria-label="HIPJONG - beranda">
-                <div class="logo-icon" aria-hidden="true">
-                    <span class="box red"></span>
-                    <span class="box green"></span>
-                    <span class="box blue"></span>
-                    <span class="box empty"></span>
-                </div>
-                <span class="logo-text">HIPJONG</span>
+                <img class="logo-img" src="hipjong-logo-light.png" alt="HIPJONG" width="1000" height="299">
             </a>
 
             <nav class="nav-links" id="primary-nav" aria-label="Menu utama">
@@ -191,7 +208,7 @@
 
         <div class="footer-top reveal-group">
             <div class="footer-column brand-col reveal">
-                <h3 class="footer-logo">HIPJONG</h3>
+                <h3 class="footer-logo"><img class="footer-logo-img" src="hipjong-logo.png" alt="HIPJONG" width="1000" height="299" loading="lazy"></h3>
                 <p>Game nights, elevated.<br>Mahjong just got hipper.</p>
                 <p>Modern design + smart tech furniture<br>for contemporary gatherings.<br>Style. Play. Gather. Effortlessly.</p>
             </div>
