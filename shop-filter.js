@@ -45,13 +45,21 @@
         // Label chip di UI tidak selalu sama persis dengan nama category di data,
         // jadi dipetakan di sini:
         // - "Pool Tables" (chip) -> "billiard tables" (category data)
-        // - "Other Tables" (chip) -> semua category selain mahjong/billiard/poker
+        // - "Foosball Table" (chip) -> "foosball tables" (category data)
+        // - "Texas Hold'em Poker Tables" -> kategori baru, kosong dulu sampai ada produk khusus
+        // - "Other Tables" (chip) -> semua category selain kategori-kategori bernama di bawah
         var chipToCategories = {
             'mahjong tables': ['mahjong tables'],
             'pool tables': ['billiard tables'],
-            'poker tables': ['poker tables']
+            'poker tables': ['poker tables'],
+            "texas hold'em poker tables": ["texas hold'em poker tables"],
+            'roulette tables': ['roulette tables'],
+            'foosball table': ['foosball tables']
         };
-        var namedCategories = ['mahjong tables', 'billiard tables', 'poker tables'];
+        var namedCategories = [
+            'mahjong tables', 'billiard tables', 'poker tables',
+            "texas hold'em poker tables", 'roulette tables', 'foosball tables'
+        ];
 
         function applyFilter(chip) {
             var label = chip.textContent.trim().toLowerCase();
@@ -87,7 +95,7 @@
             mahjong: 'mahjong tables',
             poker: 'poker tables',
             billiard: 'pool tables',
-            foosball: 'other tables'
+            foosball: 'foosball table'
         };
         var catParam = new URLSearchParams(window.location.search).get('cat');
         var targetLabel = catParam ? catMap[catParam.toLowerCase()] : null;

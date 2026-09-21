@@ -77,7 +77,7 @@ window.HIPJONG_PRODUCTS = [
         tagline: "More ways to gather.",
         price: 1699,
         priceLabel: "$1,699",
-        category: "All Tables", // Kategori fallback jika tidak ada chip spesifik
+        category: "Roulette Tables",
         primaryImg: "roulette table.png",
         hoverImg: "roulette hover.png",
         description: "Roulette and more ways to bring everyone around the table in style.",
