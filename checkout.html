@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Checkout — HIPJONG.">
+    <meta name="theme-color" content="#F8F6F0">
+    <meta name="robots" content="noindex">
+    <title>Checkout - HIPJONG</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages-extra.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <style>
+        /* Page-specific styles for the checkout flow. Uses the same design
+           tokens (--brand-green, --brand-red, --text-dark, --border-color,
+           --cream-deep, --font-display) already defined in style.css. */
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+            align-items: start;
+        }
+        @media (max-width: 860px) {
+            .checkout-layout { grid-template-columns: 1fr; }
+        }
+        .checkout-panel {
+            background: #fff;
+            border: 1px solid var(--border-color, #D6D2CA);
+            border-radius: 4px;
+            padding: clamp(1.5rem, 3vw, 2.25rem);
+        }
+        .checkout-panel h2 {
+            font-family: var(--font-display, inherit);
+            font-size: clamp(1.15rem, 2vw, 1.4rem);
+            font-weight: 500;
+            color: var(--text-dark, #221A15);
+            margin-bottom: .35rem;
+        }
+        .checkout-panel .panel-sub {
+            color: var(--text-muted, #8a8378);
+            font-size: .9rem;
+            margin-bottom: 1.5rem;
+        }
+        .co-field { margin-bottom: 1.2rem; }
+        .co-field label {
+            display: block;
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--text-dark, #221A15);
+            margin-bottom: .4rem;
+        }
+        .co-field input[type="text"],
+        .co-field input[type="tel"],
+        .co-field input[type="email"],
+        .co-field textarea {
+            width: 100%;
+            font: inherit;
+            font-size: .95rem;
+            padding: .7rem .85rem;
+            border: 1px solid var(--border-color, #D6D2CA);
+            border-radius: 4px;
+            background: var(--cream-deep, #F8F6F0);
+            color: var(--text-dark, #221A15);
+        }
+        .co-field textarea { resize: vertical; min-height: 80px; }
+        .co-field .co-hint { font-size: .78rem; color: var(--text-muted, #8a8378); margin-top: .35rem; }
+        .co-field-error { color: var(--brand-red, #AF3E2B); font-size: .78rem; margin-top: .35rem; display: none; }
+        .co-field.has-error input,
+        .co-field.has-error textarea { border-color: var(--brand-red, #AF3E2B); }
+        .co-field.has-error .co-field-error { display: block; }
+
+        .co-method-toggle { display: flex; gap: .75rem; margin-bottom: 1.2rem; }
+        .co-method-option {
+            flex: 1;
+            border: 1px solid var(--border-color, #D6D2CA);
+            border-radius: 4px;
+            padding: .85rem 1rem;
+            cursor: pointer;
+            position: relative;
+        }
+        .co-method-option input { position: absolute; top: .9rem; left: 1rem; }
+        .co-method-option span.label {
+            display: block;
+            padding-left: 1.5rem;
+            font-weight: 600;
+            font-size: .9rem;
+            color: var(--text-dark, #221A15);
+        }
+        .co-method-option span.desc {
+            display: block;
+            padding-left: 1.5rem;
+            font-size: .78rem;
+            color: var(--text-muted, #8a8378);
+            margin-top: .15rem;
+        }
+        .co-method-option.is-active {
+            border-color: var(--brand-green, #204C39);
+            background: rgba(32, 76, 57, 0.04);
+        }
+
+        /* Order summary card (used on the details step, sticky on desktop) */
+        .order-summary-card { position: sticky; top: 1.5rem; }
+        .order-summary-card .summary-item {
+            display: flex;
+            gap: .75rem;
+            padding: .75rem 0;
+            border-bottom: 1px solid var(--border-color, #D6D2CA);
+        }
+        .order-summary-card .summary-item img {
+            width: 52px; height: 52px; object-fit: cover; border-radius: 4px;
+            background: var(--cream-deep, #E6E1D8); flex-shrink: 0;
+        }
+        .order-summary-card .summary-item .name { font-size: .88rem; font-weight: 600; color: var(--text-dark, #221A15); }
+        .order-summary-card .summary-item .meta { font-size: .8rem; color: var(--text-muted, #8a8378); margin-top: .15rem; }
+        .order-summary-card .summary-item .line-total { margin-left: auto; font-size: .85rem; font-weight: 600; color: var(--text-dark, #221A15); white-space: nowrap; }
+        .order-summary-card .summary-row {
+            display: flex; justify-content: space-between; padding: .5rem 0; font-size: .9rem; color: var(--text-dark, #221A15);
+        }
+        .order-summary-card .summary-row.total { font-weight: 700; font-size: 1.05rem; border-top: 1px solid var(--border-color, #D6D2CA); margin-top: .5rem; padding-top: .85rem; }
+
+        /* Step 2 — Review */
+        .order-id-banner {
+            text-align: center;
+            margin-bottom: 1.75rem;
+        }
+        .order-id-banner .badge {
+            display: inline-block;
+            font-family: var(--font-display, inherit);
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--brand-green, #204C39);
+            background: rgba(32, 76, 57, 0.08);
+            border: 1px solid rgba(32, 76, 57, 0.25);
+            border-radius: 999px;
+            padding: .3rem 1rem;
+            margin-top: .35rem;
+        }
+        .wa-preview-wrap {
+            border: 1px solid var(--border-color, #D6D2CA);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        .wa-preview-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            background: #25D366;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: .6rem .9rem;
+        }
+        .wa-preview-head .ready-tag {
+            background: rgba(255,255,255,.2);
+            border-radius: 999px;
+            padding: .15rem .65rem;
+            font-size: .72rem;
+            font-weight: 600;
+        }
+        .wa-preview-body {
+            background: #ECE5DD;
+            padding: 1rem 1.1rem;
+            max-height: 420px;
+            overflow-y: auto;
+        }
+        .wa-bubble {
+            background: #fff;
+            border-radius: 6px;
+            padding: .9rem 1rem;
+            font-size: .85rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #111;
+        }
+
+        .co-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border: none;
+        }
+        .btn-whatsapp:hover { background: #1EBE5A; }
+
+        /* Step 3 — Success */
+        .success-wrap { max-width: 480px; margin: 0 auto; text-align: center; }
+        .success-check {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(32, 76, 57, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+        .success-wrap h1 {
+            font-family: var(--font-display, inherit);
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            color: var(--text-dark, #221A15);
+            margin-bottom: .5rem;
+        }
+        .success-wrap .status-tag {
+            display: inline-block;
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--brand-green, #204C39);
+            background: rgba(32, 76, 57, 0.08);
+            border-radius: 999px;
+            padding: .25rem .8rem;
+            margin-bottom: 1rem;
+        }
+        .success-wrap .order-id-badge {
+            display: inline-block;
+            font-family: var(--font-display, inherit);
+            font-weight: 600;
+            background: var(--cream-deep, #F0ECE3);
+            border: 1px solid var(--border-color, #D6D2CA);
+            border-radius: 6px;
+            padding: .5rem 1.1rem;
+            margin: 1rem 0 1.75rem;
+            color: var(--text-dark, #221A15);
+        }
+        .step { display: none; }
+        .step.is-active { display: block; }
+        [data-toast] {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--text-dark, #221A15);
+            color: #fff;
+            padding: .65rem 1.2rem;
+            border-radius: 999px;
+            font-size: .85rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s ease, transform .2s ease;
+            z-index: 999;
+        }
+        [data-toast].is-visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+<header class="navbar">
+            <a href="index.html" class="logo" aria-label="HIPJONG - home">
+                <div class="logo-icon" aria-hidden="true">
+                    <span class="box red"></span>
+                    <span class="box green"></span>
+                    <span class="box blue"></span>
+                    <span class="box empty"></span>
+                </div>
+                <span class="logo-text">HIPJONG</span>
+            </a>
+
+            <nav class="nav-links" id="primary-nav" aria-label="Main menu">
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="faq.html">FAQ</a>
+
+                <div class="nav-drawer-extra">
+                    <a href="cart.html" class="drawer-cart">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        Cart (0)
+                    </a>
+                    <button type="button" class="drawer-search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Search
+                    </button>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-link">Cart (0)</a>
+                <a href="shop.html" class="btn btn-primary nav-cta">
+                    <span class="cta-label-full">Shop Our Tables &rarr;</span>
+                    <span class="cta-label-short">Shop &rarr;</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+    <main id="main">
+    <section class="page-hero">
+        <div class="page-hero-inner reveal-group">
+            <span class="eyebrow reveal">CHECKOUT</span>
+            <h1 class="reveal" id="hero-title">Your Details</h1>
+        </div>
+    </section>
+
+    <section class="page-content">
+
+        <!-- Empty cart state -->
+        <div id="checkout-empty" class="cart-empty" style="display:none;">
+            <p>Your cart is empty right now.</p>
+            <a href="shop.html" class="btn btn-primary">Browse Tables &rarr;</a>
+        </div>
+
+        <!-- STEP 1: Customer details -->
+        <div id="step-details" class="step">
+            <div class="checkout-layout">
+                <div class="checkout-panel">
+                    <h2>Your Details</h2>
+                    <p class="panel-sub">Tell us where to send your order, then review it before it goes to WhatsApp.</p>
+
+                    <form id="details-form" novalidate>
+                        <div class="co-field" id="field-name">
+                            <label for="cust-name">Full Name</label>
+                            <input type="text" id="cust-name" name="name" autocomplete="name" placeholder="e.g. Jamie Carter">
+                            <p class="co-field-error">Please enter your full name.</p>
+                        </div>
+
+                        <div class="co-field" id="field-whatsapp">
+                            <label for="cust-whatsapp">WhatsApp Number</label>
+                            <input type="tel" id="cust-whatsapp" name="whatsapp" autocomplete="tel" placeholder="e.g. +1 415 555 0132">
+                            <p class="co-hint">Include your country code, e.g. +1 for the US.</p>
+                            <p class="co-field-error">Please enter a valid WhatsApp number.</p>
+                        </div>
+
+                        <div class="co-field" id="field-email">
+                            <label for="cust-email">Email</label>
+                            <input type="email" id="cust-email" name="email" autocomplete="email" placeholder="e.g. jamie@email.com">
+                            <p class="co-field-error">Please enter a valid email address.</p>
+                        </div>
+
+                        <div class="co-field">
+                            <label>Delivery Method</label>
+                            <div class="co-method-toggle">
+                                <label class="co-method-option is-active" id="opt-delivery">
+                                    <input type="radio" name="method" value="delivery" checked>
+                                    <span class="label">Delivery</span>
+                                    <span class="desc">Shipped to your address</span>
+                                </label>
+                                <label class="co-method-option" id="opt-pickup">
+                                    <input type="radio" name="method" value="pickup">
+                                    <span class="label">Self Pickup</span>
+                                    <span class="desc">Collect from our workshop</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="co-field" id="field-address">
+                            <label for="cust-address">Delivery Address</label>
+                            <textarea id="cust-address" name="address" placeholder="Street address, city, state/province, postal code, country"></textarea>
+                            <p class="co-field-error">Please enter your delivery address.</p>
+                        </div>
+
+                        <div class="co-field">
+                            <label for="cust-notes">Order Notes <span style="font-weight:400; color: var(--text-muted, #8a8378);">(optional)</span></label>
+                            <textarea id="cust-notes" name="notes" placeholder="Anything else we should know? (colorway, assembly help, delivery timing, etc.)"></textarea>
+                        </div>
+
+                        <div class="co-actions">
+                            <button type="submit" class="btn btn-primary">Review Order &rarr;</button>
+                            <a href="cart.html" class="btn btn-outline" style="color: var(--text-dark); border-color: var(--border-color);">Back to Cart</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-panel order-summary-card">
+                    <h2 style="margin-bottom: 1rem;">Order Summary</h2>
+                    <div id="summary-items-1"></div>
+                    <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal-1">$0</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="summary-total-1">$0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 2: Review & send -->
+        <div id="step-review" class="step">
+            <div class="order-id-banner">
+                <p style="color: var(--text-muted, #8a8378); font-size: .92rem;">Your order has been recorded as <strong id="order-id-text">#ORD-...</strong>.<br>Click the green button below to send it straight to WhatsApp.</p>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="checkout-panel" style="padding: 0; overflow: hidden;">
+                    <div class="wa-preview-wrap" style="border: none; margin-bottom: 0;">
+                        <div class="wa-preview-head">
+                            <span>&#9993; Auto-Formatted WhatsApp Message</span>
+                            <span class="ready-tag">Ready to Send</span>
+                        </div>
+                        <div class="wa-preview-body">
+                            <div class="wa-bubble" id="wa-message-preview"></div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem clamp(1.5rem, 3vw, 2.25rem);">
+                        <div class="co-actions" style="margin-top: 0;">
+                            <button type="button" id="send-wa-btn" class="btn btn-whatsapp">
+                                &#9993; Send Order to WhatsApp &rarr;
+                            </button>
+                            <button type="button" id="edit-details-btn" class="btn btn-outline" style="color: var(--text-dark); border-color: var(--border-color);">Edit Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-panel order-summary-card">
+                    <h2 style="margin-bottom: 1rem;">Order Summary</h2>
+                    <div class="summary-row"><span>Name</span><span id="review-name">—</span></div>
+                    <div class="summary-row"><span>Method</span><span id="review-method">—</span></div>
+                    <div class="summary-row" id="review-address-row"><span>Address</span><span id="review-address" style="text-align:right; max-width: 60%;">—</span></div>
+                    <div id="summary-items-2" style="margin-top: .5rem;"></div>
+                    <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal-2">$0</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="summary-total-2">$0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3: Success -->
+        <div id="step-success" class="step">
+            <div class="success-wrap">
+                <div class="success-check">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#204C39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="status-tag">Status: Sent to WhatsApp</span>
+                <h1>Order Created!</h1>
+                <p style="color: var(--text-muted, #8a8378);">Thank you, <strong id="success-name" style="color: var(--text-dark, #221A15);">—</strong>. Your order has been saved with the number:</p>
+                <div class="order-id-badge" id="success-order-id">#ORD-...</div>
+                <div class="co-actions" style="justify-content: center;">
+                    <button type="button" id="resend-wa-btn" class="btn btn-whatsapp">&#9993; Resend to WhatsApp</button>
+                    <button type="button" id="copy-details-btn" class="btn btn-outline" style="color: var(--text-dark); border-color: var(--border-color);">Copy Details</button>
+                </div>
+                <p style="margin-top: 2rem;"><a href="shop.html" style="color: var(--brand-green, #204C39);">&larr; Continue Browsing</a></p>
+            </div>
+        </div>
+
+    </section>
+    </main>
+
+    <div data-toast id="toast"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-decoration left-deco" aria-hidden="true">
+            <img src="batu-mahjong-kiri.png" alt="" loading="lazy">
+        </div>
+        <div class="footer-decoration right-deco" aria-hidden="true">
+            <img src="batu-mahjong-kanan.png" alt="" loading="lazy">
+        </div>
+
+        <div class="footer-top reveal-group">
+            <div class="footer-column brand-col reveal">
+                <h3 class="footer-logo">HIPJONG</h3>
+                <p>Game nights, elevated.<br>Mahjong just got hipper.</p>
+                <p>Modern design + smart tech furniture<br>for contemporary gatherings.<br>Style. Play. Gather. Effortlessly.</p>
+            </div>
+
+            <div class="footer-column links-col reveal">
+                <h4 class="footer-heading">Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Tables</a></li>
+                    <li><a href="shop.html?cat=mahjong">Mahjong Tables</a></li>
+                    <li><a href="shop.html?cat=poker">Poker Tables</a></li>
+                    <li><a href="shop.html?cat=billiard">Pool Tables</a></li>
+                    <li><a href="shop.html?cat=foosball">Other Tables</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column links-col reveal">
+                <h4 class="footer-heading">About</h4>
+                <ul>
+                    <li><a href="index.html#our-story">Our Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column newsletter-col reveal">
+                <h4 class="footer-heading">Join the vibe</h4>
+                <p>Get the latest drops, stories, and exclusive offers.</p>
+
+                <form class="newsletter-form">
+                    <label class="visually-hidden" for="newsletter-email">Email address</label>
+                    <input id="newsletter-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path><path d="M15 4v12a5 5 0 0 1-5 5"></path><path d="M15 8a4 4 0 0 0 4 4"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.3 2.7 8.1 6.6 9.5-.1-.8-.2-2.1.04-3l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2 1 .5 1.7 1.4 1.7 1.7 0 3-1.8 3-4.4 0-2.3-1.7-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.1.1.1.1.2.1.3-.1.4-.3 1.1-.3 1.2-.1.1-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6.1 0 3.6-2.3 6.5-5.4 6.5-1 0-2-.5-2.4-1.2l-.7 2.5c-.2.9-.9 2-1.3 2.7A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hipjong. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <span class="legal-tagline">Game nights, elevated. Mahjong just got hipper.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="product-data.js"></script>
+    <script src="cart.js"></script>
+    <script src="search.js" defer></script>
+    <script src="forms.js" defer></script>
+    <script>
+        (function () {
+            /* TODO: replace with your real WhatsApp Business number.
+               International format, no "+", spaces or dashes
+               (e.g. US +1 415-555-0132 -> "14155550132"). */
+            var WHATSAPP_NUMBER = '6285669027270';
+
+            function money(n) {
+                return '$' + n.toLocaleString('en-US');
+            }
+
+            function getCartWithProducts() {
+                var cart = HipjongCart.getCart();
+                var rows = [];
+                var subtotal = 0;
+                cart.forEach(function (item) {
+                    var product = HIPJONG_PRODUCTS.find(function (p) { return p.id === item.id; });
+                    if (!product) return;
+                    subtotal += product.price * item.qty;
+                    rows.push({ product: product, item: item });
+                });
+                return { rows: rows, subtotal: subtotal };
+            }
+
+            function renderSummaryItems(container, rows) {
+                container.innerHTML = '';
+                rows.forEach(function (row) {
+                    var el = document.createElement('div');
+                    el.className = 'summary-item';
+                    el.innerHTML =
+                        '<img src="' + row.product.primaryImg + '" alt="' + row.product.name + '">' +
+                        '<div>' +
+                            '<div class="name">' + row.product.name + '</div>' +
+                            '<div class="meta">Qty ' + row.item.qty + ' &times; ' + row.product.priceLabel + '</div>' +
+                        '</div>' +
+                        '<div class="line-total">' + money(row.product.price * row.item.qty) + '</div>';
+                    container.appendChild(el);
+                });
+            }
+
+            /* ---------- Order number ---------- */
+            function generateOrderNumber() {
+                var d = new Date();
+                var y = d.getFullYear();
+                var m = String(d.getMonth() + 1).padStart(2, '0');
+                var day = String(d.getDate()).padStart(2, '0');
+                var dateStr = '' + y + m + day;
+                var seqKey = 'hipjong_order_seq_' + dateStr;
+                var seq = parseInt(localStorage.getItem(seqKey) || '0', 10) + 1;
+                try { localStorage.setItem(seqKey, String(seq)); } catch (e) { /* ignore */ }
+                return '#ORD-' + dateStr + '-' + String(seq).padStart(4, '0');
+            }
+
+            /* ---------- WhatsApp message formatting ---------- */
+            function buildMessage(orderNumber, customer, data) {
+                var lines = [];
+                lines.push('Hello *HIPJONG*, I would like to place an order:');
+                lines.push('');
+                lines.push('*ORDER DETAILS*');
+                lines.push('------------------------------');
+
+                data.rows.forEach(function (row, i) {
+                    lines.push((i + 1) + '. *' + row.product.name + '*');
+                    lines.push('   Qty: ' + row.item.qty + ' x ' + row.product.priceLabel);
+                    lines.push('   Subtotal: ' + money(row.product.price * row.item.qty));
+                    lines.push('------------------------------');
+                });
+
+                lines.push('*Subtotal:* ' + money(data.subtotal));
+                lines.push('*TOTAL ORDER:* ' + money(data.subtotal));
+                lines.push('');
+                lines.push('*CUSTOMER DETAILS*');
+                lines.push('Name: ' + customer.name);
+                lines.push('WhatsApp: ' + customer.whatsapp);
+                lines.push('Email: ' + customer.email);
+                lines.push('Delivery Method: ' + (customer.method === 'pickup' ? 'Self Pickup' : 'Delivery'));
+                if (customer.method === 'delivery') {
+                    lines.push('Delivery Address: ' + customer.address);
+                } else {
+                    lines.push('Pickup: at our workshop (we will confirm the address & time)');
+                }
+                if (customer.notes) {
+                    lines.push('Notes: ' + customer.notes);
+                }
+                lines.push('');
+                lines.push('*Order No.:* ' + orderNumber);
+                lines.push('');
+                lines.push('Please process this order. Thank you! \uD83D\uDE4F');
+
+                return lines.join('\n');
+            }
+
+            /* ---------- Toast ---------- */
+            var toastEl = document.getElementById('toast');
+            var toastTimer = null;
+            function showToast(text) {
+                toastEl.textContent = text;
+                toastEl.classList.add('is-visible');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () { toastEl.classList.remove('is-visible'); }, 2200);
+            }
+
+            /* ---------- Step switching ---------- */
+            var heroTitle = document.getElementById('hero-title');
+            function showStep(id) {
+                document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('is-active'); });
+                document.getElementById(id).classList.add('is-active');
+                if (id === 'step-details') heroTitle.textContent = 'Your Details';
+                if (id === 'step-review') heroTitle.textContent = 'Review & Send to WhatsApp';
+                if (id === 'step-success') heroTitle.textContent = 'Order Created';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            /* ---------- Field validation ---------- */
+            function setError(fieldId, show) {
+                document.getElementById(fieldId).classList.toggle('has-error', !!show);
+            }
+
+            function validate(customer) {
+                var ok = true;
+                if (!customer.name) { setError('field-name', true); ok = false; } else { setError('field-name', false); }
+
+                var waDigits = customer.whatsapp.replace(/[^0-9]/g, '');
+                if (waDigits.length < 8) { setError('field-whatsapp', true); ok = false; } else { setError('field-whatsapp', false); }
+
+                var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customer.email);
+                if (!emailOk) { setError('field-email', true); ok = false; } else { setError('field-email', false); }
+
+                if (customer.method === 'delivery' && !customer.address) { setError('field-address', true); ok = false; } else { setError('field-address', false); }
+
+                return ok;
+            }
+
+            /* ---------- Init ---------- */
+            var cartData = getCartWithProducts();
+            if (!cartData.rows.length) {
+                document.getElementById('checkout-empty').style.display = 'block';
+                document.querySelector('.page-hero-inner').style.display = 'none';
+                return;
+            }
+
+            renderSummaryItems(document.getElementById('summary-items-1'), cartData.rows);
+            document.getElementById('summary-subtotal-1').textContent = money(cartData.subtotal);
+            document.getElementById('summary-total-1').textContent = money(cartData.subtotal);
+
+            showStep('step-details');
+
+            /* Delivery / Pickup toggle */
+            var addressField = document.getElementById('field-address');
+            var methodRadios = document.querySelectorAll('input[name="method"]');
+            var optDelivery = document.getElementById('opt-delivery');
+            var optPickup = document.getElementById('opt-pickup');
+
+            function syncMethodUI() {
+                var method = document.querySelector('input[name="method"]:checked').value;
+                optDelivery.classList.toggle('is-active', method === 'delivery');
+                optPickup.classList.toggle('is-active', method === 'pickup');
+                addressField.style.display = method === 'delivery' ? 'block' : 'none';
+            }
+            methodRadios.forEach(function (r) { r.addEventListener('change', syncMethodUI); });
+            syncMethodUI();
+
+            var orderNumber = null;
+            var lastMessage = '';
+            var lastCustomer = null;
+
+            document.getElementById('details-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var customer = {
+                    name: document.getElementById('cust-name').value.trim(),
+                    whatsapp: document.getElementById('cust-whatsapp').value.trim(),
+                    email: document.getElementById('cust-email').value.trim(),
+                    method: document.querySelector('input[name="method"]:checked').value,
+                    address: document.getElementById('cust-address').value.trim(),
+                    notes: document.getElementById('cust-notes').value.trim()
+                };
+
+                if (!validate(customer)) return;
+
+                /* Cart may have changed while filling the form (rare, but re-read to be safe) */
+                cartData = getCartWithProducts();
+                if (!cartData.rows.length) {
+                    document.getElementById('checkout-empty').style.display = 'block';
+                    document.getElementById('step-details').classList.remove('is-active');
+                    return;
+                }
+
+                if (!orderNumber) orderNumber = generateOrderNumber();
+                lastCustomer = customer;
+                lastMessage = buildMessage(orderNumber, customer, cartData);
+
+                document.getElementById('order-id-text').textContent = orderNumber;
+                document.getElementById('wa-message-preview').textContent = lastMessage;
+
+                document.getElementById('review-name').textContent = customer.name;
+                document.getElementById('review-method').textContent = customer.method === 'pickup' ? 'Self Pickup' : 'Delivery';
+                var addrRow = document.getElementById('review-address-row');
+                if (customer.method === 'delivery') {
+                    addrRow.style.display = 'flex';
+                    document.getElementById('review-address').textContent = customer.address;
+                } else {
+                    addrRow.style.display = 'none';
+                }
+
+                renderSummaryItems(document.getElementById('summary-items-2'), cartData.rows);
+                document.getElementById('summary-subtotal-2').textContent = money(cartData.subtotal);
+                document.getElementById('summary-total-2').textContent = money(cartData.subtotal);
+
+                showStep('step-review');
+            });
+
+            document.getElementById('edit-details-btn').addEventListener('click', function () {
+                showStep('step-details');
+            });
+
+            function openWhatsApp() {
+                var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lastMessage);
+                window.open(waUrl, '_blank');
+            }
+
+            document.getElementById('send-wa-btn').addEventListener('click', function () {
+                openWhatsApp();
+
+                /* Persist the order so it can be re-sent / copied after this page reloads */
+                try {
+                    localStorage.setItem('hipjong_last_order', JSON.stringify({
+                        orderNumber: orderNumber,
+                        message: lastMessage,
+                        customerName: lastCustomer.name
+                    }));
+                } catch (e) { /* ignore */ }
+
+                document.getElementById('success-order-id').textContent = orderNumber;
+                document.getElementById('success-name').textContent = lastCustomer.name;
+
+                /* Order placed — clear the cart */
+                try { HipjongCart.getCart().slice().forEach(function (i) { HipjongCart.removeFromCart(i.id); }); } catch (e) { /* ignore */ }
+
+                showStep('step-success');
+            });
+
+            document.getElementById('resend-wa-btn').addEventListener('click', function () {
+                openWhatsApp();
+            });
+
+            document.getElementById('copy-details-btn').addEventListener('click', function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(lastMessage).then(function () {
+                        showToast('Order details copied!');
+                    }).catch(function () {
+                        showToast('Could not copy — please copy manually.');
+                    });
+                } else {
+                    showToast('Copy not supported on this browser.');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -753,8 +753,8 @@ body.nav-open {
    tanpa perlu media query terpisah. */
 .collections-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
-    gap: clamp(1.75rem, 3vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: clamp(1.25rem, 2.2vw, 1.75rem);
 }
 
 .collection-card {
@@ -2033,41 +2033,17 @@ body.nav-open {
     .cta-visual { flex: 1.35 1 0%; }
 }
 
-/* ---- Collections: turn the equal-weight card grid into an
-   asymmetric bento grid — one large picture tile plus four smaller
-   ones, mirroring the reference layout. Copy inside each card is
-   unchanged, only its container's size/shape changes. ---- */
+/* ---- Collections: semua card ukurannya seragam dan lebih kecil,
+   gambar lebih lebar ke samping (landscape). ---- */
 @media (min-width: 901px) {
     .collections-grid {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: minmax(170px, auto);
         gap: clamp(1.25rem, 2vw, 1.75rem);
-    }
-
-    .collection-card {
-        height: 100%;
-    }
-
-    .collection-card:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .collection-card:nth-child(1) .card-image-wrapper {
-        aspect-ratio: auto;
-        flex: 1 1 auto;
-        min-height: 0;
     }
 }
 
 @media (min-width: 1300px) {
-    .collections-grid { grid-auto-rows: minmax(200px, auto); }
-}
-
-/* Bigger tile's image should still crop nicely at any of the taller
-   heights produced by the grid-row span above */
-.collection-card:nth-child(1) .card-image-wrapper img {
-    height: 100%;
+    .collections-grid { grid-template-columns: repeat(5, 1fr); }
 }
 
 /* ---- Photo strip: a row of small square picture tiles, no copy,
@@ -2317,12 +2293,11 @@ body.nav-open {
     padding: 0.85rem 1.75rem;
     border-radius: 4px;
 }
-
-/* ---- Checkerboard image + mini-product rows ---- */
 .checker-row {
     display: flex;
     width: 100%;
     min-height: 70vh;
+    border-bottom: 1px solid var(--border-color); 
 }
 
 .checker-image {

@@ -95,8 +95,8 @@
                     <span>Total</span>
                     <span id="cart-total">$0</span>
                 </div>
-                <button type="button" id="checkout-btn" class="btn btn-primary">Checkout &rarr;</button>
-                <p class="form-note" style="margin-top: 1rem;">Checkout isn't wired to a payment processor yet — connect Stripe, Shopify, or your provider of choice here.</p>
+                <a href="checkout.html" id="checkout-btn" class="btn btn-primary">Checkout &rarr;</a>
+                <p class="form-note" style="margin-top: 1rem;">On the next page you'll fill in your details, review your order, and send it straight to WhatsApp. No payment is taken here yet.</p>
             </div>
         </div>
     </section>
@@ -124,8 +124,8 @@
                     <li><a href="shop.html">All Tables</a></li>
                     <li><a href="shop.html?cat=mahjong">Mahjong Tables</a></li>
                     <li><a href="shop.html?cat=poker">Poker Tables</a></li>
-                    <li><a href="shop.html?cat=billiard">Billiard Table</a></li>
-                    <li><a href="shop.html?cat=foosball">Foosball Table</a></li>
+                    <li><a href="shop.html?cat=billiard">Pool Tables</a></li>
+                    <li><a href="shop.html?cat=foosball">Other Tables</a></li>
                 </ul>
             </div>
 
@@ -266,10 +266,6 @@
                     });
                 });
             }
-
-            document.getElementById('checkout-btn').addEventListener('click', function () {
-                alert('Checkout belum terhubung ke payment gateway. Sambungkan Stripe/provider pilihanmu di sini.');
-            });
 
             render();
         })();

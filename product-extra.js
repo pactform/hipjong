@@ -1,12 +1,3 @@
-/* =========================================================
-   product-extra.js — addition untuk product.html:
-   1. Thumbnail galeri (foto utama + foto hover yang sudah ada
-      di product-data.js, sebelumnya tidak dipakai sama sekali).
-   2. Produk terkait (kategori sama), diambil dari HIPJONG_PRODUCTS.
-
-   Tidak mengubah <script> inline yang sudah ada di product.html —
-   file ini berjalan terpisah setelahnya.
-   ========================================================= */
 (function () {
     'use strict';
 
@@ -59,7 +50,7 @@
         if (product.hoverImg && product.hoverImg !== product.primaryImg) {
             images.push(product.hoverImg);
         }
-        if (images.length < 2) return; // tidak perlu thumbnail kalau cuma 1 foto
+        if (images.length < 2) return; 
 
         wrap.innerHTML = '';
         images.forEach(function (src, i) {
@@ -81,16 +72,27 @@
         var container = document.getElementById('related-products');
         if (!container || typeof window.HIPJONG_PRODUCTS === 'undefined') return;
 
+
         var related = window.HIPJONG_PRODUCTS.filter(function (p) {
             return p.id !== product.id && p.category === product.category;
         });
 
-        // Kalau tidak ada produk lain di kategori yang sama, tampilkan produk lain apa saja (maks 3)
         if (!related.length) {
             related = window.HIPJONG_PRODUCTS.filter(function (p) { return p.id !== product.id; });
         }
+        
+
         related = related.slice(0, 3);
-        if (!related.length) return;
+
+
+        var isRouletteIncluded = related.some(function(p) { return p.id === "5"; });
+        var rouletteTable = null;
+        if (product.id !== "5" && !isRouletteIncluded) {
+            rouletteTable = window.HIPJONG_PRODUCTS.find(function (p) { return p.id === "5"; });
+        }
+
+        if (!related.length && !rouletteTable) return;
+
 
         var html = '<h2>You might also like</h2><div class="hj-related-grid">';
         related.forEach(function (p) {
@@ -102,6 +104,20 @@
                 + '</div></a>';
         });
         html += '</div>';
+
+
+        if (rouletteTable) {
+            html += '<h3 style="font-family: var(--font-display, inherit); font-size: 1.1rem; font-weight: 500; color: var(--text-muted, #595552); margin: 2.5rem 0 1.25rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color, #D6D2CA);">Or try something different</h3>';
+            html += '<div class="hj-related-grid">';
+            html += '<a class="hj-related-card" style="border-color: var(--brand-green, #204C39); border-width: 2px;" href="product.html?id=' + encodeURIComponent(rouletteTable.id) + '">'
+                + '<img src="' + escapeHtml(rouletteTable.primaryImg) + '" alt="' + escapeHtml(rouletteTable.name) + '">'
+                + '<div class="hj-related-card-body">'
+                + '<div class="hj-related-card-name">' + escapeHtml(rouletteTable.name) + '</div>'
+                + '<div class="hj-related-card-price">' + escapeHtml(rouletteTable.priceLabel) + '</div>'
+                + '</div></a>';
+            html += '</div>';
+        }
+
         container.innerHTML = html;
     }
 
