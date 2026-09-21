@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages-extra.css">
+    <link rel="stylesheet" href="pages-redesign.css">
 
     <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -86,57 +87,77 @@
             </button>
         </header>
 
-    <main id="main">
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-inner reveal-group">
-            <span class="eyebrow reveal">FAQ</span>
-            <h1 class="reveal">Questions, answered.</h1>
-            <p class="reveal">Everything you need to know about HIPJONG tables — design, tech, delivery, and care.</p>
+    <main id="main" class="rd">
+    <!-- Hero -->
+    <section class="rd-hero">
+        <div class="rd-wrap">
+            <div class="rd-hero-grid reveal-group">
+                <div class="reveal">
+                    <span class="eyebrow">FAQ</span>
+                    <h1 class="rd-title">Good questions. <span class="rd-hl">Straight answers.</span></h1>
+                </div>
+                <p class="rd-lead reveal">Everything you need to know about HIPJONG tables &mdash; design, tech, delivery, and care.</p>
+            </div>
         </div>
     </section>
 
-    <!-- FAQ Two-column -->
-    <section class="page-content">
-        <div class="faq-layout">
-            <div class="faq-side faq-side-card reveal">
-                <h2>Still curious?</h2>
-                <p>Can't find what you're looking for? We're happy to help.</p>
-                <a href="contact.html" class="btn btn-white">Contact Us &rarr;</a>
-            </div>
+    <!-- Daftar pertanyaan dikelompokkan per topik -->
+    <section class="rd-section rd-section--white">
+        <div class="rd-wrap">
+            <div class="rd-faq">
+                <aside class="rd-faq-aside">
+                    <h2>Still curious?</h2>
+                    <p>Can&rsquo;t find your answer? Ask us directly &mdash; we&rsquo;re happy to help.</p>
+                    <a href="contact.html" class="btn-white">Contact Us &rarr;</a>
+                </aside>
 
-            <div class="faq-list reveal-group">
-                <details class="faq-item reveal">
-                    <summary>Can this actually look like a normal dining table?</summary>
-                    <p>Yes — all tech is fully hidden. It's sleek furniture, 100% of the time.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Is the automatic tech noisy?</summary>
-                    <p>Nope. Ultra-quiet shuffling, engineered for home living rooms.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Is setup complicated?</summary>
-                    <p>Zero complexity. Plug-and-play, no assembly headaches.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Does it fit standard mahjong tiles?</summary>
-                    <p>Yes — universal sizing fits every standard tile set.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Do you offer warranty on the smart components?</summary>
-                    <p>2-year full warranty on every mechanical &amp; tech system.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Can I design a totally custom table?</summary>
-                    <p>Absolutely — our Atelier series is fully bespoke.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Where do you deliver?</summary>
-                    <p>Fast, insured delivery, nationwide.</p>
-                </details>
+                <div class="rd-faq-list">
+                <div class="rd-group">
+                    <h2 class="rd-group-title">Design &amp; tech</h2>
+                    <div class="rd-qs">
+                        <details class="rd-q">
+                            <summary>Can it pass as a regular dining table?</summary>
+                            <p>Better than regular. Every bit of tech is concealed, so what your guests see is beautiful furniture and nothing else.</p>
+                        </details>
+                        <details class="rd-q">
+                            <summary>Is the automatic shuffling loud?</summary>
+                            <p>Ultra-quiet by design. It&rsquo;s engineered for living rooms, so the game never drowns out the gossip.</p>
+                        </details>
+                        <details class="rd-q">
+                            <summary>Will my tiles fit?</summary>
+                            <p>Yes. Universal sizing works with every standard mahjong tile set, so bring the one you already love.</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="rd-group">
+                    <h2 class="rd-group-title">Setup &amp; care</h2>
+                    <div class="rd-qs">
+                        <details class="rd-q">
+                            <summary>How hard is setup?</summary>
+                            <p>Plug in and play. That&rsquo;s the whole setup &mdash; no assembly headaches.</p>
+                        </details>
+                        <details class="rd-q">
+                            <summary>Are the smart components covered?</summary>
+                            <p>Fully. Every mechanical and tech system comes with a 2-year full warranty.</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="rd-group">
+                    <h2 class="rd-group-title">Custom &amp; delivery</h2>
+                    <div class="rd-qs">
+                        <details class="rd-q">
+                            <summary>Can I design something totally custom?</summary>
+                            <p>Absolutely. Our Atelier series is fully bespoke, built around your table.</p>
+                        </details>
+                        <details class="rd-q">
+                            <summary>Where do you deliver?</summary>
+                            <p>Nationwide. Fast, insured, and handled with care from our door to yours.</p>
+                        </details>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-
     </section>
     </main>
 

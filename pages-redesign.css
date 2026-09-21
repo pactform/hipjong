@@ -1,0 +1,586 @@
+/* =========================================================
+   pages-redesign.css  (v2 — disamakan dengan index.html)
+   Desain ulang ISI halaman About, How It Works, dan FAQ.
+   ---------------------------------------------------------
+   - Dimuat SETELAH pages-extra.css, hanya di 3 halaman itu.
+   - Semua selector memakai awalan .rd- supaya tidak menabrak
+     style.css, pages-extra.css, maupun halaman lain.
+   - Navbar & footer tidak disentuh sama sekali.
+   - Font, ukuran huruf, dan warna DIAMBIL dari index:
+       * hero    : italic 700 hijau + frasa merah   (.split-hero .headline)
+       * judul   : 500, -0.02em, kata sorot 600      (.collections-title)
+       * eyebrow : 700, kapital, tracking 2–2.4px    (.eyebrow)
+       * isi     : muted, clamp(0.8rem…0.88rem)      (.story-content p)
+       * banner  : terakota + tombol putih           (.cta-banner)
+   - Semua foto/blok siku (tanpa border-radius), sesuai gaya situs.
+========================================================= */
+
+/* ---------- 0. TOKEN & DASAR ---------- */
+.rd {
+    /* Warna: semuanya dari :root di style.css */
+    --rd-ink: var(--text-dark);
+    --rd-muted: var(--text-muted);
+    --rd-cream: var(--cream);
+    --rd-white: var(--white);
+    --rd-line: var(--border-color);
+    --rd-card-line: #E8E4DC;            /* garis kartu, sama dengan .mini-product */
+    --rd-green: var(--brand-green);
+    --rd-red: var(--brand-red);
+    --rd-blue: #2D5B7C;                 /* biru kata sorot di index */
+    --rd-tile-blue: var(--tile-blue);
+    --rd-terracotta: var(--terracotta);
+    --rd-coral: #FF9A7A;                /* aksen di atas latar gelap (sama dengan index) */
+
+    /* Ukuran huruf: angka clamp() persis dari index */
+    --rd-fs-hero: clamp(2.1rem, 3.8vw, 3.2rem);       /* h1 hero       */
+    --rd-fs-h2: clamp(1.7rem, 3.4vw, 2.6rem);         /* judul section */
+    --rd-fs-h3: clamp(1.15rem, 1.7vw, 1.45rem);       /* judul kecil   */
+    --rd-fs-body: clamp(0.8rem, 0.95vw, 0.88rem);     /* isi           */
+    --rd-fs-lead: clamp(0.82rem, 1vw, 0.92rem);       /* deskripsi hero */
+    --rd-fs-eyebrow: clamp(0.62rem, 0.8vw, 0.7rem);   /* eyebrow       */
+    --rd-fs-cta: clamp(1.4rem, 2.6vw, 2rem);          /* judul banner  */
+
+    /* Jarak vertikal antar section */
+    --rd-gap: clamp(2.75rem, 6vw, 5rem);
+
+    --rd-ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+
+    font-family: var(--font-body);
+    color: var(--rd-ink);
+}
+
+.rd,
+.rd *,
+.rd *::before,
+.rd *::after {
+    box-sizing: border-box;
+}
+
+.rd h1,
+.rd h2,
+.rd h3,
+.rd p,
+.rd ul,
+.rd ol {
+    margin: 0;
+    padding: 0;
+}
+
+.rd ul,
+.rd ol {
+    list-style: none;
+}
+
+.rd h1,
+.rd h2,
+.rd h3 {
+    font-family: var(--font-display);
+    color: inherit;
+}
+
+/* Lebar konten = lebar navbar, jadi logo, judul, dan foto sebaris */
+.rd-wrap {
+    width: 100%;
+    max-width: 1720px;
+    margin-inline: auto;
+    padding-inline: var(--pad-x);
+}
+
+/* Eyebrow: pakai .eyebrow bawaan style.css, hanya ukurannya
+   disamakan dengan eyebrow di section index. */
+.rd .eyebrow {
+    font-size: var(--rd-fs-eyebrow);
+    letter-spacing: 2.4px;
+    margin-bottom: 0.9rem;
+}
+
+/* Kata sorot di judul section (hijau / merah / biru), seperti
+   "every vibe, every crew, every home" di index */
+.rd .hl-green,
+.rd .hl-red,
+.rd .hl-blue {
+    font-weight: 600;
+}
+
+.rd .hl-green { color: var(--rd-green); }
+.rd .hl-red { color: var(--rd-red); }
+.rd .hl-blue { color: var(--rd-blue); }
+
+/* ---------- 1. HERO ---------- */
+.rd-hero {
+    background-color: var(--rd-white);
+    padding: clamp(2.75rem, 6vw, 5rem) 0 clamp(2.25rem, 4vw, 4rem);
+    border-bottom: 1px solid var(--rd-line);
+}
+
+.rd-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 2rem clamp(2rem, 6vw, 6rem);
+    align-items: end;
+}
+
+.rd .rd-hero .eyebrow {
+    color: var(--rd-green);
+    font-size: clamp(0.64rem, 0.85vw, 0.72rem);
+    letter-spacing: 2px;
+    margin-bottom: clamp(1rem, 2vw, 1.4rem);
+}
+
+/* Sama dengan .split-hero .headline di index */
+.rd .rd-title {
+    max-width: 24ch;
+    font-size: var(--rd-fs-hero);
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    color: var(--rd-green);
+    text-wrap: balance;
+}
+
+.rd .rd-title .rd-hl {
+    display: block;
+    color: var(--rd-red);
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Sama dengan .split-hero .description di index */
+.rd .rd-lead {
+    max-width: 30rem;
+    font-size: var(--rd-fs-lead);
+    line-height: 1.65;
+    color: var(--rd-muted);
+}
+
+/* ---------- 2. FOTO (siku, selebar kolom konten) ---------- */
+.rd-figure {
+    background-color: var(--rd-white);
+    padding: var(--rd-gap) 0 0;
+}
+
+.rd-figure-frame {
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    background-color: var(--cream-deep);
+    border-radius: 0;
+}
+
+.rd-figure-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.rd-figure-cap {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 0 var(--rd-gap);
+    font-size: var(--fs-small);
+    color: var(--rd-muted);
+}
+
+/* ---------- 3. BAND WARNA (manifesto & banner ajakan) ---------- */
+.rd-band {
+    padding: clamp(3rem, 7vw, 5.5rem) 0;
+    color: var(--rd-cream);
+}
+
+.rd-band--green { background-color: var(--rd-green); }
+.rd-band--terracotta { background-color: var(--rd-terracotta); }
+
+/* Ukuran & warna sama dengan .statement-band di style.css */
+.rd-kicker {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 500;
+    color: rgba(248, 246, 240, 0.85);
+}
+
+.rd-band-text {
+    max-width: 34ch;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4.4vw, 2.75rem);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    color: var(--rd-cream);
+    text-wrap: balance;
+}
+
+/* Frasa yang dicoret di manifesto: koral seperti <strong> di index */
+.rd-strike {
+    font-weight: 600;
+    color: var(--rd-coral);
+    text-decoration: line-through;
+    text-decoration-thickness: 0.07em;
+}
+
+/* Banner terakota: sama dengan .cta-banner di index */
+.rd .rd-band--terracotta .eyebrow {
+    color: rgba(248, 246, 240, 0.85);
+    font-size: clamp(0.6rem, 0.78vw, 0.68rem);
+    margin-bottom: 0.9rem;
+}
+
+.rd .rd-cta-headline {
+    max-width: 24ch;
+    font-size: var(--rd-fs-cta);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    color: var(--rd-cream);
+    margin-bottom: 0.75rem;
+    text-wrap: balance;
+}
+
+.rd .rd-cta-sub {
+    max-width: 34rem;
+    font-size: clamp(0.78rem, 0.92vw, 0.86rem);
+    line-height: 1.5;
+    color: var(--rd-cream);
+    margin-bottom: clamp(1.4rem, 3vw, 2rem);
+}
+
+/* ---------- 4. SECTION UMUM ---------- */
+.rd-section {
+    padding: var(--rd-gap) 0;
+}
+
+.rd-section--cream { background-color: var(--rd-cream); }
+.rd-section--white { background-color: var(--rd-white); }
+
+.rd-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 1.5rem clamp(2rem, 6vw, 6rem);
+    align-items: end;
+    margin-bottom: clamp(2rem, 4.5vw, 3.5rem);
+}
+
+/* Sama dengan .collections-title / .story-headline di index */
+.rd .rd-h2 {
+    max-width: 18ch;
+    font-size: var(--rd-fs-h2);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--rd-ink);
+    text-wrap: balance;
+}
+
+.rd .rd-body {
+    max-width: 34rem;
+    font-size: var(--rd-fs-body);
+    line-height: 1.7;
+    color: var(--rd-muted);
+}
+
+/* ---------- 5. IKON TITIK (motif batu mahjong suit "dots") ---------- */
+.rd-pips {
+    display: block;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    overflow: visible;
+}
+
+.rd-pips .pip-g { color: var(--rd-green); }
+.rd-pips .pip-r { color: var(--rd-red); }
+.rd-pips .pip-b { color: var(--rd-tile-blue); }
+.rd-pips .pip-c { color: var(--rd-cream); }
+
+/* ---------- 6. PILAR ABOUT = EMPAT "BATU" ---------- */
+.rd-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.75rem, 1.4vw, 1.25rem);
+}
+
+.rd-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    aspect-ratio: 3 / 4;
+    padding: clamp(1.1rem, 2.1vw, 1.85rem);
+    background-color: var(--rd-white);
+    border: 1px solid var(--rd-card-line);
+    border-radius: 0;
+    color: var(--rd-ink);
+}
+
+.rd-tile--green { background-color: var(--rd-green); border-color: var(--rd-green); color: var(--rd-cream); }
+.rd-tile--blue { background-color: var(--rd-blue); border-color: var(--rd-blue); color: var(--rd-cream); }
+
+.rd-tile .rd-pips {
+    width: clamp(4.75rem, 8vw, 7.5rem);
+}
+
+.rd .rd-tile h3 {
+    margin-bottom: 0.55rem;
+    font-size: var(--rd-fs-h3);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.rd .rd-tile p {
+    font-size: var(--rd-fs-body);
+    line-height: 1.6;
+    color: var(--rd-muted);
+}
+
+.rd .rd-tile--green p,
+.rd .rd-tile--blue p {
+    color: rgba(248, 246, 240, 0.85);
+}
+
+@media (min-width: 1181px) {
+    .rd .rd-tile p { min-height: calc(3 * 1.6em); }
+}
+
+/* ---------- 7. LANGKAH HOW IT WORKS ---------- */
+.rd-steps {
+    border-top: 1px solid var(--rd-line);
+}
+
+.rd-step {
+    display: grid;
+    grid-template-columns: clamp(3.75rem, 6vw, 5.25rem) minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 0 clamp(1.5rem, 4vw, 4.5rem);
+    align-items: center;
+    padding-block: clamp(1.25rem, 2.6vw, 2.1rem);
+    border-bottom: 1px solid var(--rd-line);
+}
+
+.rd-step-tile {
+    display: block;
+    aspect-ratio: 3 / 4;
+    padding: 8%;
+    background-color: var(--rd-white);
+    border: 1px solid var(--rd-card-line);
+    border-radius: 0;
+}
+
+.rd-step-tile .rd-pips {
+    width: 100%;
+    height: 100%;
+}
+
+.rd .rd-step h3 {
+    font-size: var(--rd-fs-cta);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+.rd .rd-step p {
+    max-width: 34rem;
+    font-size: var(--rd-fs-body);
+    line-height: 1.7;
+    color: var(--rd-muted);
+}
+
+/* ---------- 8. FAQ ---------- */
+.rd-faq {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.7fr);
+    gap: clamp(2.5rem, 6vw, 7rem);
+    align-items: start;
+}
+
+.rd-faq-aside {
+    position: sticky;
+    top: calc(var(--nav-h) + 1.5rem);
+    padding: clamp(1.5rem, 2.6vw, 2.5rem);
+    background-color: var(--rd-green);
+    color: var(--rd-cream);
+}
+
+.rd .rd-faq-aside h2 {
+    margin-bottom: 0.75rem;
+    font-size: var(--rd-fs-cta);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.rd .rd-faq-aside p {
+    margin-bottom: 1.5rem;
+    font-size: var(--rd-fs-body);
+    line-height: 1.65;
+    color: rgba(248, 246, 240, 0.82);
+}
+
+.rd-group + .rd-group {
+    margin-top: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+
+/* Label grup = eyebrow gaya index (kapital, tebal, tracking) */
+.rd .rd-group-title {
+    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: var(--rd-fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: var(--rd-muted);
+}
+
+.rd-qs {
+    border-top: 1px solid var(--rd-line);
+}
+
+.rd-q {
+    border-bottom: 1px solid var(--rd-line);
+}
+
+.rd-q summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: clamp(1rem, 1.9vw, 1.4rem);
+    font-family: var(--font-display);
+    font-size: var(--rd-fs-h3);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.rd-q summary::-webkit-details-marker { display: none; }
+
+.rd-q summary:hover,
+.rd-q[open] summary { color: var(--rd-green); }
+
+/* Tanda plus yang berputar jadi silang saat dibuka */
+.rd-q summary::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 1.25rem;
+    height: 1.25rem;
+    background:
+        linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+        linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat;
+    transition: transform 0.35s var(--rd-ease);
+}
+
+.rd-q[open] summary::after { transform: rotate(45deg); }
+
+.rd .rd-q p {
+    max-width: 52ch;
+    padding: 0 clamp(2.5rem, 8vw, 5rem) clamp(1.1rem, 2.2vw, 1.6rem) 0;
+    font-size: var(--rd-fs-body);
+    line-height: 1.7;
+    color: var(--rd-muted);
+}
+
+/* Jawaban meluncur halus di browser yang mendukung; browser lain
+   tetap membuka-tutup seketika, tanpa masalah. */
+@supports selector(::details-content) {
+    .rd-q { interpolate-size: allow-keywords; }
+
+    .rd-q::details-content {
+        block-size: 0;
+        overflow: clip;
+        transition:
+            block-size 0.4s var(--rd-ease),
+            content-visibility 0.4s allow-discrete;
+    }
+
+    .rd-q[open]::details-content { block-size: auto; }
+}
+
+/* =========================================================
+   RESPONSIVE — desktop → tablet → half view → HP
+   Urutan menurun supaya aturan yang lebih sempit selalu menang.
+========================================================= */
+
+/* ≤1180px: empat batu jadi 2 × 2 */
+@media (max-width: 1180px) {
+    .rd-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .rd-tile { aspect-ratio: 1 / 1; }
+    .rd-tile .rd-pips { width: clamp(4.75rem, 12vw, 7rem); }
+}
+
+/* ≤1024px: tablet lanskap & half view lebar */
+@media (max-width: 1024px) {
+    .rd-figure-frame { aspect-ratio: 16 / 8; }
+}
+
+/* ≤900px: tablet portrait */
+@media (max-width: 900px) {
+    .rd-figure-frame { aspect-ratio: 16 / 9; }
+
+    .rd-hero-grid,
+    .rd-split { grid-template-columns: minmax(0, 1fr); align-items: start; }
+
+    .rd .rd-title,
+    .rd .rd-h2 { max-width: none; }
+
+    .rd-faq { grid-template-columns: minmax(0, 1fr); }
+    .rd-faq-aside { position: static; order: 2; }
+}
+
+/* ≤768px: HP lanskap, tablet sempit, half view */
+@media (max-width: 768px) {
+    .rd-figure-frame { aspect-ratio: 3 / 2; }
+
+    /* Langkah: batu di kiri, judul + teks bertumpuk di kanan */
+    .rd-step {
+        grid-template-columns: clamp(3.25rem, 11vw, 4.25rem) minmax(0, 1fr);
+        grid-template-areas:
+            "tile title"
+            "tile text";
+        align-items: start;
+        gap: 0.4rem clamp(1.1rem, 4vw, 1.75rem);
+    }
+
+    .rd-step-tile { grid-area: tile; }
+    .rd .rd-step h3 { grid-area: title; }
+    .rd .rd-step p { grid-area: text; max-width: none; }
+}
+
+/* ≤600px: HP portrait */
+@media (max-width: 600px) {
+    .rd-figure-frame { aspect-ratio: 4 / 3; }
+
+    .rd-tiles { grid-template-columns: minmax(0, 1fr); }
+    .rd-tile { aspect-ratio: auto; min-height: 17rem; }
+
+    .rd-figure-cap { flex-direction: column; gap: 0.15rem; }
+
+    .rd-band .btn-white,
+    .rd-faq-aside .btn-white { width: 100%; }
+
+    .rd .rd-q p { padding-right: 0; }
+}
+
+/* ≤480px: HP kecil */
+@media (max-width: 480px) {
+    .rd-q summary { gap: 1rem; }
+}
+
+/* Layar pendek / HP dimiringkan */
+@media (max-height: 520px) and (orientation: landscape) {
+    .rd-figure-frame { aspect-ratio: 21 / 8; }
+}
+
+/* Hormati pengguna yang mematikan animasi */
+@media (prefers-reduced-motion: reduce) {
+    .rd-q summary,
+    .rd-q summary::after,
+    .rd-q::details-content {
+        transition: none;
+    }
+}

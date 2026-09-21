@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages-extra.css">
+    <link rel="stylesheet" href="pages-redesign.css">
     <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -84,77 +85,98 @@
             </button>
         </header>
 
-    <main id="main">
+    <main id="main" class="rd">
+    <!-- Simbol titik (dipakai ulang oleh ikon batu di halaman ini) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="rd-pip" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10.25" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
+        </symbol>
+    </svg>
 
-    <section class="page-hero">
-        <div class="page-hero-inner reveal-group">
-            <span class="eyebrow reveal">HOW IT WORKS</span>
-            <h1 class="reveal">Super simple. Super streamlined.</h1>
-            <p class="reveal">Order to game night, in five steps.</p>
+    <!-- Hero -->
+    <section class="rd-hero">
+        <div class="rd-wrap">
+            <div class="rd-hero-grid reveal-group">
+                <div class="reveal">
+                    <span class="eyebrow">HOW IT WORKS</span>
+                    <h1 class="rd-title">Five steps from checkout <span class="rd-hl">to game night.</span></h1>
+                </div>
+                <p class="rd-lead reveal">Pick it. Personalize it. We handle the build, the delivery, and the setup.</p>
+            </div>
         </div>
     </section>
 
-
-    <section class="page-content">
-        <div class="timeline reveal-group">
-            <div class="step-item reveal">
-                <div class="step-marker">
-                    <span class="step-dot dot-red">01</span>
-                    <span class="step-connector"></span>
-                </div>
-                <div class="step-text">
-                    <h3>Pick your vibe</h3>
-                    <p>Everyday, elevated, or fully custom.</p>
-                </div>
-            </div>
-            <div class="step-item reveal">
-                <div class="step-marker">
-                    <span class="step-dot dot-green">02</span>
-                    <span class="step-connector"></span>
-                </div>
-                <div class="step-text">
-                    <h3>Customize your setup</h3>
-                    <p>Finishes and add-ons that match your home.</p>
-                </div>
-            </div>
-            <div class="step-item reveal">
-                <div class="step-marker">
-                    <span class="step-dot dot-blue">03</span>
-                    <span class="step-connector"></span>
-                </div>
-                <div class="step-text">
-                    <h3>Precision build &amp; testing</h3>
-                    <p>Design, tech, and finish — all checked.</p>
-                </div>
-            </div>
-            <div class="step-item reveal">
-                <div class="step-marker">
-                    <span class="step-dot dot-gold">04</span>
-                    <span class="step-connector"></span>
-                </div>
-                <div class="step-text">
-                    <h3>Safe, premium delivery</h3>
-                    <p>White-glove, fully insured.</p>
-                </div>
-            </div>
-            <div class="step-item reveal">
-                <div class="step-marker">
-                    <span class="step-dot dot-red">05</span>
-                </div>
-                <div class="step-text">
-                    <h3>Setup + ongoing support</h3>
-                    <p>Plug, play, gather.</p>
-                </div>
-            </div>
+    <!-- Lima langkah: jumlah titik di batu = nomor langkah -->
+    <section class="rd-section rd-section--cream">
+        <div class="rd-wrap">
+            <ol class="rd-steps reveal-group">
+            <li class="rd-step reveal">
+                <span class="rd-step-tile">
+                    <svg class="rd-pips" viewBox="0 0 60 80" aria-hidden="true" focusable="false">
+                        <use href="#rd-pip" class="pip-r" x="17" y="27" width="26" height="26"/>
+                    </svg>
+                </span>
+                <h3>Choose your table</h3>
+                <p>Everyday, elevated, or fully custom. Start with the one that feels like home.</p>
+            </li>
+            <li class="rd-step reveal">
+                <span class="rd-step-tile">
+                    <svg class="rd-pips" viewBox="0 0 60 80" aria-hidden="true" focusable="false">
+                        <use href="#rd-pip" class="pip-g" x="19" y="10" width="22" height="22"/>
+                        <use href="#rd-pip" class="pip-b" x="19" y="48" width="22" height="22"/>
+                    </svg>
+                </span>
+                <h3>Make it yours</h3>
+                <p>Select the finishes and add-ons that match your space.</p>
+            </li>
+            <li class="rd-step reveal">
+                <span class="rd-step-tile">
+                    <svg class="rd-pips" viewBox="0 0 60 80" aria-hidden="true" focusable="false">
+                        <use href="#rd-pip" class="pip-b" x="6" y="8" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-r" x="21" y="31" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-g" x="36" y="54" width="18" height="18"/>
+                    </svg>
+                </span>
+                <h3>Built and tested</h3>
+                <p>We build every table with precision, then check the design, the tech, and the finish.</p>
+            </li>
+            <li class="rd-step reveal">
+                <span class="rd-step-tile">
+                    <svg class="rd-pips" viewBox="0 0 60 80" aria-hidden="true" focusable="false">
+                        <use href="#rd-pip" class="pip-g" x="8" y="12" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-b" x="34" y="12" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-b" x="8" y="50" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-g" x="34" y="50" width="18" height="18"/>
+                    </svg>
+                </span>
+                <h3>Delivered with care</h3>
+                <p>White-glove, fully insured delivery, all the way to your room.</p>
+            </li>
+            <li class="rd-step reveal">
+                <span class="rd-step-tile">
+                    <svg class="rd-pips" viewBox="0 0 60 80" aria-hidden="true" focusable="false">
+                        <use href="#rd-pip" class="pip-g" x="8" y="12" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-b" x="34" y="12" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-r" x="21" y="31" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-b" x="8" y="50" width="18" height="18"/>
+                        <use href="#rd-pip" class="pip-g" x="34" y="50" width="18" height="18"/>
+                    </svg>
+                </span>
+                <h3>Set up and supported</h3>
+                <p>Plug in, play, gather. Our support stays with you long after the first game.</p>
+            </li>
+            </ol>
         </div>
-        
     </section>
 
-    <section class="statement-band on-green reveal">
-        <div class="statement-inner">
-            <span class="statement-script">That's it. That's the whole process.</span>
-            <p class="statement-text">Ready for a table that pulls double duty?</p>
-            <a href="shop.html" class="btn btn-white">Shop Our Tables &rarr;</a>
+    <!-- Banner ajakan (terakota, seperti di index) -->
+    <section class="rd-band rd-band--terracotta">
+        <div class="rd-wrap reveal-group">
+            <span class="eyebrow reveal">THAT&rsquo;S THE WHOLE PROCESS</span>
+            <h2 class="rd-cta-headline reveal">Ready for a table that pulls double duty?</h2>
+            <p class="rd-cta-sub reveal">Pick yours today, and we&rsquo;ll take it from there.</p>
+            <a href="shop.html" class="btn-white reveal">Shop Our Tables &rarr;</a>
         </div>
     </section>
     </main>
