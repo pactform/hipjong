@@ -7,10 +7,8 @@
     <meta name="theme-color" content="#F8F6F0">
     <title>Shop - HIPJONG</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="HIPJONG">
     <meta property="og:title" content="Shop - HIPJONG">
@@ -18,7 +16,6 @@
     <meta property="og:image" content="https://hipjong.com/og-image.jpg">
     <meta property="og:url" content="https://hipjong.com/shop.html">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Shop - HIPJONG">
     <meta name="twitter:description" content="Browse every HIPJONG mahjong table — modern, smart furniture built for game nights.">
@@ -39,7 +36,6 @@
             overflow: hidden;
         }
         
-        /* Memaksa KEDUA gambar untuk full mengisi container tanpa ruang sisa */
         .card-image-wrapper .primary-img,
         .card-image-wrapper .hover-img {
             width: 100%;
@@ -52,7 +48,6 @@
             display: block;
         }
         
-        /* Gambar hover menimpa tepat di atas gambar utama */
         .card-image-wrapper .hover-img {
             position: absolute;
             top: 0;
@@ -61,12 +56,10 @@
             z-index: 2;
         }
         
-        /* Munculkan gambar hover saat kartu di-hover */
         .collection-card:hover .card-image-wrapper .hover-img {
             opacity: 1;
         }
         
-        /* Efek zoom opsional saat hover */
         .collection-card:hover .card-image-wrapper .primary-img,
         .collection-card:hover .card-image-wrapper .hover-img {
             transform: scale(1.05); 
@@ -127,7 +120,6 @@
     </header>
 
     <main id="main">
-        <!-- Page Hero -->
         <section class="page-hero">
             <div class="page-hero-inner reveal-group">
                 <span class="eyebrow reveal">OUR COLLECTION</span>
@@ -136,7 +128,6 @@
             </div>
         </section>
 
-        <!-- Product Grid -->
         <section class="page-content">
             <div class="filter-row reveal-group">
                 <button class="filter-chip is-active reveal" type="button">All Tables</button>
@@ -147,7 +138,6 @@
             </div>
 
             <div class="collections-grid reveal-group">
-                <!-- Card 1 -->
                 <div class="collection-card reveal-scale">
                     <div class="card-image-wrapper">
                         <img src="majong table new.png" alt="Lorem Table No.1" class="primary-img" loading="lazy" decoding="async">
@@ -163,7 +153,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 2 -->
                 <div class="collection-card reveal-scale">
                     <div class="card-image-wrapper">
                         <img src="billiard table.png" alt="Lorem Table No.2" class="primary-img" loading="lazy" decoding="async">
@@ -179,7 +168,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 3 -->
                 <div class="collection-card reveal-scale">
                     <div class="card-image-wrapper">
                         <img src="poker table.png" alt="Lorem Table No.3" class="primary-img" loading="lazy" decoding="async">
@@ -195,7 +183,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 4 -->
                 <div class="collection-card reveal-scale">
                     <div class="card-image-wrapper">
                         <img src="foosball table.png" alt="Lorem Table No.4" class="primary-img" loading="lazy" decoding="async">
@@ -211,7 +198,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 5 -->
                 <div class="collection-card reveal-scale">
                     <div class="card-image-wrapper">
                         <img src="roulette table.png" alt="Lorem Table No.5" class="primary-img" loading="lazy" decoding="async">
@@ -226,11 +212,23 @@
                         <a href="product.html?id=5" class="card-arrow-btn pink" aria-label="View Lorem Table No.5">&rarr;</a>
                     </div>
                 </div>
+                <div class="collection-card reveal-scale">
+                    <div class="card-image-wrapper">
+                        <img src="roulette table.png" alt="Lorem Table No.5" class="primary-img" loading="lazy" decoding="async">
+                        <img src="roulette hover.png" alt="Lorem Table No.5 Hover" class="hover-img" loading="lazy" decoding="async">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <h3>MONACO ROULETTE TABLE</h3>
+                            <p>More ways to gather.</p>
+                            <span class="card-price">$1,699</span>
+                        </div>
+                        <a href="product.html?id=5" class="card-arrow-btn pink" aria-label="View Lorem Table No.5">&rarr;</a>
+                    </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-decoration left-deco" aria-hidden="true">
             <img src="batu-mahjong-kiri.png" alt="" loading="lazy">

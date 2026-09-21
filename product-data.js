@@ -1,4 +1,4 @@
-const HIPJONG_PRODUCTS = [
+window.HIPJONG_PRODUCTS = [
     {
         id: "1",
         name: "PRISM MAHJONG",
