@@ -1,0 +1,39 @@
+/* =========================================================
+   reveal-fix.css
+   Additive file — loaded AFTER every other stylesheet so it
+   never edits or removes existing rules in style.css.
+
+   Why this exists:
+   style.css has this rule for the collection cards on the
+   homepage (Mahjong / Pool / Poker & Roulette / Other Game
+   Tables):
+
+       .mini-product { transition: opacity 0.2s ease; }
+
+   Those same elements also carry the site's ".reveal" class,
+   which is supposed to animate them in/out on scroll using:
+
+       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                   transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+   Because both rules target the same elements with equal CSS
+   specificity, and the .mini-product rule happens to come
+   later in style.css, its "transition: opacity 0.2s ease"
+   silently REPLACES the .reveal transition entirely — the
+   transform transition disappears completely, and opacity
+   only animates for 0.2s. The result: the card just "pops"
+   into place almost instantly instead of sliding/fading in,
+   which looks like the scroll animation isn't running at all.
+
+   The fix below targets only ".mini-product.reveal" — two
+   classes combined — which is MORE specific than either rule
+   in style.css, so it wins regardless of file order, without
+   touching style.css itself. This restores the normal reveal
+   timing for these cards; every other .mini-product behavior
+   (hover, layout, etc.) is untouched.
+========================================================= */
+
+.mini-product.reveal {
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}

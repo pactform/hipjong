@@ -1780,9 +1780,6 @@ body.nav-open {
         color: var(--text-dark);
     }
 
-    /* Menu button sits on top of the cream drawer panel once open,
-       so it needs to switch back to dark — it only needs to stay
-       light while the drawer is closed and it's over the photo. */
     .navbar:not(.navbar-static) .nav-links a {
         color: var(--text-dark);
     }
@@ -1791,12 +1788,10 @@ body.nav-open {
         background-color: var(--text-dark);
     }
 
-    /* Hindari garis dobel dengan border-top blok Cart/Search */
+
     .nav-links > a:last-of-type { border-bottom: none; }
 
-    /* Cart & search dipindah ke dalam drawer supaya tetap
-       bisa diakses dari HP (sebelumnya di-display:none
-       dan hilang sama sekali). */
+
     .nav-actions .search-btn,
     .nav-actions .cart-link { display: none; }
 
