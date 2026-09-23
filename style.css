@@ -3208,3 +3208,22 @@ body.nav-open {
 
     .navbar:not(.navbar-static) .nav-links a:hover { color: var(--brand-green); }
 }
+
+/* ---------- 25.6 FIX: HERO SCRIM DI MOBILE/TABLET ----------
+   Rule §25.1 (.split-hero::after) tidak dibungkus media query,
+   jadi gradasi horizontal itu ikut menimpa gradasi vertikal
+   dari §23.10 di layar sempit dan membuat foto hero jadi
+   terlihat "berkabut" putih di sisi kiri pada HP. Dikembalikan
+   ke gradasi vertikal (atas bening, bawah krem solid) khusus
+   untuk layar <=1024px, tanpa mengubah aturan lain manapun. */
+@media (max-width: 1024px) {
+    .split-hero::after {
+        background: linear-gradient(
+            180deg,
+            rgba(248, 246, 240, 0) 0%,
+            rgba(248, 246, 240, 0.35) 34%,
+            rgba(248, 246, 240, 0.9) 56%,
+            rgba(248, 246, 240, 0.98) 72%
+        );
+    }
+}
