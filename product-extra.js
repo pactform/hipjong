@@ -52,9 +52,14 @@
         var mainImg = document.getElementById('product-image');
         if (!wrap || !mainImg) return;
 
-        var images = [product.primaryImg];
-        if (product.hoverImg && product.hoverImg !== product.primaryImg) {
-            images.push(product.hoverImg);
+        var images;
+        if (Array.isArray(product.galleryImgs) && product.galleryImgs.length) {
+            images = product.galleryImgs.slice(0, 4);
+        } else {
+            images = [product.primaryImg];
+            if (product.hoverImg && product.hoverImg !== product.primaryImg) {
+                images.push(product.hoverImg);
+            }
         }
 
         var TOTAL_SLOTS = 4;

@@ -23,9 +23,27 @@
     <link rel="stylesheet" href="reveal-fix.css">
     <script src="loader.js"></script>
     <script>document.documentElement.classList.add('js');</script>
+    <style>
+           #product-thumbs {
+               display: flex !important;
+               flex-wrap: wrap;
+               gap: 12px;
+               margin-top: 15px;
+               width: 100%;
+           }
+           #product-thumbs img {
+               border-radius: 8px;
+               transition: all 0.2s ease-in-out;
+               background-color: #f8f8f8;
+           }
+           #product-thumbs img:hover {
+               border-color: #4A2E2A !important;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+           }
+       </style>
 </head>
 <body>
-<!-- Page loader -->
 <div class="page-loader" role="status" aria-live="polite">
     <span class="visually-hidden">Loading&hellip;</span>
     <div class="page-loader-inner">
@@ -238,6 +256,35 @@
             document.getElementById('product-tagline').textContent = product.tagline;
             document.getElementById('product-price').textContent = product.priceLabel;
             document.getElementById('product-desc').textContent = product.description;
+
+            const thumbsContainer = document.getElementById('product-thumbs');
+            thumbsContainer.innerHTML = ''; // Bersihkan kontainer
+
+            
+            const imagesToLoad = product.galleryImgs || [product.primaryImg, product.hoverImg];
+
+            imagesToLoad.forEach(function (imgSrc, index) {
+                if (!imgSrc) return; // Lewati jika gambar kosong
+
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.alt = product.name + ' thumbnail ' + (index + 1);
+                
+                
+                thumb.style.cursor = 'pointer';
+                thumb.style.width = '80px'; // Sesuaikan ukuran dengan CSS Anda
+                thumb.style.height = '80px';
+                thumb.style.objectFit = 'cover';
+                thumb.style.border = '1px solid var(--border-color, #ccc)';
+                thumb.style.marginRight = '10px'; // Spasi antar thumbnail
+
+                
+                thumb.addEventListener('click', function () {
+                    document.getElementById('product-image').src = imgSrc;
+                });
+                
+                thumbsContainer.appendChild(thumb);
+            });
 
             const featuresEl = document.getElementById('product-features');
             product.features.forEach(function (f) {

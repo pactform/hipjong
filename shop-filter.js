@@ -30,13 +30,27 @@
             card.dataset.category = product.category.toLowerCase();
 
             var hasOwnPhoto = seenImages[product.primaryImg] === product.id;
+            var TOTAL_SLOTS = 4;
             var imageHtml;
+
             if (hasOwnPhoto) {
-                imageHtml =
-                    '<img src="' + product.primaryImg + '" alt="' + product.name + '" class="card-photo is-active" loading="lazy" decoding="async">' +
-                    '<img src="' + product.hoverImg + '" alt="' + product.name + ' - view 2" class="card-photo" loading="lazy" decoding="async">' +
-                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
-                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>';
+                var images;
+                if (Array.isArray(product.galleryImgs) && product.galleryImgs.length) {
+                    images = product.galleryImgs.slice(0, TOTAL_SLOTS);
+                } else {
+                    images = [product.primaryImg];
+                    if (product.hoverImg && product.hoverImg !== product.primaryImg) {
+                        images.push(product.hoverImg);
+                    }
+                }
+
+                imageHtml = '';
+                images.forEach(function (src, i) {
+                    imageHtml += '<img src="' + src + '" alt="' + product.name + (i === 0 ? '' : ' - view ' + (i + 1)) + '" class="card-photo' + (i === 0 ? ' is-active' : '') + '" loading="lazy" decoding="async">';
+                });
+                for (var i = images.length; i < TOTAL_SLOTS; i++) {
+                    imageHtml += '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>';
+                }
             } else {
                 imageHtml =
                     '<div class="card-photo photo-placeholder is-active" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
