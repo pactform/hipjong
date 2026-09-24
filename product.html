@@ -249,8 +249,20 @@
 
             document.getElementById('product-detail').style.display = 'grid';
             document.getElementById('product-title-tag').textContent = product.name + ' - HIPJONG';
-            document.getElementById('product-image').src = product.primaryImg;
-            document.getElementById('product-image').alt = product.name;
+            var mainImgEl = document.getElementById('product-image');
+            var firstRealImg = (product.galleryImgs && product.galleryImgs[0]) || product.primaryImg;
+            if (firstRealImg) {
+                mainImgEl.src = firstRealImg;
+                mainImgEl.alt = product.name;
+            } else {
+                mainImgEl.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">' +
+                    '<rect width="100%" height="100%" fill="#EDE9E0"/>' +
+                    '<text x="50%" y="50%" font-family="sans-serif" font-size="28" fill="#7A7365" text-anchor="middle" dominant-baseline="middle">Photo Coming Soon</text>' +
+                    '</svg>'
+                );
+                mainImgEl.alt = product.name + ' - Photo Coming Soon';
+            }
             document.getElementById('product-category').textContent = product.category;
             document.getElementById('product-name').textContent = product.name;
             document.getElementById('product-tagline').textContent = product.tagline;

@@ -14,22 +14,15 @@
         // 1. Kosongkan grid HTML statis dan buat ulang dari Data
         grid.innerHTML = ''; 
 
-        // Deteksi produk yang foto-nya numpang (dipakai bareng produk lain).
-        // Produk pertama yang memakai sebuah file foto dianggap "pemilik asli";
-        // produk lain yang pakai file foto sama dianggap belum punya foto sendiri.
-        var seenImages = {};
-        window.HIPJONG_PRODUCTS.forEach(function (product) {
-            if (!seenImages[product.primaryImg]) {
-                seenImages[product.primaryImg] = product.id;
-            }
-        });
-
         window.HIPJONG_PRODUCTS.forEach(function(product) {
             var card = document.createElement('div');
             card.className = 'collection-card reveal-scale';
             card.dataset.category = product.category.toLowerCase();
 
-            var hasOwnPhoto = seenImages[product.primaryImg] === product.id;
+            // Produk dianggap "punya foto sendiri" kalau primaryImg diisi.
+            // Produk yang belum punya foto cukup dikosongkan primaryImg-nya
+            // di product-data.js (primaryImg: "") - otomatis full placeholder di sini.
+            var hasOwnPhoto = Boolean(product.primaryImg);
             var TOTAL_SLOTS = 4;
             var imageHtml;
 

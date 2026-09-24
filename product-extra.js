@@ -31,6 +31,11 @@
             + 'border:1px solid var(--border-color,#D6D2CA);border-radius:0;overflow:hidden;}'
             + '.hj-related-card img{width:100%;aspect-ratio:4/3;object-fit:cover;'
             + 'background:var(--cream-deep,#E6E1D8);display:block;}'
+            + '.hj-related-placeholder{width:100%;aspect-ratio:4/3;display:flex;'
+            + 'align-items:center;justify-content:center;'
+            + 'background:repeating-linear-gradient(45deg,#EDE9E0,#EDE9E0 8px,#E4DFD4 8px,#E4DFD4 16px);'
+            + 'border-bottom:1px dashed #B9B2A4;}'
+            + '.hj-related-placeholder span{font-size:.75rem;font-weight:500;color:#7A7365;}'
             + '.hj-related-card-body{padding:.85rem 1rem;}'
             + '.hj-related-card-name{font-family:var(--font-display,inherit);font-weight:500;'
             + 'font-size:.95rem;color:var(--text-dark,#221A15);}'
@@ -55,11 +60,13 @@
         var images;
         if (Array.isArray(product.galleryImgs) && product.galleryImgs.length) {
             images = product.galleryImgs.slice(0, 4);
-        } else {
+        } else if (product.primaryImg) {
             images = [product.primaryImg];
             if (product.hoverImg && product.hoverImg !== product.primaryImg) {
                 images.push(product.hoverImg);
             }
+        } else {
+            images = [];
         }
 
         var TOTAL_SLOTS = 4;
@@ -118,8 +125,11 @@
 
         var html = '<h2>You might also like</h2><div class="hj-related-grid">';
         related.forEach(function (p) {
+            var thumbHtml = p.primaryImg
+                ? '<img src="' + escapeHtml(p.primaryImg) + '" alt="' + escapeHtml(p.name) + '">'
+                : '<div class="hj-related-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>';
             html += '<a class="hj-related-card" href="product.html?id=' + encodeURIComponent(p.id) + '">'
-                + '<img src="' + escapeHtml(p.primaryImg) + '" alt="' + escapeHtml(p.name) + '">'
+                + thumbHtml
                 + '<div class="hj-related-card-body">'
                 + '<div class="hj-related-card-name">' + escapeHtml(p.name) + '</div>'
                 + '<div class="hj-related-card-price">' + escapeHtml(p.priceLabel) + '</div>'
