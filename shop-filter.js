@@ -13,16 +13,41 @@
 
         // 1. Kosongkan grid HTML statis dan buat ulang dari Data
         grid.innerHTML = ''; 
-        
+
+        // Deteksi produk yang foto-nya numpang (dipakai bareng produk lain).
+        // Produk pertama yang memakai sebuah file foto dianggap "pemilik asli";
+        // produk lain yang pakai file foto sama dianggap belum punya foto sendiri.
+        var seenImages = {};
+        window.HIPJONG_PRODUCTS.forEach(function (product) {
+            if (!seenImages[product.primaryImg]) {
+                seenImages[product.primaryImg] = product.id;
+            }
+        });
+
         window.HIPJONG_PRODUCTS.forEach(function(product) {
             var card = document.createElement('div');
             card.className = 'collection-card reveal-scale';
             card.dataset.category = product.category.toLowerCase();
-            
+
+            var hasOwnPhoto = seenImages[product.primaryImg] === product.id;
+            var imageHtml;
+            if (hasOwnPhoto) {
+                imageHtml =
+                    '<img src="' + product.primaryImg + '" alt="' + product.name + '" class="card-photo is-active" loading="lazy" decoding="async">' +
+                    '<img src="' + product.hoverImg + '" alt="' + product.name + ' - view 2" class="card-photo" loading="lazy" decoding="async">' +
+                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
+                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>';
+            } else {
+                imageHtml =
+                    '<div class="card-photo photo-placeholder is-active" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
+                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
+                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>' +
+                    '<div class="card-photo photo-placeholder" aria-hidden="true"><span>Photo Coming Soon</span></div>';
+            }
+
             card.innerHTML = 
                 '<div class="card-image-wrapper">' +
-                    '<img src="' + product.primaryImg + '" alt="' + product.name + '" class="primary-img" loading="lazy" decoding="async">' +
-                    '<img src="' + product.hoverImg + '" alt="' + product.name + ' Hover" class="hover-img" loading="lazy" decoding="async">' +
+                    imageHtml +
                 '</div>' +
                 '<div class="card-info">' +
                     '<div class="card-text">' +

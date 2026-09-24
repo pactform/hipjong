@@ -15,6 +15,12 @@
             + 'border:2px solid transparent;}'
             + '#product-thumbs button.active{border-color:var(--brand-green,#204C39);}'
             + '#product-thumbs img{width:100%;height:100%;object-fit:cover;display:block;}'
+            + '#product-thumbs button.thumb-placeholder{cursor:default;display:flex;'
+            + 'align-items:center;justify-content:center;'
+            + 'background:repeating-linear-gradient(45deg,#EDE9E0,#EDE9E0 6px,#E4DFD4 6px,#E4DFD4 12px);'
+            + 'border:1px dashed #B9B2A4;}'
+            + '#product-thumbs button.thumb-placeholder span{font-size:.55rem;font-weight:500;'
+            + 'color:#7A7365;text-align:center;line-height:1.2;padding:0 .2rem;}'
             + '#related-products{margin-top:clamp(3rem,6vw,5rem);}'
             + '#related-products h2{font-family:var(--font-display,inherit);'
             + 'font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:500;'
@@ -50,7 +56,8 @@
         if (product.hoverImg && product.hoverImg !== product.primaryImg) {
             images.push(product.hoverImg);
         }
-        if (images.length < 2) return; 
+
+        var TOTAL_SLOTS = 4;
 
         wrap.innerHTML = '';
         images.forEach(function (src, i) {
@@ -66,6 +73,16 @@
             });
             wrap.appendChild(btn);
         });
+
+        for (var i = images.length; i < TOTAL_SLOTS; i++) {
+            var placeholder = document.createElement('button');
+            placeholder.type = 'button';
+            placeholder.className = 'thumb-placeholder';
+            placeholder.disabled = true;
+            placeholder.setAttribute('aria-hidden', 'true');
+            placeholder.innerHTML = '<span>Coming Soon</span>';
+            wrap.appendChild(placeholder);
+        }
     }
 
     function renderRelated(product) {

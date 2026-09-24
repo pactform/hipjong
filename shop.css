@@ -6,31 +6,44 @@
     position: relative;
 }
 
-/* Pastikan kedua gambar mengisi kotak dengan penuh */
-.card-image-wrapper .primary-img,
-.card-image-wrapper .hover-img {
+/* Empat foto ditumpuk penuh, bergantian lewat class .is-active (lihat script auto-rotate) */
+.card-image-wrapper .card-photo {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ubah menjadi 'contain' jika gambar meja terlihat terpotong */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-/* Gambar hover ditumpuk di atas gambar utama dan disembunyikan */
-.card-image-wrapper .hover-img {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
+    z-index: 1;
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card-image-wrapper .card-photo.is-active {
+    opacity: 1;
     z-index: 2;
 }
 
-/* Efek Morphing: memunculkan gambar hover */
-.collection-card:hover .card-image-wrapper .hover-img {
-    opacity: 1;
+/* Placeholder untuk slot foto yang belum diisi - tinggal ganti div ini dengan <img> nanti */
+.card-image-wrapper .photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(45deg, #EDE9E0, #EDE9E0 10px, #E4DFD4 10px, #E4DFD4 20px);
+    border: 1px dashed #B9B2A4;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card-image-wrapper .photo-placeholder span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #7A7365;
+    letter-spacing: 0.02em;
 }
 
 /* Efek Zoom in sedikit saat di-hover (opsional, bisa dihapus kalau tidak suka) */
-.collection-card:hover .card-image-wrapper .primary-img,
-.collection-card:hover .card-image-wrapper .hover-img {
-    transform: scale(1.05); 
+.collection-card:hover .card-image-wrapper .card-photo.is-active {
+    transform: scale(1.05);
 }

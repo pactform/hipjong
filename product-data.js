@@ -10,10 +10,11 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "mahjong hover.png",
         description: "Modern mahjong table disguised as a sleek dining table. Features ultra-quiet automatic shuffling.",
         features: [
+            "Dimensions (W × D × H): 42.9 × 42.9 × 30.7 in / 109 × 109 × 78 cm",
             "Ultra-quiet smart shuffling mechanism",
-            "Doubles as a everyday dining table",
-            "Solid wood finish, multiple colorways",
-            "2-year warranty on mechanical & tech systems"
+            "Solid glossy finish, multiple colorways",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
     },
@@ -28,6 +29,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "billiard hover.png",
         description: "A statement billiard table built around a classic game, designed for contemporary spaces.",
         features: [
+            "Dimensions (W × D × H): 59.8 × 47.2 × 32.2 in / 152 x 268 x 82 cm",
             "Regulation-inspired play surface",
             "Hidden tech, sleek modern silhouette",
             "Fits standard cue sets",
@@ -46,6 +48,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "poker hover.png",
         description: "Made for long hands, late nights, and one more round. Seats up to 8 players comfortably.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
             "Padded rail, felt playing surface",
             "Seats up to 8 players",
             "Foldable base for easy storage",
@@ -64,6 +67,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "foosball hover.png",
         description: "Fast, social, and always ready for a rematch. A stylish take on the classic foosball table.",
         features: [
+            "Dimensions (W × D × H): 34.8 × 60.3 × 33.7 in / 88.5 × 153.2 × 85.8 cm",
             "Smooth precision rods",
             "Compact footprint for smaller rooms",
             "Scratch-resistant finish",
@@ -82,6 +86,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "roulette hover.png",
         description: "Roulette and more ways to bring everyone around the table in style.",
         features: [
+            "Dimensions (W × D × H): 51.1 × 102.3 × 30.7 in / 130 x 260 x 78 cm",
             "Full roulette wheel + table layout",
             "Removable top for multi-game use",
             "Compact folding legs",
@@ -100,6 +105,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "halo mahjong hover.png",
         description: "A softer, warmer take on the smart mahjong table, built for cozier living rooms.",
         features: [
+            "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 × 106 × 78 cm",
             "Ultra-quiet smart shuffling mechanism",
             "Warm ambient under-table lighting",
             "Solid wood finish, multiple colorways",
@@ -118,6 +124,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "tier mahjong hover.png",
         description: "Stripped-back silhouette with all the same smart shuffling tech hidden underneath.",
         features: [
+            "Dimensions (W × D × H): 41.3 × 41.3 × 31.1 in / 105 × 105 × 79 cm",
             "Ultra-quiet smart shuffling mechanism",
             "Slimmer, minimal profile",
             "Solid wood finish, multiple colorways",
@@ -136,6 +143,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "palazzo mahjong hover.png",
         description: "Our fully custom mahjong build — finishes, dimensions, and tech tailored to your space.",
         features: [
+            "Dimensions: TBC",
             "Custom finish & dimensions",
             "Ultra-quiet smart shuffling mechanism",
             "Made-to-order, longer lead time",
@@ -154,6 +162,7 @@ window.HIPJONG_PRODUCTS = [
         hoverImg: "cove mahjong hover.png",
         description: "A foldable frame that packs down small without giving up the smart shuffling tech.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 47.2 × 29.9 in / 120 × 120 × 76 cm",
             "Ultra-quiet smart shuffling mechanism",
             "Folds flat for storage or travel",
             "Lightweight composite build",

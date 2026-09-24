@@ -1015,3 +1015,90 @@ video,
         height: 68px !important; 
     }
 }
+.hero-full-bleed {
+    display: block !important;
+    position: relative !important;
+
+    /* Memaksa elemen selebar layar 100% menembus semua pembatas */
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    max-width: 100vw !important;
+
+    min-height: 80vh;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* Teks ditumpuk (overlay) di atas foto full-bleed */
+.hero-full-bleed .content-text {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Padding dinamis agar teks tetap rapi dan sejajar dengan margin logo/konten lain */
+    padding: clamp(3rem, 8vw, 6rem) clamp(3rem, 5vw, 6rem) !important;
+    padding-left: max(2rem, calc((100vw - 1240px) / 2)) !important;
+    /* Gradasi gelap di sisi kiri supaya teks tetap terbaca di atas foto */
+    background: linear-gradient(to right, rgba(20, 16, 14, 0.72) 0%, rgba(20, 16, 14, 0.45) 35%, rgba(20, 16, 14, 0) 70%);
+}
+
+.hero-full-bleed .content-text .eyebrow,
+.hero-full-bleed .content-text .rd-title,
+.hero-full-bleed .content-text .rd-lead {
+    color: var(--white) !important;
+}
+
+/* Jarak rapi antara judul dan body text, serta antar paragraf */
+.hero-full-bleed .content-text .rd-title {
+    margin-bottom: 1.5rem !important;
+}
+
+.hero-full-bleed .content-text .rd-lead {
+    max-width: 46ch;
+    line-height: 1.65;
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    margin-top: 0 !important;
+    margin-bottom: 1.1rem !important;
+}
+
+.hero-full-bleed .content-text .rd-lead:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+.hero-full-bleed .content-visual {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.hero-full-bleed .content-visual img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsif untuk Layar HP dan Tablet Kecil */
+@media (max-width: 900px) {
+    .hero-full-bleed {
+        min-height: 60vh;
+    }
+
+    .hero-full-bleed .content-visual {
+        height: 60vh;
+        min-height: 60vh;
+    }
+
+    .hero-full-bleed .content-text {
+        justify-content: flex-end;
+        padding: 2.5rem 1.5rem !important;
+        /* Di layar sempit, gradasi dari bawah supaya teks tetap terbaca */
+        background: linear-gradient(to top, rgba(20, 16, 14, 0.8) 0%, rgba(20, 16, 14, 0.35) 55%, rgba(20, 16, 14, 0) 100%);
+    }
+}

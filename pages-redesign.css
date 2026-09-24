@@ -213,13 +213,10 @@
     color: var(--rd-cream);
     text-wrap: balance;
 }
-
-/* Frasa yang dicoret di manifesto: koral seperti <strong> di index */
 .rd-strike {
-    font-weight: 600;
-    color: var(--rd-coral);
-    text-decoration: line-through;
-    text-decoration-thickness: 0.07em;
+    color: #FFFFFF !important;
+    text-decoration: line-through !important;
+    text-decoration-color: #F88A72 !important;
 }
 
 /* Banner terakota: sama dengan .cta-banner di index */
