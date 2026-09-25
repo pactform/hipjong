@@ -13,9 +13,7 @@
     var overlay, input, resultsEl, emptyEl;
     var dataReady = false;
 
-    /* Muat product-data.js otomatis kalau halaman belum memuatnya
-       (mis. index.html, about.html, dll tidak butuh script itu
-       untuk kebutuhan lain, jadi kita muat sendiri di sini). */
+
     function ensureProductData(cb) {
         if (typeof window.HIPJONG_PRODUCTS !== 'undefined') {
             dataReady = true;
