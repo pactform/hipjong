@@ -500,35 +500,20 @@ window.HIPJONG_PRODUCTS = [
         arrowColor: "blue"
     },
     {
-        id: "21",
-        name: "ECLIPSE POKER TABLE",
-        price: 1449,
-        priceLabel: "$1,449",
-        category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A darker take on our signature oval poker table, built for late nights.",
-        features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
-            "Seats up to 8 players",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "beige"
-    },
-    {
         id: "22",
         name: "ALDEN POOL TABLE",
         price: 1249,
         priceLabel: "$1,249",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A timeless, classic-leaning billiard table for traditional game rooms.",
+        primaryImg: "alden1.png",
+        hoverImg: "alden2.png",
+        galleryImgs: [
+            "alden1.png",
+            "alden2.png",
+            "alden3.png",
+            "alden4.png"
+        ],
+        description: "A fresh take on a timeless game. Alden features a striking layered, transparent-look frame paired with bold, architectural legs. Its clean lines and open design bring a contemporary touch to the classic pool table, creating an inviting centerpiece for game rooms and social spaces.",
         features: [
             "Regulation-inspired play surface",
             "Glass frame and legs, orange felt playing surface",
@@ -545,10 +530,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1199,
         priceLabel: "$1,199",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A deep blue-toned billiard table built to stand out in any room.",
+        primaryImg: "cobalt1.png",
+        hoverImg: "cobalt2.png",
+        galleryImgs: [
+            "cobalt1.png",
+            "cobalt2.png",
+            "cobalt3.png",
+            "cobalt4.png"
+        ],
+        description: "Make a bold statement with Cobalt. Its streamlined silhouette, substantial frame, and distinctive wraparound base create a seamless, contemporary look. Balancing classic gameplay with a modern furniture aesthetic, Cobalt brings character to entertainment spaces and sets the scene for friendly competition and memorable game nights.",
         features: [
             "Regulation-inspired play surface",
             "Glass frame and legs, orange felt playing surface",
@@ -565,10 +555,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1549,
         priceLabel: "$1,549",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A precision-built poker table designed around the fundamentals.",
+        primaryImg: "axiom1.png",
+        hoverImg: "axiom2.png",
+        galleryImgs: [
+            "axiom1.png",
+            "axiom2.png",
+            "axiom3.png",
+            "axiom4.png"
+        ],
+        description: "Bring a contemporary edge to poker night with Axiom. Its angular silhouette, layered transparent-look frame, and slender legs create a striking balance between structure and openness. The geometric playing surface adds visual character, making Axiom an eye-catching addition to modern game rooms and entertainment spaces.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -585,10 +580,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1349,
         priceLabel: "$1,349",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "An open, airy poker table built for hosting a full house.",
+        primaryImg: "pav1.png",
+        hoverImg: "pav2.png",
+        galleryImgs: [
+            "pav1.png",
+            "pav2.png",
+            "pav3.png",
+            "pav4.png"
+        ],
+        description: "Designed to bring everyone around the table, Pavilion combines a distinctive multi-sided silhouette with angled player-side panels and an elegant, open-frame design. Its geometric form and refined detailing create an inviting setting for poker nights, turning a classic social game into a stylish gathering experience.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -605,10 +605,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1499,
         priceLabel: "$1,499",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A layered finish gives this poker table quiet depth and texture.",
+        primaryImg: "str1.png",
+        hoverImg: "str2.png",
+        galleryImgs: [
+            "str1.png",
+            "str2.png",
+            "str3.png",
+            "str4.png"
+        ],
+        description: "Strata brings a contemporary edge to classic poker nights with its bold, layered silhouette and sleek geometric detailing. Its angular frame and slender legs create a distinctive balance of form and function, making it a striking centerpiece for modern entertainment spaces and memorable gatherings.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -625,10 +630,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1599,
         priceLabel: "$1,599",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A central gathering point, built for regular poker nights.",
+        primaryImg: "nex1.png",
+        hoverImg: "nex2.png",
+        galleryImgs: [
+            "nex1.png",
+            "nex2.png",
+            "nex3.png",
+            "nex4.png"
+        ],
+        description: "Bring everyone together around Nexus, a contemporary poker table with a distinctive multi-sided silhouette and transparent-look outer frame. Its angled player-side panels and streamlined design create an inviting space for friendly competition, bringing a fresh, modern perspective to the classic poker experience.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -645,10 +655,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1399,
         priceLabel: "$1,399",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A rhythmic, tiered design for a poker table with a distinct voice.",
+        primaryImg: "oct1.png",
+        hoverImg: "oct2.png",
+        galleryImgs: [
+            "oct1.png",
+            "oct2.png",
+            "oct3.png",
+            "oct4.png"
+        ],
+        description: "Designed for games that bring people together, Octaves combines a striking geometric silhouette with a transparent-look frame and padded player-side panels. Its open, architectural design creates a sense of lightness while offering a welcoming setting for poker nights, social gatherings, and friendly competition.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -668,7 +683,7 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "An ultra-dark finish poker table built to disappear into a moody room.",
+        description: "Vanta brings a sophisticated touch to poker night with its sleek, angular detailing and layered, transparent-look construction. Padded player-side panels and integrated chip compartments create a thoughtfully arranged playing area, while its contemporary design makes it a distinctive addition to modern game rooms and entertainment spaces.",
         features: [
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
@@ -685,10 +700,15 @@ window.HIPJONG_PRODUCTS = [
         price: 1299,
         priceLabel: "$1,299",
         category: "Mahjong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "A rich, dark-finish mahjong table for low-lit game nights.",
+        primaryImg: "sable1.png",
+        hoverImg: "sable2.png",
+        galleryImgs: [
+            "sable1.png",
+            "sable2.png",
+            "sable3.png",
+            "sable4.png"
+        ],
+        description: "Sable brings a refined, contemporary feel to mahjong nights with its softly rounded corners, textured exterior, and structured pedestal base. Its balanced proportions and understated detailing create an inviting centerpiece that blends naturally into modern living and entertainment spaces.",
         features: [
             "Ultra-quiet smart shuffling mechanism",
             "Customizable (please contact us for more info)",

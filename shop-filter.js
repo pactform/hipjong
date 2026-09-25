@@ -59,7 +59,6 @@
                 '<div class="card-info">' +
                     '<div class="card-text">' +
                         '<h3>' + product.name + '</h3>' +
-                        '<p>' + product.tagline + '</p>' +
                         '<span class="card-price">' + product.priceLabel + '</span>' +
                     '</div>' +
                     '<a href="product.html?id=' + product.id + '" class="card-arrow-btn ' + product.arrowColor + '" aria-label="View ' + product.name + '">&rarr;</a>' +
