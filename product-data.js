@@ -64,11 +64,11 @@ window.HIPJONG_PRODUCTS = [
             "eclipse3.png",
             "eclipse4.png"
         ],
-        description: "An oval black felt top floats on a single polished chrome pedestal. A sculptural poker table built for long hands and late nights.",
+        description: "An oval poker table with a cream felt top and black trim. A sculptural black pedestal base built for long hands and late nights.",
         features: [
             "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Oval cream felt playing surface, black trim",
+            "Single sculpted black pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -222,7 +222,7 @@ window.HIPJONG_PRODUCTS = [
         features: [
             "Dimensions (W × D × H): 47.2 × 47.2 × 29.9 in / 120 × 120 × 76 cm",
             "Ultra-quiet smart shuffling mechanism",
-            "Four upholstered chairs built into the frame",
+            "Compact beige frame, green felt top",
             "Foldable, portable design",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -246,8 +246,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A bold poker table designed to stand out in any game room or lounge. Its faceted silhouette and spacious playing surface create a distinctive setting for longer sessions and lively gatherings.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal pink felt playing surface, black trim",
+            "Slim angled metal legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -272,6 +272,7 @@ window.HIPJONG_PRODUCTS = [
         description: "Clean lines meet a bold, architectural presence in Nocturne. Its substantial tabletop, framed side panels, and geometric pedestal create a streamlined silhouette that feels both modern and timeless. A distinctive centerpiece designed to bring style and character to every mahjong gathering.",
         features: [
             "Ultra-quiet smart shuffling mechanism",
+            "Dark green tabletop, black pedestal base",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -292,9 +293,10 @@ window.HIPJONG_PRODUCTS = [
             "gar3.png",
             "gar4.png"
         ],
-        description: "Garnett gives the classic mahjong table an expressive update with its decorative surface detailing, contrasting textures, and distinctive furniture-inspired design. Paired with its matching seating, it creates an inviting setting for memorable games and relaxed gatherings with family and friends.",
+        description: "Garnett gives the classic mahjong table an expressive update with its decorative surface detailing, contrasting textures, and distinctive furniture-inspired design. Its distinctive silhouette creates an inviting setting for memorable games and relaxed gatherings with family and friends.",
         features: [
             "Ultra-quiet smart shuffling mechanism",
+            "Deep red tabletop, stone grey base",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -318,6 +320,7 @@ window.HIPJONG_PRODUCTS = [
         description: "Regent brings a classic, furniture-inspired character to mahjong nights with its richly patterned finish, rounded tabletop corners, and sculptural pedestal base. Its carefully composed silhouette creates an elegant focal point for social gatherings, bringing a refined touch to a timeless game.",
         features: [
             "Ultra-quiet smart shuffling mechanism",
+            "Rust marbled tabletop, gold trim accents",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -340,8 +343,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A refined poker table that brings a clean, elevated look to casual games and social nights. The smooth oval shape, integrated cup holders, and generous layout make it easy to gather, play, and stay comfortable.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Oval cream felt playing surface, gold accents",
+            "Single white pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -365,8 +368,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A streamlined poker table made for relaxed games and polished interiors. Its elongated profile and built-in cup holders offer a practical setup while keeping the overall look sleek and understated.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Oval tan felt playing surface, dark trim",
+            "Single white pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -390,8 +393,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A sculptural poker table that blends classic gameplay with a more statement-making form. Designed to anchor the room, it offers a spacious playing surface and a striking base that gives every gathering a stronger visual presence.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Oval tan felt playing surface, dark trim",
+            "Crossed chrome pedestal legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -415,8 +418,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring everyone together around a table designed to stand out. Velour features a distinctive multi-sided silhouette, sleek geometric detailing, and a transparent-look structure that gives it a contemporary edge. Its spacious playing surface creates an inviting setting for poker nights, friendly competition, and memorable gatherings.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal navy felt playing surface",
+            "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -440,8 +443,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Take game night in a new direction with Orbit. Its circular design, sculptural pedestal, and raised central platform create a distinctive centerpiece for social gatherings. With integrated cup holders and space for drinks and game essentials, Orbit brings a playful, contemporary feel to every round.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Blue metallic playing surface",
+            "Sculpted double tier pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -466,7 +469,7 @@ window.HIPJONG_PRODUCTS = [
         description: "A bold take on the classic pool table, Monolith combines clean architectural lines with a substantial, sculptural base. Its streamlined silhouette and integrated accessory drawer bring together striking design and everyday practicality, making it a natural centerpiece for modern game rooms and entertainment spaces.",
         features: [
             "Regulation-inspired play surface",
-            "Glass frame and legs, orange felt playing surface",
+            "Solid black frame, navy blue felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -490,8 +493,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Make every poker night feel like an occasion with Cascade. Its smooth oval silhouette, integrated cup holders, and distinctive tiered pedestal bring a sculptural touch to the classic card table. Designed to draw people together, Cascade creates an inviting setting for friendly games and long evenings around the table.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Oval cream felt playing surface, bronze trim",
+            "Tiered pearlescent pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -513,10 +516,10 @@ window.HIPJONG_PRODUCTS = [
             "alden3.png",
             "alden4.png"
         ],
-        description: "A fresh take on a timeless game. Alden features a striking layered, transparent-look frame paired with bold, architectural legs. Its clean lines and open design bring a contemporary touch to the classic pool table, creating an inviting centerpiece for game rooms and social spaces.",
+        description: "A fresh take on a timeless game. Alden features a warm wood frame paired with bold, architectural legs. Its clean lines and open design bring a contemporary touch to the classic pool table, creating an inviting centerpiece for game rooms and social spaces.",
         features: [
             "Regulation-inspired play surface",
-            "Glass frame and legs, orange felt playing surface",
+            "Wood frame, tan felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -541,7 +544,7 @@ window.HIPJONG_PRODUCTS = [
         description: "Make a bold statement with Cobalt. Its streamlined silhouette, substantial frame, and distinctive wraparound base create a seamless, contemporary look. Balancing classic gameplay with a modern furniture aesthetic, Cobalt brings character to entertainment spaces and sets the scene for friendly competition and memorable game nights.",
         features: [
             "Regulation-inspired play surface",
-            "Glass frame and legs, orange felt playing surface",
+            "Blue wood frame, deep blue felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -565,8 +568,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring a contemporary edge to poker night with Axiom. Its angular silhouette, layered transparent-look frame, and slender legs create a striking balance between structure and openness. The geometric playing surface adds visual character, making Axiom an eye-catching addition to modern game rooms and entertainment spaces.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal blue grey felt playing surface",
+            "Glass panel legs, chrome accents",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -590,8 +593,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Designed to bring everyone around the table, Pavilion combines a distinctive multi-sided silhouette with angled player-side panels and an elegant, open-frame design. Its geometric form and refined detailing create an inviting setting for poker nights, turning a classic social game into a stylish gathering experience.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal tan felt playing surface",
+            "Glass legs, brass accents",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -615,8 +618,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Strata brings a contemporary edge to classic poker nights with its bold, layered silhouette and sleek geometric detailing. Its angular frame and slender legs create a distinctive balance of form and function, making it a striking centerpiece for modern entertainment spaces and memorable gatherings.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal charcoal felt playing surface",
+            "Slim chrome legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -640,8 +643,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring everyone together around Nexus, a contemporary poker table with a distinctive multi-sided silhouette and transparent-look outer frame. Its angled player-side panels and streamlined design create an inviting space for friendly competition, bringing a fresh, modern perspective to the classic poker experience.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal tan felt playing surface",
+            "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -665,8 +668,8 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Designed for games that bring people together, Octaves combines a striking geometric silhouette with a transparent-look frame and padded player-side panels. Its open, architectural design creates a sense of lightness while offering a welcoming setting for poker nights, social gatherings, and friendly competition.",
         features: [
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
+            "Octagonal navy felt playing surface",
+            "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
@@ -711,6 +714,7 @@ window.HIPJONG_PRODUCTS = [
         description: "Sable brings a refined, contemporary feel to mahjong nights with its softly rounded corners, textured exterior, and structured pedestal base. Its balanced proportions and understated detailing create an inviting centerpiece that blends naturally into modern living and entertainment spaces.",
         features: [
             "Ultra-quiet smart shuffling mechanism",
+            "Dark wood tabletop, rust inlay accent",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
