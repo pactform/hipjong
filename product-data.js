@@ -295,6 +295,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Garnett gives the classic mahjong table an expressive update with its decorative surface detailing, contrasting textures, and distinctive furniture-inspired design. Its distinctive silhouette creates an inviting setting for memorable games and relaxed gatherings with family and friends.",
         features: [
+            "Dimensions: TBC",
             "Ultra-quiet smart shuffling mechanism",
             "Deep red tabletop, stone grey base",
             "Customizable (please contact us for more info)",
@@ -518,6 +519,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A fresh take on a timeless game. Alden features a warm wood frame paired with bold, architectural legs. Its clean lines and open design bring a contemporary touch to the classic pool table, creating an inviting centerpiece for game rooms and social spaces.",
         features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 × 268 × 82 cm",
             "Regulation-inspired play surface",
             "Wood frame, tan felt playing surface",
             "Fits standard cue sets",
@@ -543,6 +545,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Make a bold statement with Cobalt. Its streamlined silhouette, substantial frame, and distinctive wraparound base create a seamless, contemporary look. Balancing classic gameplay with a modern furniture aesthetic, Cobalt brings character to entertainment spaces and sets the scene for friendly competition and memorable game nights.",
         features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 × 268 × 82 cm",
             "Regulation-inspired play surface",
             "Blue wood frame, deep blue felt playing surface",
             "Fits standard cue sets",
@@ -720,5 +723,419 @@ window.HIPJONG_PRODUCTS = [
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
+    },
+    {
+        id: "53",
+        name: "MERIDIAN POKER TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Poker Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "31",
+        name: "PEBBLE MAHJONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Mahjong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "32",
+        name: "GAMBIT CHESS TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Chess Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 31.4 × 31.4 × 19.6 in / 80 x 80 x 50 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "33",
+        name: "AXIS POKER TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Poker Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 63 × 63 × 30.7 in / 160 x 160 x 78 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "34",
+        name: "BELMONT POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "35",
+        name: "PORTICO POKER TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Poker Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 49.2 × 86.6 × 29.5 in / 125 x 220 x 75 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "36",
+        name: "VELA POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "37",
+        name: "CALDER POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "38",
+        name: "RELIC POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "39",
+        name: "VELVET POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "40",
+        name: "CADENCE POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "41",
+        name: "PORT POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "42",
+        name: "LUMEN POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "43",
+        name: "VECTOR POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "44",
+        name: "ELARA POOL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Billiard Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "45",
+        name: "VERTEX MAHJONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Mahjong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "46",
+        name: "RIBBY MAHJONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Mahjong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "47",
+        name: "HYALINE PING PONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Ping Pong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "48",
+        name: "GLACE PING PONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Ping Pong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "49",
+        name: "TERRACE PING PONG TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Ping Pong Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
+    },
+    {
+        id: "50",
+        name: "MERCER FOOSBALL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Foosball Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 34.8 × 60.3 × 33.7 in / 88.5 x 153.2 x 85.8 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "beige"
+    },
+    {
+        id: "51",
+        name: "RELINE FOOSBALL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Foosball Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 29.1 × 55.1 × 36.2 in / 74 x 140 x 92 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "pink"
+    },
+    {
+        id: "52",
+        name: "VANGUARD FOOSBALL TABLE",
+        price: 0,
+        priceLabel: "Price TBC",
+        category: "Foosball Tables",
+        primaryImg: "",
+        hoverImg: "",
+        galleryImgs: [],
+        description: "Details coming soon.",
+        features: [
+            "Dimensions (W × D × H): 44.4 × 64.9 × 34.2 in / 113 x 165 x 87 cm",
+            "Customizable (please contact us for more info)",
+            "3-year warranty on mechanical & tech systems",
+            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
+        ],
+        arrowColor: "blue"
     }
 ];
