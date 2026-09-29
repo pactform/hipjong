@@ -1,0 +1,210 @@
+/* =========================================================
+   logo-loader.css
+   Additive file — loaded AFTER every other stylesheet so it
+   never edits or removes existing rules.
+   1. Logo image (navbar + footer)
+   2. Page loader animation (all pages)
+========================================================= */
+
+/* ---------------------------------------------------------
+   1. LOGO IMAGE
+   --------------------------------------------------------- */
+
+/* Navbar */
+.logo .logo-img {
+    display: block;
+    height: clamp(28px, 2.9vw, 38px);
+    width: auto;
+    max-width: none;
+}
+
+/* Navbar bar is solid green, so it uses the light version of the logo
+   (hipjong-logo-light.png: cream lettering, transparent background).
+   No background tile needed. */
+
+/* Footer (cream background — the dark logo sits on it directly) */
+.footer-logo .footer-logo-img {
+    display: block;
+    height: clamp(40px, 4.2vw, 56px);
+    width: auto;
+    max-width: none;
+}
+
+/* ---------------------------------------------------------
+   2. PAGE LOADER
+   The overlay is only shown while <html> has .is-loading,
+   which loader.js adds. If the script ever fails to load,
+   the overlay simply never appears (page stays usable).
+   --------------------------------------------------------- */
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream, #F8F6F0);
+    color: var(--text-dark, #221A15);
+
+    /* Resting (hidden) state = curtain raised */
+    transform: translateY(-100%);
+    visibility: hidden;
+    pointer-events: none;
+
+    /* Exit: curtain lifts, then visibility flips off */
+    transition:
+        transform 0.85s cubic-bezier(0.77, 0, 0.18, 1),
+        visibility 0s linear 0.85s;
+}
+
+html.is-loading .page-loader {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    /* Entering is instant: no transition on first paint */
+    transition: none;
+}
+
+.page-loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 2.4vw, 1.5rem);
+    padding: 1.5rem;
+    transition: opacity 0.35s ease, transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* While the curtain lifts the mark fades and drifts up a little */
+html:not(.is-loading) .page-loader-inner {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.96);
+}
+
+html.is-loading .page-loader-inner {
+    opacity: 1;
+    transform: none;
+}
+
+/* ----- The mark (drawn from the logo symbol) ----- */
+.pl-mark {
+    display: block;
+    width: clamp(112px, 16vw, 168px);
+    height: auto;
+    overflow: visible;
+}
+
+.pl-dot,
+.pl-core {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(0);
+}
+
+/* Four dots pop in one after another */
+.pl-dot {
+    animation: pl-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.pl-dot-1 { animation-delay: 0.05s; }
+.pl-dot-2 { animation-delay: 0.17s; }
+.pl-dot-3 { animation-delay: 0.29s; }
+.pl-dot-4 { animation-delay: 0.41s; }
+
+/* Diamond ring draws itself */
+.pl-ring {
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: 1;
+    animation: pl-draw 0.85s cubic-bezier(0.65, 0, 0.35, 1) 0.35s forwards;
+}
+
+/* Centre gem pops, then breathes until the page is ready */
+.pl-core {
+    animation:
+        pl-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.95s forwards,
+        pl-breathe 1.3s ease-in-out 1.5s infinite;
+}
+
+.pl-tagline {
+    margin: 0;
+    font-family: var(--font-body, 'Plus Jakarta Sans', system-ui, sans-serif);
+    font-size: clamp(0.72rem, 1vw, 0.82rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--text-muted, #595552);
+    opacity: 0;
+    transform: translateY(6px);
+    animation: pl-rise 0.6s ease 0.9s forwards;
+}
+
+@keyframes pl-pop {
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
+}
+
+@keyframes pl-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes pl-breathe {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.22); }
+}
+
+@keyframes pl-rise {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------
+   Reveal choreography
+   Elements that scroll-reveal (.reveal…) would already be
+   finished behind the loader. While loading, hold them in
+   their "not yet revealed" pose so they animate in the
+   moment the curtain lifts.
+   --------------------------------------------------------- */
+html.is-loading .reveal.active { opacity: 0; transform: translateY(35px); }
+html.is-loading .reveal-left.active { opacity: 0; transform: translateX(-40px); }
+html.is-loading .reveal-right.active { opacity: 0; transform: translateX(40px); }
+html.is-loading .reveal-scale.active { opacity: 0; transform: scale(0.92); }
+
+/* ---------------------------------------------------------
+   Reduced motion: static mark, quick fade instead of curtain
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .pl-dot,
+    .pl-core {
+        animation: none;
+        transform: scale(1);
+    }
+    .pl-ring {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+    .pl-tagline {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .page-loader {
+        transform: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    }
+    html.is-loading .page-loader { opacity: 1; }
+
+    html:not(.is-loading) .page-loader-inner {
+        transform: none;
+    }
+
+    html.is-loading .reveal.active,
+    html.is-loading .reveal-left.active,
+    html.is-loading .reveal-right.active,
+    html.is-loading .reveal-scale.active {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media print {
+    .page-loader { display: none !important; }
+}
