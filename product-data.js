@@ -246,6 +246,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A bold poker table designed to stand out in any game room or lounge. Its faceted silhouette and spacious playing surface create a distinctive setting for longer sessions and lively gatherings.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Octagonal pink felt playing surface, black trim",
             "Slim angled metal legs",
             "Seats up to 8 players",
@@ -271,6 +272,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Clean lines meet a bold, architectural presence in Nocturne. Its substantial tabletop, framed side panels, and geometric pedestal create a streamlined silhouette that feels both modern and timeless. A distinctive centerpiece designed to bring style and character to every mahjong gathering.",
         features: [
+            "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 × 106 × 78 cm",
             "Ultra-quiet smart shuffling mechanism",
             "Dark green tabletop, black pedestal base",
             "Customizable (please contact us for more info)",
@@ -320,6 +322,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Regent brings a classic, furniture-inspired character to mahjong nights with its richly patterned finish, rounded tabletop corners, and sculptural pedestal base. Its carefully composed silhouette creates an elegant focal point for social gatherings, bringing a refined touch to a timeless game.",
         features: [
+            "Dimensions: TBC",
             "Ultra-quiet smart shuffling mechanism",
             "Rust marbled tabletop, gold trim accents",
             "Customizable (please contact us for more info)",
@@ -344,6 +347,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A refined poker table that brings a clean, elevated look to casual games and social nights. The smooth oval shape, integrated cup holders, and generous layout make it easy to gather, play, and stay comfortable.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
             "Oval cream felt playing surface, gold accents",
             "Single white pedestal base",
             "Seats up to 8 players",
@@ -369,6 +373,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A streamlined poker table made for relaxed games and polished interiors. Its elongated profile and built-in cup holders offer a practical setup while keeping the overall look sleek and understated.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
             "Oval tan felt playing surface, dark trim",
             "Single white pedestal base",
             "Seats up to 8 players",
@@ -394,6 +399,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A sculptural poker table that blends classic gameplay with a more statement-making form. Designed to anchor the room, it offers a spacious playing surface and a striking base that gives every gathering a stronger visual presence.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
             "Oval tan felt playing surface, dark trim",
             "Crossed chrome pedestal legs",
             "Seats up to 8 players",
@@ -419,6 +425,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring everyone together around a table designed to stand out. Velour features a distinctive multi-sided silhouette, sleek geometric detailing, and a transparent-look structure that gives it a contemporary edge. Its spacious playing surface creates an inviting setting for poker nights, friendly competition, and memorable gatherings.",
         features: [
+            "Dimensions (W × D × H): 61.4 × 61.4 × 29.9 in / 156 × 156 × 76 cm",
             "Octagonal navy felt playing surface",
             "Glass panel legs",
             "Seats up to 8 players",
@@ -444,6 +451,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Take game night in a new direction with Orbit. Its circular design, sculptural pedestal, and raised central platform create a distinctive centerpiece for social gatherings. With integrated cup holders and space for drinks and game essentials, Orbit brings a playful, contemporary feel to every round.",
         features: [
+            "Dimensions (W × D × H): 51.1 × 51.1 × 30.7 in / 130 × 130 × 78 cm",
             "Blue metallic playing surface",
             "Sculpted double tier pedestal base",
             "Seats up to 8 players",
@@ -469,6 +477,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "A bold take on the classic pool table, Monolith combines clean architectural lines with a substantial, sculptural base. Its streamlined silhouette and integrated accessory drawer bring together striking design and everyday practicality, making it a natural centerpiece for modern game rooms and entertainment spaces.",
         features: [
+            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 × 268 × 82 cm",
             "Regulation-inspired play surface",
             "Solid black frame, navy blue felt playing surface",
             "Fits standard cue sets",
@@ -494,6 +503,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Make every poker night feel like an occasion with Cascade. Its smooth oval silhouette, integrated cup holders, and distinctive tiered pedestal bring a sculptural touch to the classic card table. Designed to draw people together, Cascade creates an inviting setting for friendly games and long evenings around the table.",
         features: [
+            "Dimensions (W × D × H): 47.2 × 102.3 × 30.7 in / 120 × 260 × 78 cm",
             "Oval cream felt playing surface, bronze trim",
             "Tiered pearlescent pedestal base",
             "Seats up to 8 players",
@@ -571,6 +581,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring a contemporary edge to poker night with Axiom. Its angular silhouette, layered transparent-look frame, and slender legs create a striking balance between structure and openness. The geometric playing surface adds visual character, making Axiom an eye-catching addition to modern game rooms and entertainment spaces.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Octagonal blue grey felt playing surface",
             "Glass panel legs, chrome accents",
             "Seats up to 8 players",
@@ -596,6 +607,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Designed to bring everyone around the table, Pavilion combines a distinctive multi-sided silhouette with angled player-side panels and an elegant, open-frame design. Its geometric form and refined detailing create an inviting setting for poker nights, turning a classic social game into a stylish gathering experience.",
         features: [
+            "Dimensions (W × D × H): 61.4 × 61.4 × 29.9 in / 156 × 156 × 76 cm",
             "Octagonal tan felt playing surface",
             "Glass legs, brass accents",
             "Seats up to 8 players",
@@ -621,6 +633,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Strata brings a contemporary edge to classic poker nights with its bold, layered silhouette and sleek geometric detailing. Its angular frame and slender legs create a distinctive balance of form and function, making it a striking centerpiece for modern entertainment spaces and memorable gatherings.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Octagonal charcoal felt playing surface",
             "Slim chrome legs",
             "Seats up to 8 players",
@@ -646,6 +659,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Bring everyone together around Nexus, a contemporary poker table with a distinctive multi-sided silhouette and transparent-look outer frame. Its angled player-side panels and streamlined design create an inviting space for friendly competition, bringing a fresh, modern perspective to the classic poker experience.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Octagonal tan felt playing surface",
             "Glass panel legs",
             "Seats up to 8 players",
@@ -671,6 +685,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Designed for games that bring people together, Octaves combines a striking geometric silhouette with a transparent-look frame and padded player-side panels. Its open, architectural design creates a sense of lightness while offering a welcoming setting for poker nights, social gatherings, and friendly competition.",
         features: [
+            "Dimensions (W × D × H): 61.4 × 61.4 × 29.9 in / 156 × 156 × 76 cm",
             "Octagonal navy felt playing surface",
             "Glass panel legs",
             "Seats up to 8 players",
@@ -691,6 +706,7 @@ window.HIPJONG_PRODUCTS = [
         galleryImgs: [],
         description: "Vanta brings a sophisticated touch to poker night with its sleek, angular detailing and layered, transparent-look construction. Padded player-side panels and integrated chip compartments create a thoughtfully arranged playing area, while its contemporary design makes it a distinctive addition to modern game rooms and entertainment spaces.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Oval black felt playing surface",
             "Single polished chrome pedestal base",
             "Seats up to 8 players",
@@ -716,6 +732,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Sable brings a refined, contemporary feel to mahjong nights with its softly rounded corners, textured exterior, and structured pedestal base. Its balanced proportions and understated detailing create an inviting centerpiece that blends naturally into modern living and entertainment spaces.",
         features: [
+            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
             "Ultra-quiet smart shuffling mechanism",
             "Dark wood tabletop, rust inlay accent",
             "Customizable (please contact us for more info)",
