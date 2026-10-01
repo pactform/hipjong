@@ -750,9 +750,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A social game table designed to make every seat feel part of the action. Its circular form creates an inviting setup for group play, while transparent structural elements and softly padded player rests give the table a clean, contemporary presence. Balanced between function and statement design, Meridian works naturally as the centrepiece of a dedicated game room or entertainment space.",
         features: [
             "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
+            "Round playing surface designed for comfortable group gameplay",
+            "Transparent architectural base with integrated cushioned player rests",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -768,9 +770,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Pebble brings a softer, more residential character to the traditional game table. Rounded edges, a broad playing surface and an integrated base give it the presence of a considered furniture piece rather than purely gaming equipment. Its understated silhouette makes it easy to place in contemporary homes, lounges and private entertainment spaces.",
         features: [
             "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
+            "Generous square playing surface with softly rounded corners",
+            "Integrated base design creates a clean and furniture-like appearance",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -786,9 +790,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Gambit turns a classic chess table into a substantial interior piece. The integrated board sits within a generous tabletop, leaving plenty of surrounding space while keeping the game itself at the centre. A stepped pedestal base gives the table a grounded architectural feel, making it equally suited to focused matches and as a distinctive addition to a study, lounge or game room.",
         features: [
             "Dimensions (W × D × H): 31.4 × 31.4 × 19.6 in / 80 x 80 x 50 cm",
+            "Integrated chessboard set directly into the tabletop",
+            "Wide surrounding surface provides additional space around the playing area",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -804,9 +810,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Axis is designed to make poker nights feel more immersive, comfortable and visually refined. Its circular layout encourages natural interaction between players, while built-in holders and accessory spaces help keep everything within easy reach. With its statement pedestal base and polished overall form, Axis works as both a functional gaming table and a striking centrepiece for a private entertainment room.",
         features: [
             "Dimensions (W × D × H): 63 × 63 × 30.7 in / 160 x 160 x 78 cm",
+            "Round playing surface designed for smooth, social group gameplay",
+            "Integrated cup holders and accessory slots help keep the table organized during play",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -822,9 +830,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Belmont brings a dramatic architectural look to the classic pool table. Its strong geometric form and transparent base create an eye-catching silhouette, while the playing surface remains the clear focus for everyday use. Designed for entertainment spaces that want something more distinctive, Belmont combines practical gameplay with a bold, conversation-starting presence.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Full-size pool table layout created for dedicated gameplay",
+            "Transparent glass base gives the design a bold contemporary character",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -840,9 +850,11 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Portico is made for longer game sessions and larger gatherings, with an elongated layout that gives every player a comfortable place at the table. Built-in drink holders and dedicated player positions help keep the setup practical and organized, while the transparent structural base adds a light, modern feel. The result is a table that feels equally suited to serious play and elevated entertaining.",
         features: [
             "Dimensions (W × D × H): 49.2 × 86.6 × 29.5 in / 125 x 220 x 75 cm",
+            "Elongated playing surface offers generous space for group card games",
+            "Integrated cup holders and player stations support a more comfortable playing experience",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -858,9 +870,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A refined pool table designed for modern interiors. Its soft, rounded profile and clean-lined legs create a calm, contemporary presence, while the balanced proportions keep the focus on play. Elegant yet understated, it fits naturally into residential lounges, game rooms, and hospitality spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface with regulation dimensions",
+            "Streamlined silhouette with softly rounded corners",
+            "Sleek tapered leg design for a clean contemporary look",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -876,9 +891,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Designed to make a statement without feeling heavy, this pool table combines a refined top frame with sculptural supports for a polished, upscale look. The contrast between its clean playing surface and substantial base gives it a confident presence, making it a striking centerpiece for both private residences and luxury leisure spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Sculpted leg design with a strong architectural profile",
+            "Refined frame with a warm, tailored look",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -894,9 +912,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A pool table with timeless character, designed for spaces that lean into classic luxury. Decorative detailing, traditional leg forms, and a generous playing surface give it a distinguished presence while still feeling inviting and functional. It is a strong choice for game rooms that call for a more elegant, heritage-inspired statement.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Classic silhouette with decorative carved detailing",
+            "Traditional turned legs and elegant frame construction",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -912,9 +933,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A straightforward pool table with a softer, more refined take on the classic four-leg design. Rounded edges and clean proportions give it an easy contemporary feel, allowing it to sit comfortably in both casual game rooms and more considered interiors without overpowering the space.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Clean four-leg construction with softly rounded frame edges",
+            "Streamlined profile designed for modern residential and leisure spaces",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -930,9 +954,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A statement pool table built around rhythm, repetition, and architectural detail. Its sculptural base uses a series of vertical elements to create a distinctive profile from every angle, turning the table into a visual centerpiece even when the game is over.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Sculptural vertical detailing around the base and frame",
+            "Architectural design with a distinctive geometric silhouette",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -948,9 +975,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "A modern pool table defined by a bold sculptural base and an uncluttered silhouette. The open center creates a lighter visual impression beneath the substantial playing surface, giving the design a strong architectural identity while keeping the overall look sleek and contemporary.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Sculptural pedestal base with an open-center design",
+            "Smooth, minimal frame with a bold contemporary profile",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -966,9 +996,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Designed to feel substantial without looking heavy, Lumen pairs a clean playing surface with transparent structural elements that give the table a distinctive floating quality. Its polished detailing and sculptural profile make it equally suited to contemporary homes, entertainment spaces, and statement interiors.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Sculptural clear-panel base with a light, open appearance",
+            "Refined frame detailing with multiple finish options",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -984,9 +1017,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Vector brings a more architectural character to the classic pool table. Layered horizontal lines and tapered geometric legs create a strong, structured silhouette, while the restrained overall form keeps it versatile enough for both residential game rooms and modern hospitality spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
+            "Premium billiard playing surface",
+            "Geometric four-leg construction with layered architectural detailing",
+            "Clean, angular profile designed for contemporary interiors",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1002,7 +1038,7 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Elara gives the traditional pool table a more polished, furniture-led presence. Soft curves, tapered legs, and carefully placed decorative accents create an elegant silhouette that feels at home in refined residential interiors while still keeping the table practical and inviting for everyday play.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
             "Customizable (please contact us for more info)",
@@ -1020,9 +1056,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Vertex brings a sharper architectural character to the automatic mahjong table. Its angular frame and tapered leg construction create a strong, contemporary silhouette, while the integrated game system keeps the playing area clean and organized. Designed for modern entertainment spaces where function and visual impact carry equal weight.",
         features: [
             "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
+            "Automatic mahjong table with integrated shuffling system",
+            "Angular four-leg construction with a bold geometric profile",
+            "Streamlined playing surface with concealed mechanical components",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1038,9 +1077,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Ribby takes a quieter approach to the automatic mahjong table, pairing a straightforward square form with slim, uninterrupted lines. The simple four-leg construction gives it the familiarity of a dining table while discreetly integrating the technology needed for effortless play, making it an easy fit for contemporary homes and private game rooms.",
         features: [
             "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
+            "Automatic mahjong table with integrated shuffling system",
+            "Clean four-leg construction with a minimal furniture-like profile",
+            "Compact square format designed for comfortable four-player seating",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1056,9 +1098,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Hyaline turns the familiar table tennis table into a visually lighter statement piece. Its transparent construction creates an open, almost floating presence, while the restrained detailing keeps the focus on the game itself. A distinctive option for contemporary residences, lounges, and entertainment spaces where sporting function becomes part of the interior.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Full-size table tennis playing surface",
+            "Transparent glass construction for a light, sculptural appearance",
+            "Integrated net system with clean, minimal detailing",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1074,9 +1119,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Glace gives the table tennis table a distinctly architectural character. A transparent playing surface keeps the overall form visually light, while the angular base introduces a stronger technical edge. clean, unconventional, and easy to appreciate from every angle, it is designed to work as both a game table and a contemporary interior feature.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Transparent glass playing surface with an integrated net system",
+            "Angular support structure with exposed mechanical-style detailing",
+            "Open-frame construction creates a light, contemporary profile",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1092,9 +1140,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Terrace brings a more sculptural approach to table tennis, pairing a clean playing surface with a layered geometric base. The broad pedestal gives the table a strong sense of balance while keeping the overall silhouette polished and intentional. It works especially well in contemporary entertainment spaces where the game table is meant to feel like part of the furniture collection.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Streamlined table tennis playing surface with integrated net",
+            "Sculptural layered pedestal base",
+            "Wide central support creates a grounded furniture-like presence",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1110,9 +1161,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Mercer reworks the familiar foosball table with a lighter, more furniture-led appearance. Transparent panels reveal the mechanics of the game, while the streamlined frame and tapered legs give the piece a composed residential character. Playful in function but refined in form, it fits comfortably into living rooms, lounges, and dedicated game spaces.",
         features: [
             "Dimensions (W × D × H): 34.8 × 60.3 × 33.7 in / 88.5 x 153.2 x 85.8 cm",
+            "Transparent glass enclosure keeps the playing area visually open",
+            "Solid frame and tapered four-leg construction",
+            "Exposed metal playing rods with integrated goal baskets",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1128,9 +1182,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Reline turns the familiar foosball table into something visually lighter and more architectural. its transparent structure puts the game itself on display, while polished mechanical details add a crisp contemporary character. The result feels playful without looking overly casual, making it an easy fit for modern living spaces, lounges, and game rooms.",
         features: [
             "Dimensions (W × D × H): 29.1 × 55.1 × 36.2 in / 74 x 140 x 92 cm",
+            "Transparent panel construction with a light, open visual profile",
+            "Metal playing rods and exposed mechanical detailing",
+            "Clean rectangular form with transparent supporting legs",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
@@ -1146,9 +1203,12 @@ window.HIPJONG_PRODUCTS = [
         primaryImg: "",
         hoverImg: "",
         galleryImgs: [],
-        description: "Details coming soon.",
+        description: "Vanguard brings a more polished furniture sensibility to the classic foosball table. The sculpted body and tapered legs give it a composed silhouette, while integrated game details keep the playing experience practical and familiar. Refined enough for a designed interior yet still unmistakably made for play, it works naturally in residential entertainment spaces and private lounges.",
         features: [
             "Dimensions (W × D × H): 44.4 × 64.9 × 34.2 in / 113 x 165 x 87 cm",
+            "Sculpted tabletop profile with softly rounded corners",
+            "Tapered four-leg base for a more furniture-like appearance",
+            "Integrated playing rods, score tracks, and detailed player pieces",
             "Customizable (please contact us for more info)",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
