@@ -747,9 +747,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "mar1.png",
+        hoverImg: "mar2.png",
+        galleryImgs: [
+            "mar1.png",
+            "mar2.png",
+            "mar3.png",
+            "mar4.png"
+        ],
         description: "A social game table designed to make every seat feel part of the action. Its circular form creates an inviting setup for group play, while transparent structural elements and softly padded player rests give the table a clean, contemporary presence. Balanced between function and statement design, Meridian works naturally as the centrepiece of a dedicated game room or entertainment space.",
         features: [
             "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
@@ -767,9 +772,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Mahjong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "peb1.png",
+        hoverImg: "peb2.png",
+        galleryImgs: [
+            "peb1.png",
+            "peb2.png",
+            "peb3.png",
+            "peb4.png"
+        ],
         description: "Pebble brings a softer, more residential character to the traditional game table. Rounded edges, a broad playing surface and an integrated base give it the presence of a considered furniture piece rather than purely gaming equipment. Its understated silhouette makes it easy to place in contemporary homes, lounges and private entertainment spaces.",
         features: [
             "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
@@ -787,9 +797,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Chess Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "gambit1.png",
+        hoverImg: "gambit2.png",
+        galleryImgs: [
+            "gambit1.png",
+            "gambit2.png",
+            "gambit3.png",
+            "gambit4.png"
+        ],
         description: "Gambit turns a classic chess table into a substantial interior piece. The integrated board sits within a generous tabletop, leaving plenty of surrounding space while keeping the game itself at the centre. A stepped pedestal base gives the table a grounded architectural feel, making it equally suited to focused matches and as a distinctive addition to a study, lounge or game room.",
         features: [
             "Dimensions (W × D × H): 31.4 × 31.4 × 19.6 in / 80 x 80 x 50 cm",
