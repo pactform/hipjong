@@ -918,9 +918,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "cal1.png",
+        hoverImg: "cal2.png",
+        galleryImgs: [
+            "cal1.png",
+            "cal2.png",
+            "cal3.png",
+            "cal4.png"
+        ],
         description: "Designed to make a statement without feeling heavy, this pool table combines a refined top frame with sculptural supports for a polished, upscale look. The contrast between its clean playing surface and substantial base gives it a confident presence, making it a striking centerpiece for both private residences and luxury leisure spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -939,9 +944,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "rel1.png",
+        hoverImg: "rel2.png",
+        galleryImgs: [
+            "rel1.png",
+            "rel2.png",
+            "rel3.png",
+            "rel4.png"
+        ],
         description: "A pool table with timeless character, designed for spaces that lean into classic luxury. Decorative detailing, traditional leg forms, and a generous playing surface give it a distinguished presence while still feeling inviting and functional. It is a strong choice for game rooms that call for a more elegant, heritage-inspired statement.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -960,9 +970,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "velvet1.png",
+        hoverImg: "velvet2.png",
+        galleryImgs: [
+            "velvet1.png",
+            "velvet2.png",
+            "velvet3.png",
+            "velvet4.png"
+        ],
         description: "A straightforward pool table with a softer, more refined take on the classic four-leg design. Rounded edges and clean proportions give it an easy contemporary feel, allowing it to sit comfortably in both casual game rooms and more considered interiors without overpowering the space.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -981,9 +996,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "cad1.png",
+        hoverImg: "cad2.png",
+        galleryImgs: [
+            "cad1.png",
+            "cad2.png",
+            "cad3.png",
+            "cad4.png"
+        ],
         description: "A statement pool table built around rhythm, repetition, and architectural detail. Its sculptural base uses a series of vertical elements to create a distinctive profile from every angle, turning the table into a visual centerpiece even when the game is over.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -1002,9 +1022,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "port1.png",
+        hoverImg: "port2.png",
+        galleryImgs: [
+            "port1.png",
+            "port2.png",
+            "port3.png",
+            "port4.png"
+        ],
         description: "A modern pool table defined by a bold sculptural base and an uncluttered silhouette. The open center creates a lighter visual impression beneath the substantial playing surface, giving the design a strong architectural identity while keeping the overall look sleek and contemporary.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -1044,9 +1069,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "vector1.png",
+        hoverImg: "vector2.png",
+        galleryImgs: [
+            "vector1.png",
+            "vector2.png",
+            "vector3.png",
+            "vector4.png"
+        ],
         description: "Vector brings a more architectural character to the classic pool table. Layered horizontal lines and tapered geometric legs create a strong, structured silhouette, while the restrained overall form keeps it versatile enough for both residential game rooms and modern hospitality spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -1065,9 +1095,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "elara1.png",
+        hoverImg: "elara2.png",
+        galleryImgs: [
+            "elara1.png",
+            "elara2.png",
+            "elara3.png",
+            "elara4.png"
+        ],
         description: "Elara gives the traditional pool table a more polished, furniture-led presence. Soft curves, tapered legs, and carefully placed decorative accents create an elegant silhouette that feels at home in refined residential interiors while still keeping the table practical and inviting for everyday play.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -1083,9 +1118,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Mahjong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "vertex1.png",
+        hoverImg: "vertex2.png",
+        galleryImgs: [
+            "vertex1.png",
+            "vertex2.png",
+            "vertex3.png",
+            "vertex4.png"
+        ],
         description: "Vertex brings a sharper architectural character to the automatic mahjong table. Its angular frame and tapered leg construction create a strong, contemporary silhouette, while the integrated game system keeps the playing area clean and organized. Designed for modern entertainment spaces where function and visual impact carry equal weight.",
         features: [
             "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
@@ -1104,9 +1144,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Mahjong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "rib1.png",
+        hoverImg: "rib2.png",
+        galleryImgs: [
+            "rib1.png",
+            "rib2.png",
+            "rib3.png",
+            "rib4.png"
+        ],
         description: "Ribby takes a quieter approach to the automatic mahjong table, pairing a straightforward square form with slim, uninterrupted lines. The simple four-leg construction gives it the familiarity of a dining table while discreetly integrating the technology needed for effortless play, making it an easy fit for contemporary homes and private game rooms.",
         features: [
             "Dimensions (W × D × H): 41.7 × 41.7 × 30.7 in / 106 x 106 x 78 cm",
@@ -1125,9 +1170,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Ping Pong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "hya1.png",
+        hoverImg: "hya2.png",
+        galleryImgs: [
+            "hya1.png",
+            "hya2.png",
+            "hya3.png",
+            "hya4.png"
+        ],
         description: "Hyaline turns the familiar table tennis table into a visually lighter statement piece. Its transparent construction creates an open, almost floating presence, while the restrained detailing keeps the focus on the game itself. A distinctive option for contemporary residences, lounges, and entertainment spaces where sporting function becomes part of the interior.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
@@ -1146,9 +1196,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Ping Pong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "glace1.png",
+        hoverImg: "glace2.png",
+        galleryImgs: [
+            "glace1.png",
+            "glace2.png",
+            "glace3.png",
+            "glace4.png"
+        ],
         description: "Glace gives the table tennis table a distinctly architectural character. A transparent playing surface keeps the overall form visually light, while the angular base introduces a stronger technical edge. clean, unconventional, and easy to appreciate from every angle, it is designed to work as both a game table and a contemporary interior feature.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
@@ -1167,9 +1222,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Ping Pong Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "terrace1.png",
+        hoverImg: "terrace2.png",
+        galleryImgs: [
+            "terrace1.png",
+            "terrace2.png",
+            "terrace3.png",
+            "terrace4.png"
+        ],
         description: "Terrace brings a more sculptural approach to table tennis, pairing a clean playing surface with a layered geometric base. The broad pedestal gives the table a strong sense of balance while keeping the overall silhouette polished and intentional. It works especially well in contemporary entertainment spaces where the game table is meant to feel like part of the furniture collection.",
         features: [
             "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
