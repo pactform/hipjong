@@ -842,9 +842,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "bel1.png",
+        hoverImg: "bel2.png",
+        galleryImgs: [
+            "bel1.png",
+            "bel2.png",
+            "bel3.png",
+            "bel4.png"
+        ],
         description: "Belmont brings a dramatic architectural look to the classic pool table. Its strong geometric form and transparent base create an eye-catching silhouette, while the playing surface remains the clear focus for everyday use. Designed for entertainment spaces that want something more distinctive, Belmont combines practical gameplay with a bold, conversation-starting presence.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
@@ -862,9 +867,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "po1.png",
+        hoverImg: "po2.png",
+        galleryImgs: [
+            "po1.png",
+            "po2.png",
+            "po3.png",
+            "po4.png"
+        ],
         description: "Portico is made for longer game sessions and larger gatherings, with an elongated layout that gives every player a comfortable place at the table. Built-in drink holders and dedicated player positions help keep the setup practical and organized, while the transparent structural base adds a light, modern feel. The result is a table that feels equally suited to serious play and elevated entertaining.",
         features: [
             "Dimensions (W × D × H): 49.2 × 86.6 × 29.5 in / 125 x 220 x 75 cm",
@@ -882,9 +892,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "vela1.png",
+        hoverImg: "vela2.png",
+        galleryImgs: [
+            "vela1.png",
+            "vela2.png",
+            "vela3.png",
+            "vela4.png"
+        ],
         description: "A refined pool table designed for modern interiors. Its soft, rounded profile and clean-lined legs create a calm, contemporary presence, while the balanced proportions keep the focus on play. Elegant yet understated, it fits naturally into residential lounges, game rooms, and hospitality spaces.",
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
