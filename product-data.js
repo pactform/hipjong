@@ -771,7 +771,7 @@ window.HIPJONG_PRODUCTS = [
         name: "PEBBLE MAHJONG TABLE",
         price: 0,
         priceLabel: "Price TBC",
-        category: "Mahjong Tables",
+        category: "Poker Tables",
         primaryImg: "peb1.png",
         hoverImg: "peb2.png",
         galleryImgs: [
@@ -782,7 +782,7 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Pebble brings a softer, more residential character to the traditional game table. Rounded edges, a broad playing surface and an integrated base give it the presence of a considered furniture piece rather than purely gaming equipment. Its understated silhouette makes it easy to place in contemporary homes, lounges and private entertainment spaces.",
         features: [
-            "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 158 × 158 × 76 cm",
+            "Dimensions (W × D × H): 62.2 × 62.2 × 30 in / 120 × 120 × 76 cm",
             "Generous square playing surface with softly rounded corners",
             "Integrated base design creates a clean and furniture-like appearance",
             "Customizable (please contact us for more info)",
@@ -822,9 +822,14 @@ window.HIPJONG_PRODUCTS = [
         price: 0,
         priceLabel: "Price TBC",
         category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
+        primaryImg: "axis1.png",
+        hoverImg: "axis2.png",
+        galleryImgs: [
+            "axis1.png",
+            "axis2.png",
+            "axis3.png",
+            "axis4.png"
+        ],
         description: "Axis is designed to make poker nights feel more immersive, comfortable and visually refined. Its circular layout encourages natural interaction between players, while built-in holders and accessory spaces help keep everything within easy reach. With its statement pedestal base and polished overall form, Axis works as both a functional gaming table and a striking centrepiece for a private entertainment room.",
         features: [
             "Dimensions (W × D × H): 63 × 63 × 30.7 in / 160 x 160 x 78 cm",
