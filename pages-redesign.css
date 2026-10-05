@@ -154,6 +154,19 @@
     color: var(--rd-muted);
 }
 
+/* Kolom kanan hero: deskripsi di atas, tombol di ujung kanan,
+   sebaris bawah dengan judul di kolom kiri */
+.rd-hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.rd-hero-side .btn-catalogue {
+    align-self: flex-end;
+    margin-top: 0;
+}
+
 /* ---------- 2. FOTO (siku, selebar kolom konten) ---------- */
 .rd-figure {
     background-color: var(--rd-white);
@@ -527,6 +540,8 @@
 
     .rd-faq { grid-template-columns: minmax(0, 1fr); }
     .rd-faq-aside { position: static; order: 2; }
+
+    .rd-hero-side .btn-catalogue { align-self: flex-start; }
 }
 
 /* ≤768px: HP lanskap, tablet sempit, half view */

@@ -81,6 +81,48 @@
         .collection-card:hover .card-image-wrapper .card-photo.is-active {
             transform: scale(1.05);
         }
+
+        /* Hero Shop: judul di kiri, tombol Download Catalogue di ujung kanan, sejajar judul */
+        .page-hero .page-hero-inner {
+            width: 100%;
+            max-width: none;
+        }
+
+        .page-hero-inner .hero-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 1rem 2rem;
+        }
+
+        .page-hero-inner .hero-head h1 {
+            margin: 0;
+            min-width: 0;
+        }
+
+        /* Tablet sempit & HP: urutan eyebrow > judul > "One table. Every vibe." > tombol */
+        @media (max-width: 700px) {
+            .page-hero .page-hero-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .page-hero-inner .hero-head { display: contents; }
+
+            .page-hero-inner .eyebrow { order: 1; }
+            .page-hero-inner .hero-head h1 { order: 2; }
+            .page-hero-inner > p { order: 3; }
+            .page-hero-inner .btn-catalogue {
+                order: 4;
+                margin-top: 1.25rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero-inner .btn-catalogue { align-self: stretch; }
+        }
     </style>
 
     <script>document.documentElement.classList.add('js');</script>
@@ -151,9 +193,11 @@
         <section class="page-hero">
             <div class="page-hero-inner reveal-group">
                 <span class="eyebrow reveal">OUR COLLECTION</span>
-                <h1 class="reveal">Shop all tables</h1>
+                <div class="hero-head">
+                    <h1 class="reveal">Shop all tables</h1>
+                    <a href="shop.html" class="btn-catalogue reveal">Download Catalogue &rarr;</a>
+                </div>
                 <p class="reveal">One table. Every vibe.</p>
-                <a href="shop.html" class="btn btn-navbar reveal" style="margin-top:1.5rem">Download Catalogue &rarr;</a>
             </div>
         </section>
 

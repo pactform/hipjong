@@ -1102,3 +1102,90 @@ video,
         background: linear-gradient(to top, rgba(20, 16, 14, 0.8) 0%, rgba(20, 16, 14, 0.35) 55%, rgba(20, 16, 14, 0) 100%);
     }
 }
+
+
+/* =========================================================
+   TOMBOL "DOWNLOAD CATALOGUE" (dipakai di semua halaman)
+   Hijau tua, teks putih tebal, sudut membulat.
+========================================================= */
+.btn-catalogue {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;            /* target sentuh >= 44px */
+    padding: 0.85rem 1.6rem;
+    background-color: var(--brand-green, #1F4D3A);
+    color: #fff;
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-catalogue:hover {
+    background-color: #173B2C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 77, 58, 0.25);
+}
+
+.btn-catalogue:focus-visible {
+    outline: 3px solid #FFD84D;
+    outline-offset: 2px;
+}
+
+/* Tombol berdiri sendiri di bawah teks (halaman About) */
+.btn-catalogue--solo {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+}
+
+/* HP: tombol selebar kolom, mudah ditekan jempol */
+@media (max-width: 600px) {
+    .btn-catalogue {
+        width: 100%;
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+}
+
+/* HP kecil (<= 380px): sedikit lebih ringkas, teks boleh turun baris */
+@media (max-width: 380px) {
+    .btn-catalogue {
+        padding: 0.8rem 1.1rem;
+        font-size: 0.92rem;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-catalogue { transition: none; }
+    .btn-catalogue:hover { transform: none; }
+}
+
+
+/* =========================================================
+   HERO HOMEPAGE DI MOBILE: teks turun di bawah foto
+   Foto hero dibatasi clamp(260px, 62vw, 480px) di <=900px,
+   jadi teks diberi jarak atas seukuran itu + napas, supaya
+   tidak mepet / menumpuk di tepi bawah foto.
+========================================================= */
+@media (max-width: 900px) {
+    .split-hero-text {
+        padding-top: calc(clamp(260px, 62vw, 480px) + clamp(1.5rem, 5vw, 2.5rem));
+    }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+    .split-hero-text {
+        padding-top: calc(clamp(200px, 40vh, 320px) + 1.5rem);
+    }
+}
