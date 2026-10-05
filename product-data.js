@@ -811,7 +811,7 @@ window.HIPJONG_PRODUCTS = [
             "Integrated chessboard set directly into the tabletop",
             "Wide surrounding surface provides additional space around the playing area",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"

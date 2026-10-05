@@ -3121,19 +3121,6 @@ body.nav-open {
         padding-inline: var(--pad-x);
     }
 }
-
-
-/* =========================================================
-   25. REVISI LAYOUT HOMEPAGE (mockup 1.png)
-   - Hero: headline & copy baru, satu tombol saja
-   - Urutan: Hero > Collections > Vibe Shift > Row produk
-     (foto kanan) > Row produk (foto kiri) > Our Story > CTA
-   - Proporsi kolom disamakan dengan mockup
-   ========================================================= */
-
-/* ---------- 25.1 HERO ---------- */
-/* Headline sekarang tiga baris dan baris ketiga paling panjang
-   ("The idea was bigger."), jadi kolom teks perlu lebih lebar. */
 .split-hero-text { max-width: min(100%, 42rem); }
 .split-hero-text .hero-text-wrapper { max-width: 34rem; }
 
@@ -3146,9 +3133,6 @@ body.nav-open {
     max-width: 30rem;
     line-height: 1.65;
 }
-
-/* Scrim dipersempit: di mockup jendela dan lampu di sisi kanan
-   tetap bening, yang tertutup hanya bidang dinding di kiri. */
 .split-hero::after {
     background: linear-gradient(
         90deg,
@@ -3159,9 +3143,18 @@ body.nav-open {
         rgba(248, 246, 240, 0) 50%
     );
 }
+.split-hero .cta-group { gap: 1rem; }
+.split-hero .btn-navbar {
+    background-color: var(--brand-green);
+    color: var(--white);
+    border: 1px solid var(--brand-green);
+}
 
-/* Hanya satu tombol — tidak perlu jarak antar tombol */
-.split-hero .cta-group { gap: 0; }
+.split-hero .btn-navbar:hover {
+    background-color: var(--brand-green-hover);
+    border-color: var(--brand-green-hover);
+    color: var(--white);
+}
 
 /* ---------- 25.2 PANEL TEKS ---------- */
 /* Di mockup panel Vibe Shift krem, panel Our Story putih bersih. */
