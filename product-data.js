@@ -1190,7 +1190,7 @@ window.HIPJONG_PRODUCTS = [
             "Transparent glass construction for a light, sculptural appearance",
             "Integrated net system with clean, minimal detailing",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -1216,7 +1216,7 @@ window.HIPJONG_PRODUCTS = [
             "Angular support structure with exposed mechanical-style detailing",
             "Open-frame construction creates a light, contemporary profile",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -1237,12 +1237,12 @@ window.HIPJONG_PRODUCTS = [
         ],
         description: "Terrace brings a more sculptural approach to table tennis, pairing a clean playing surface with a layered geometric base. The broad pedestal gives the table a strong sense of balance while keeping the overall silhouette polished and intentional. It works especially well in contemporary entertainment spaces where the game table is meant to feel like part of the furniture collection.",
         features: [
-            "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 76 cm",
+            "Dimensions (W × D × H): 60 × 107.8 × 30 in / 152.5 x 274 x 91 cm",
             "Streamlined table tennis playing surface with integrated net",
             "Sculptural layered pedestal base",
             "Wide central support creates a grounded furniture-like presence",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
