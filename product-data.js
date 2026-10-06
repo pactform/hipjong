@@ -174,6 +174,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Pink finish, tiered pedestal base",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
