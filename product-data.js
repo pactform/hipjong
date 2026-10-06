@@ -19,6 +19,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Glass pedestal base, glossy tabletop finish",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -44,8 +45,7 @@ window.HIPJONG_PRODUCTS = [
             "Regulation-inspired play surface",
             "Glass frame and legs, orange felt playing surface",
             "Fits standard cue sets",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -71,7 +71,7 @@ window.HIPJONG_PRODUCTS = [
             "Single sculpted black pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -97,7 +97,7 @@ window.HIPJONG_PRODUCTS = [
             "Smooth precision rods",
             "Warm traditional wood finish",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -123,7 +123,7 @@ window.HIPJONG_PRODUCTS = [
             "Twin sculpted pedestal legs",
             "Teal glossy finish",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -148,6 +148,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Cream tabletop, gold pedestal base",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -199,7 +200,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Made-to-order, longer lead time",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -225,6 +226,7 @@ window.HIPJONG_PRODUCTS = [
             "Compact beige frame, green felt top",
             "Foldable, portable design",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -251,7 +253,7 @@ window.HIPJONG_PRODUCTS = [
             "Slim angled metal legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -276,6 +278,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Dark green tabletop, black pedestal base",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -301,6 +304,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Deep red tabletop, stone grey base",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -326,6 +330,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Rust marbled tabletop, gold trim accents",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -352,6 +357,7 @@ window.HIPJONG_PRODUCTS = [
             "Single white pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -378,7 +384,7 @@ window.HIPJONG_PRODUCTS = [
             "Single white pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -404,7 +410,7 @@ window.HIPJONG_PRODUCTS = [
             "Crossed chrome pedestal legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -430,7 +436,7 @@ window.HIPJONG_PRODUCTS = [
             "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -482,7 +488,7 @@ window.HIPJONG_PRODUCTS = [
             "Solid black frame, navy blue felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -508,7 +514,7 @@ window.HIPJONG_PRODUCTS = [
             "Tiered pearlescent pedestal base",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -534,7 +540,7 @@ window.HIPJONG_PRODUCTS = [
             "Wood frame, tan felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -560,7 +566,7 @@ window.HIPJONG_PRODUCTS = [
             "Blue wood frame, deep blue felt playing surface",
             "Fits standard cue sets",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -586,7 +592,7 @@ window.HIPJONG_PRODUCTS = [
             "Glass panel legs, chrome accents",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -612,7 +618,7 @@ window.HIPJONG_PRODUCTS = [
             "Glass legs, brass accents",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -638,7 +644,7 @@ window.HIPJONG_PRODUCTS = [
             "Slim chrome legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -664,7 +670,7 @@ window.HIPJONG_PRODUCTS = [
             "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -690,31 +696,10 @@ window.HIPJONG_PRODUCTS = [
             "Glass panel legs",
             "Seats up to 8 players",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
-    },
-    {
-        id: "29",
-        name: "VANTA POKER TABLE",
-        price: 1699,
-        priceLabel: "$1,699",
-        category: "Poker Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "Vanta brings a sophisticated touch to poker night with its sleek, angular detailing and layered, transparent-look construction. Padded player-side panels and integrated chip compartments create a thoughtfully arranged playing area, while its contemporary design makes it a distinctive addition to modern game rooms and entertainment spaces.",
-        features: [
-            "Dimensions (W × D × H): 49.2 × 92.1 × 29.5 in / 125 x 234 x 75 cm",
-            "Oval black felt playing surface",
-            "Single polished chrome pedestal base",
-            "Seats up to 8 players",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "blue"
     },
     {
         id: "30",
@@ -736,6 +721,7 @@ window.HIPJONG_PRODUCTS = [
             "Ultra-quiet smart shuffling mechanism",
             "Dark wood tabletop, rust inlay accent",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -761,7 +747,7 @@ window.HIPJONG_PRODUCTS = [
             "Round playing surface designed for comfortable group gameplay",
             "Transparent architectural base with integrated cushioned player rests",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -786,7 +772,7 @@ window.HIPJONG_PRODUCTS = [
             "Generous square playing surface with softly rounded corners",
             "Integrated base design creates a clean and furniture-like appearance",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -810,8 +796,9 @@ window.HIPJONG_PRODUCTS = [
             "Dimensions (W × D × H): 31.4 × 31.4 × 19.6 in / 80 x 80 x 50 cm",
             "Integrated chessboard set directly into the tabletop",
             "Wide surrounding surface provides additional space around the playing area",
+            "Sculptural pedestal base for a substantial furniture-like presence",
             "Customizable (please contact us for more info)",
-            "5-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -836,7 +823,7 @@ window.HIPJONG_PRODUCTS = [
             "Round playing surface designed for smooth, social group gameplay",
             "Integrated cup holders and accessory slots help keep the table organized during play",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -861,7 +848,7 @@ window.HIPJONG_PRODUCTS = [
             "Full-size pool table layout created for dedicated gameplay",
             "Transparent glass base gives the design a bold contemporary character",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -886,7 +873,7 @@ window.HIPJONG_PRODUCTS = [
             "Elongated playing surface offers generous space for group card games",
             "Integrated cup holders and player stations support a more comfortable playing experience",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -912,7 +899,7 @@ window.HIPJONG_PRODUCTS = [
             "Streamlined silhouette with softly rounded corners",
             "Sleek tapered leg design for a clean contemporary look",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -938,7 +925,7 @@ window.HIPJONG_PRODUCTS = [
             "Sculpted leg design with a strong architectural profile",
             "Refined frame with a warm, tailored look",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -964,7 +951,7 @@ window.HIPJONG_PRODUCTS = [
             "Classic silhouette with decorative carved detailing",
             "Traditional turned legs and elegant frame construction",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -990,7 +977,7 @@ window.HIPJONG_PRODUCTS = [
             "Clean four-leg construction with softly rounded frame edges",
             "Streamlined profile designed for modern residential and leisure spaces",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -1016,7 +1003,7 @@ window.HIPJONG_PRODUCTS = [
             "Sculptural vertical detailing around the base and frame",
             "Architectural design with a distinctive geometric silhouette",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -1042,31 +1029,10 @@ window.HIPJONG_PRODUCTS = [
             "Sculptural pedestal base with an open-center design",
             "Smooth, minimal frame with a bold contemporary profile",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
-    },
-    {
-        id: "42",
-        name: "LUMEN POOL TABLE",
-        price: 0,
-        priceLabel: "Price TBC",
-        category: "Billiard Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "Designed to feel substantial without looking heavy, Lumen pairs a clean playing surface with transparent structural elements that give the table a distinctive floating quality. Its polished detailing and sculptural profile make it equally suited to contemporary homes, entertainment spaces, and statement interiors.",
-        features: [
-            "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
-            "Premium billiard playing surface",
-            "Sculptural clear-panel base with a light, open appearance",
-            "Refined frame detailing with multiple finish options",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "pink"
     },
     {
         id: "43",
@@ -1089,7 +1055,7 @@ window.HIPJONG_PRODUCTS = [
             "Geometric four-leg construction with layered architectural detailing",
             "Clean, angular profile designed for contemporary interiors",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
@@ -1112,7 +1078,7 @@ window.HIPJONG_PRODUCTS = [
         features: [
             "Dimensions (W × D × H): 59.8 × 105.5 × 32.2 in / 152 x 268 x 82 cm",
             "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -1138,6 +1104,7 @@ window.HIPJONG_PRODUCTS = [
             "Angular four-leg construction with a bold geometric profile",
             "Streamlined playing surface with concealed mechanical components",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -1164,6 +1131,7 @@ window.HIPJONG_PRODUCTS = [
             "Clean four-leg construction with a minimal furniture-like profile",
             "Compact square format designed for comfortable four-player seating",
             "Customizable (please contact us for more info)",
+            "5-year warranty on structure and craftsmanship",
             "3-year warranty on mechanical & tech systems",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
@@ -1190,7 +1158,7 @@ window.HIPJONG_PRODUCTS = [
             "Transparent glass construction for a light, sculptural appearance",
             "Integrated net system with clean, minimal detailing",
             "Customizable (please contact us for more info)",
-            "5-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "beige"
@@ -1216,7 +1184,7 @@ window.HIPJONG_PRODUCTS = [
             "Angular support structure with exposed mechanical-style detailing",
             "Open-frame construction creates a light, contemporary profile",
             "Customizable (please contact us for more info)",
-            "5-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "pink"
@@ -1242,72 +1210,9 @@ window.HIPJONG_PRODUCTS = [
             "Sculptural layered pedestal base",
             "Wide central support creates a grounded furniture-like presence",
             "Customizable (please contact us for more info)",
-            "5-year warranty on mechanical & tech systems",
+            "5-year warranty on structure and craftsmanship",
             "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
         ],
         arrowColor: "blue"
     },
-    {
-        id: "50",
-        name: "MERCER FOOSBALL TABLE",
-        price: 0,
-        priceLabel: "Price TBC",
-        category: "Foosball Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "Mercer reworks the familiar foosball table with a lighter, more furniture-led appearance. Transparent panels reveal the mechanics of the game, while the streamlined frame and tapered legs give the piece a composed residential character. Playful in function but refined in form, it fits comfortably into living rooms, lounges, and dedicated game spaces.",
-        features: [
-            "Dimensions (W × D × H): 34.8 × 60.3 × 33.7 in / 88.5 x 153.2 x 85.8 cm",
-            "Transparent glass enclosure keeps the playing area visually open",
-            "Solid frame and tapered four-leg construction",
-            "Exposed metal playing rods with integrated goal baskets",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "beige"
-    },
-    {
-        id: "51",
-        name: "RELINE FOOSBALL TABLE",
-        price: 0,
-        priceLabel: "Price TBC",
-        category: "Foosball Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "Reline turns the familiar foosball table into something visually lighter and more architectural. its transparent structure puts the game itself on display, while polished mechanical details add a crisp contemporary character. The result feels playful without looking overly casual, making it an easy fit for modern living spaces, lounges, and game rooms.",
-        features: [
-            "Dimensions (W × D × H): 29.1 × 55.1 × 36.2 in / 74 x 140 x 92 cm",
-            "Transparent panel construction with a light, open visual profile",
-            "Metal playing rods and exposed mechanical detailing",
-            "Clean rectangular form with transparent supporting legs",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "pink"
-    },
-    {
-        id: "52",
-        name: "VANGUARD FOOSBALL TABLE",
-        price: 0,
-        priceLabel: "Price TBC",
-        category: "Foosball Tables",
-        primaryImg: "",
-        hoverImg: "",
-        galleryImgs: [],
-        description: "Vanguard brings a more polished furniture sensibility to the classic foosball table. The sculpted body and tapered legs give it a composed silhouette, while integrated game details keep the playing experience practical and familiar. Refined enough for a designed interior yet still unmistakably made for play, it works naturally in residential entertainment spaces and private lounges.",
-        features: [
-            "Dimensions (W × D × H): 44.4 × 64.9 × 34.2 in / 113 x 165 x 87 cm",
-            "Sculpted tabletop profile with softly rounded corners",
-            "Tapered four-leg base for a more furniture-like appearance",
-            "Integrated playing rods, score tracks, and detailed player pieces",
-            "Customizable (please contact us for more info)",
-            "3-year warranty on mechanical & tech systems",
-            "Payment includes after-sales service for any quality issues, excluding damage caused by human factors."
-        ],
-        arrowColor: "blue"
-    }
 ];
